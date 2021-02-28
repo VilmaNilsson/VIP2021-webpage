@@ -1,0 +1,29 @@
+{
+  "name": "vip2021-webpage",
+  "version": "0.0.1",
+  "description": "Webpage for marketing the game Scratch",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VilmaNilsson/VIP2021-webpage.git"
+  },
+  "author": "Sebastian Bengtegård",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VilmaNilsson/VIP2021-webpage/issues"
+  },
+  "homepage": "https://github.com/VilmaNilsson/VIP2021-webpage#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-minify": "^1.0.0",
+    "nodemailer": "^6.5.0",
+    "pug": "^3.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.21.0",
+    "less": "^4.1.1"
+  }
+}

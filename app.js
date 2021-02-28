@@ -31,6 +31,22 @@ app.get('/', (req, res) => {
   res.render('index');
 });
 
+app.get('/info', (req, res) => {
+  res.render('info');
+});
+
+app.get('/release', (req, res) => {
+  res.render('release');
+});
+
+app.get('/scoreboard', (req, res) => {
+  res.render('scoreboard');
+});
+
+app.get('/game', (req, res) => {
+  res.render('game');
+});
+
 // ERROR HANDLERS
 // ==============
 

@@ -5,11 +5,13 @@ html
     meta(charset='utf-8')
     meta(name='viewport' content='width=device-width,initial-scale=1')
     //- All of the basic CSS variables
-    link(rel='stylesheet' href='/static/css/root.css')
+    link(rel='stylesheet' href='/static/css/index.css')
   body
     h1 First pug template
 
     //- Common footer
     include includes/footer.pug
+    //- Common utility functions
+    script(src='/static/js/utils.js')
     //- JavaScript for this page (might not be needed)
     script(src='/static/js/index.js')

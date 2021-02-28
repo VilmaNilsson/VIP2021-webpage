@@ -1,0 +1,7 @@
+/* The following CSS files should be imported for each page */
+@import "/static/css/variables.css";
+@import "/static/css/common.css";
+
+body {
+    background: var(--colorExample);;
+}

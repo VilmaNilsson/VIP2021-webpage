@@ -2,6 +2,7 @@
 const path = require('path');
 const express = require('express');
 const morgan = require('morgan');
+const minify = require('express-minify');
 
 // Makes us able to run with a custom port via the terminal, eg:
 //  $ PORT=8080 node app.js
@@ -19,6 +20,7 @@ app.set('view engine', 'pug');
 // MIDDLEWARE
 // ==========
 
+app.use(minify());
 // Serve static files from the folder `public`, but by the URI "/static"
 app.use('/static', express.static(path.join(__dirname, 'public')));
 // HTTP logging

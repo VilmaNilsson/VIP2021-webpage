@@ -1,0 +1,6 @@
+@import "/static/css/variables.css";
+@import "/static/css/common.css";
+
+p {
+    color: green;
+}

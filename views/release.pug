@@ -6,8 +6,25 @@ html
     meta(name='viewport' content='width=device-width,initial-scale=1')
     //- All of the basic CSS variables
     link(rel='stylesheet' href='/static/css/root.css')
+    link(rel='stylesheet' href='/static/css/releaseDay.css')
   body
-    h1 Release day
+    main(id="release-main")
+      h3(id="release-cdTitle") countdown clock
+      div(id="release-outerCountdown")
+        div(id="release-innerCountdown") 
+          div(id="release-countDown")
+            div(id="release-days")
+              p(class="release-cdTitle") DAYS
+              div(class="release-cdTimer" id="release-timerDays") XX
+            div(id="release-hours")
+              p(class="release-cdTitle") HOURS
+              div(class="release-cdTimer" id="release-timerHours") XX
+            div(id="release-minutes")
+              p(class="release-cdTitle") MINUTES
+              div(class="release-cdTimer" id="release-timerMinutes") XX
+            div(id="release-seconds")
+              p(class="release-cdTitle") SECONDS
+              div(class="release-cdTimer"  id="release-timerSeconds") XX
 
     //- Common footer
     include includes/footer.pug

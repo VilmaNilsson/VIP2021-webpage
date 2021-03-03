@@ -42,11 +42,11 @@ app.get('/release', (req, res) => {
 });
 
 app.get('/release/getTime', (req, res) => {
-  //Temporary date - we'll change it whenever we know that actual date and send it to the client
-  const eventDayTime = new Date("Jun 2, 2021 15:00:00").getTime();
-  //Send the date to the client
+  // Temporary date - we'll change it whenever we know that actual date and send it to the client
+  const eventDayTime = new Date('Jun 2, 2021 15:00:00').getTime();
+  // Send the date to the client
   res.send(JSON.stringify(eventDayTime));
-})
+});
 
 app.get('/scoreboard', (req, res) => {
   res.render('scoreboard');

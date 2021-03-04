@@ -46,19 +46,20 @@ sendButton.addEventListener('click', (event) => {
   const serverInfo = JSON.stringify(info);
 
   console.log(serverInfo);
-  // POST
-  // JSON => send to server
 
   const req = new Request('http://localhost:3000/contact', {
     method: 'POST',
     headers: {
-      'content-type': 'application/json;charset=utf-8'
+      'Content-Type': 'application/json;charset=utf-8'
     },
     body: serverInfo
   });
 
-  // fetch(req);
-
+  fetch(req)
+    .then(resp => resp.json)
+    .then(rsrc => {
+      // console.log(rsrc);
+    });
 
 
 });

@@ -4,11 +4,35 @@ html
     title Scratch, the best game ever!
     meta(charset='utf-8')
     meta(name='viewport' content='width=device-width,initial-scale=1')
-    //- All of the basic CSS variables
-    link(rel='stylesheet' href='/static/css/root.css')
+    link(rel='stylesheet' href='/static/css/game.css')
   body
-    h1 The game
+    main.flex
+      section#slideshow.flex
+        #slideshowContainer
+          .slideItem.left
+          .slideItem.right
+          .slideItem.flex.middle coming soon...
+        h4 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam aliquam, quisquam accusantium fugit at soluta sapiente hic laudantium tenetur, aspernatur reprehenderit?
+
+      section#gameGrid
+        #rules.gridItem.flex
+          h2 Rules 
+          .gridImage
+          p Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi perspiciatis aspernatur quidem nihil culpa architecto vel quam facere praesentium maiores.
+        #actions.gridItem.flex
+          h2 Actions 
+          .gridImage
+          p Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi perspiciatis aspernatur quidem nihil culpa architecto vel quam facere praesentium maiores.
+        #crews.gridItem.flex
+          h2 Crews 
+          .gridImage
+          p Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi perspiciatis aspernatur quidem nihil culpa architecto vel quam facere praesentium maiores.
+        #stations.gridItem.flex
+          h2 Stations 
+          .gridImage
+          p Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi perspiciatis aspernatur quidem nihil culpa architecto vel quam facere praesentium maiores.
 
     //- Common footer
     include includes/footer.pug
+    script(src='/static/js/game.js')
 

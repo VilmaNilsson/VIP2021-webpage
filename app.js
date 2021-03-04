@@ -26,6 +26,8 @@ app.use(minify());
 app.use('/static', express.static(path.join(__dirname, 'public')));
 // HTTP logging
 app.use(morgan('combined'));
+// Parse JSON bodies (as sent by API clients)
+app.use(express.json());
 
 // ROUTES
 // ======
@@ -50,8 +52,30 @@ app.get('/game', (req, res) => {
   res.render('game');
 });
 
+// Returns true when body contains the default keys
+function validateBodyKeys(body) {
+  const defaultKeys = ['name', 'from', 'subject', 'message'];
+
+  return JSON.stringify(defaultKeys) === JSON.stringify(Object.keys(body));
+}
+
 app.post('/contact', (req, res) => {
-  console.log(req);
+  // access header parameter and get the content type to check for json
+  const contentType = req.headers['content-type'];
+
+  if (contentType !== 'application/json') {
+    // Content error
+    console.log('415: Unsupported media type');
+  }
+
+  // get the body
+  console.log(req.body);
+
+  if (!validateBodyKeys(req.body)) {
+    // Keys error
+    console.log('406: Not acceptable');
+  }
+  // TO-DO: email SMTP
 });
 
 // ERROR HANDLERS

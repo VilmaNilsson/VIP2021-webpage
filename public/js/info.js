@@ -36,7 +36,7 @@ sendButton.addEventListener('click', (event) => {
 
   const info = {
     name,
-    email,
+    from: email,
     subject,
     message,
   };
@@ -50,16 +50,14 @@ sendButton.addEventListener('click', (event) => {
   const req = new Request('http://localhost:3000/contact', {
     method: 'POST',
     headers: {
-      'Content-Type': 'application/json;charset=utf-8'
+      'Content-Type': 'application/json',
     },
-    body: serverInfo
+    body: serverInfo,
   });
 
   fetch(req)
-    .then(resp => resp.json)
-    .then(rsrc => {
+    .then((resp) => resp.json)
+    .then((rsrc) => {
       // console.log(rsrc);
     });
-
-
 });

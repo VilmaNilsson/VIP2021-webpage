@@ -1,12 +1,9 @@
-"use strict"
-//will we be using strict?
-
 const qa = document.querySelectorAll('.QA');
-qa.forEach(element => {
+qa.forEach((element) => {
   element.addEventListener('click', () => {
     const answer = element.childNodes[1];
 
-    if(answer.classList.contains('answerClose')){
+    if (answer.classList.contains('answerClose')) {
       answer.classList.add('answerOpen');
       answer.classList.remove('answerClose');
     } else {
@@ -19,8 +16,8 @@ qa.forEach(element => {
 const sendButton = document.querySelector('#sendButt');
 
 sendButton.addEventListener('click', () => {
-  let errorMessage = document.querySelector('.hiddenMessage');
-  if(errorMessage){
+  const errorMessage = document.querySelector('.hiddenMessage');
+  if (errorMessage) {
     errorMessage.classList.remove('errorMessage');
     errorMessage.classList.add('hiddenMessage');
   }
@@ -28,18 +25,16 @@ sendButton.addEventListener('click', () => {
   const email = document.querySelector('#email').value;
   const message = document.querySelector('#message').value;
 
-  if(name === '' || email === '' || message == ''){
+  if (name === '' || email === '' || message === '') {
     errorMessage.classList.add('errorMessage');
     errorMessage.classList.remove('hiddenMessage');
     return;
   }
 
-
-  
   const info = {
     name,
     email,
-    message
+    message,
   };
 
   console.log(info);
@@ -48,5 +43,5 @@ sendButton.addEventListener('click', () => {
 
   console.log(serverInfo);
   // POST
-  // JSON => send to server 
+  // JSON => send to server
 });

@@ -5,10 +5,44 @@ html
     meta(charset='utf-8')
     meta(name='viewport' content='width=device-width,initial-scale=1')
     //- All of the basic CSS variables
+    link(rel='stylesheet' href='/static/css/variables.css')
     link(rel='stylesheet' href='/static/css/info.css')
   body
-    h1 Info
-    p Just added this
+    //- In comment as file does not yet exist and to prevent error
+    //- include includes/navigation.pug
+    main#infoMain
+      section#infoGrid
+        #aboutUsCon
+          h2 About Us
+          p Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt omnis, illo harum architecto ad minima facilis odio quam animi unde! Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi illo molestiae minima deserunt dolorum a ducimus aspernatur commodi alias facilis deleniti et hic, enim ratione. Non rem harum vero sit!
+        #faqCon
+          h2 FAQ 
+          //- PLACEHOLDERS FOR DESIGN PURPOSES
+          .QA
+            p.question Oh nana, what's my name?
+            p.answerClose I don't know how many times I gotta tell ya Steve, YOUR NAME IS STEVE. We literally have this discussion every thursday, and frankly I'm getting sick of it. What happens when you're at the DMV or the frickin' hair salon? You won't make it a day out there, Steve. Not a single day.
+          .QA
+            p.question So how's the weather down there?
+            p.answerClose Wow. Never heard that one before. Great, kudos. Funny.
+          .QA
+            p.question What would your name be if you were born as a boy?
+            p.answerClose Funny you should ask. It would have been Simon.
+          .QA
+            p.question Favorite chocolate?
+            p.answerClose You know, the cacao industry is filthy. It's filled with workers who are maltreated, child labor, poor living conditions, poverty.. All for our enjoyment. I'm currently trying to get into the cacao industry to see if there truly is a brand you can trust. Tony's Chocolonely opened up my eyes for the problem, and they seemingly do a great job of continually checking their production lines to prevent the usage of child labor and poor working conditions. Their chocolate is a bit more exepensive, but isn't it worth it? With that said, I am going to try and find how Cocoa Life is doing to see if Marabou is to be trusted. I will also try to look up their sourcing for palm oil. Oh, to answer the question: frukt och mandel.
+          .QA
+            p.question Why do you always look so tired?
+            p.answerClose A combination of bad genetics and a tendency to wake up too early. NEXT.
+        #contactCon
+          h2 Contact Us
+          form
+            span.hiddenMessage Please enter all fields.
+            input#name(type="text" placeholder="Name")
+            input#email(type="email" placeholder="Email")
+            textarea#message( cols="20", rows="10" placeholder="Message")
+          #buttonNeighborFlexSolver
+          button#sendButt Send
+
 
     //- Common footer
     include includes/footer.pug

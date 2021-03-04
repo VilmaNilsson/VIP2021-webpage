@@ -1,6 +1,143 @@
 @import "/static/css/variables.css";
 @import "/static/css/common.css";
+:root {
+    --grayylmao: rgb(235, 235, 235)
+  }
 
-p {
-    color: green;
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+#infoMain {
+    margin: 0 10vw;  
+}
+#infoGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    height: 100%;
+    gap: 2.5vh;
+    margin-bottom: 5vh;
+}
+
+#aboutUsCon {
+    grid-area: 1/1/2/3;
+    /* unsure if want text align */
+    text-align: center;
+}
+
+#aboutUsCon, #faqCon, #contactCon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 5vw;
+    box-sizing: border-box;
+    background-color: var(--grayylmao);
+    border-radius: 15px;
+    height: 45vh;
+}
+
+#aboutUsCon, #contactCon {
+    justify-content: center;
+}
+
+#aboutUsCon {
+    padding: 0 10vw;
+}
+
+#faqCon {
+    overflow-y: scroll;
+    padding-top: 2.5vh;
+}
+
+.question {
+    font-weight: bold;
+    text-align: center;
+}
+
+.question:hover {
+    text-decoration: underline;
+}
+
+.QA {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.QA:hover {
+    cursor: pointer;
+}
+
+.answerClose {
+    display: none;
+}
+
+.answerOpen {
+    text-align: center;
+    margin: .5vh 0;
+}
+
+.answerOpen:last-child{
+    padding-bottom: 5vh;
+}
+
+#infoGrid h2 {
+    margin: .5vh;
+}
+
+#contactCon > form {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+
+#name, #email {
+    height: 4vh;
+}
+
+#message {
+    padding-top: 1vh;
+    box-sizing: border-box;
+    height: 15vh;
+    resize: none;
+    font-size: 12px;
+}
+
+#name, #email, #message {
+    border: none;
+    margin: 1%;
+    border-radius: 5px;
+    text-indent: .5vw;
+}
+
+#sendButt {
+    position: relative;
+    left: 29%;
+    width: 20%;
+    height: 5vh;
+    border: none;
+    box-shadow: none;
+    background-color: lightgray;
+    border-radius: 5px;
+}
+
+#sendButt:active {
+    background-color: gray;
+}
+
+.hiddenMessage{
+    display: none;
+}
+
+.errorMessage {
+    font-size: 15px;
+    color: rgb(170, 21, 21);
+    text-shadow: 0 0 1.5px rgb(255, 71, 71);
+    text-align: center;
 }

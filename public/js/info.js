@@ -15,7 +15,9 @@ qa.forEach((element) => {
 
 const sendButton = document.querySelector('#sendButt');
 
-sendButton.addEventListener('click', () => {
+sendButton.addEventListener('click', (event) => {
+  event.preventDefault();
+
   const errorMessage = document.querySelector('.hiddenMessage');
   if (errorMessage) {
     errorMessage.classList.remove('errorMessage');
@@ -23,9 +25,10 @@ sendButton.addEventListener('click', () => {
   }
   const name = document.querySelector('#name').value;
   const email = document.querySelector('#email').value;
+  const subject = document.querySelector('#subject').value;
   const message = document.querySelector('#message').value;
 
-  if (name === '' || email === '' || message === '') {
+  if (name === '' || email === '' || subject === '' || message === '') {
     errorMessage.classList.add('errorMessage');
     errorMessage.classList.remove('hiddenMessage');
     return;
@@ -34,6 +37,7 @@ sendButton.addEventListener('click', () => {
   const info = {
     name,
     email,
+    subject,
     message,
   };
 
@@ -44,4 +48,17 @@ sendButton.addEventListener('click', () => {
   console.log(serverInfo);
   // POST
   // JSON => send to server
+
+  const req = new Request('http://localhost:3000/contact', {
+    method: 'POST',
+    headers: {
+      'content-type': 'application/json;charset=utf-8'
+    },
+    body: serverInfo
+  });
+
+  // fetch(req);
+
+
+
 });

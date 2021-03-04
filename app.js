@@ -49,6 +49,10 @@ app.get('/game', (req, res) => {
   res.render('game');
 });
 
+app.get('/contact', (req, res) => {
+  console.log(res)
+});
+
 // ERROR HANDLERS
 // ==============
 

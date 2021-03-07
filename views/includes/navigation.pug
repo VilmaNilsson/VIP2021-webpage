@@ -1,9 +1,7 @@
-//- -var path = window.location.pathname
-
 header
-  #gridContainer
-    a#logo(href="/") SNATCH
+  #navGrid
+    a#navLogo.navLink(href="/") SNATCH
     div
-    a#game(href="#") Game
-    a#release(href="#") Release Day
-    a#scoreboard(href="#") Score
+    a.navLink.nonLogo(href="/game") The Game
+    a.navLink.nonLogo(href="/release") Release Day
+    a.navLink.nonLogo(href="/scoreboard") Scoreboard

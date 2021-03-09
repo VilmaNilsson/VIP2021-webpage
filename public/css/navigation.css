@@ -1,0 +1,48 @@
+@import "/public/css/variables.css";
+
+header {
+  margin: 0 5vw;
+}
+
+#navGrid {
+  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  height: 20vh;
+}
+
+.navLink {  
+  align-items: center;
+  display: flex;
+  font-size: larger;
+  height: 20%;
+  justify-content: center;
+  text-decoration: none;
+  width: 70%;
+}
+
+#navLogo {
+  background-color: black;
+  border-radius: 50px;
+  color: white;
+  height: 40%;
+  margin: 2vh;
+}
+
+#navLogo:hover {
+  background-color: palevioletred;
+}
+
+.nonLogo {
+  background-color: transparent;
+  color: black;
+}
+
+.navLink:hover {
+  /* background-color: black; */
+  color: palevioletred;
+}
+
+.currentPage {
+  border-bottom: 2px solid palevioletred;
+}

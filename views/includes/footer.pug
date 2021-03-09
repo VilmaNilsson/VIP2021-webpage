@@ -1,2 +1,9 @@
+-var date = new Date()
+-var currentYear = date.getFullYear()
+
 footer
-  p &copy; Copyright Scratch
+  #footerGrid 
+    a.footerLink(href="/info") About
+    a.footerLink(href="/info") FAQ
+    a.footerLink(href="/info") Contact
+  p.footerP &copy; Copyright Scratch #{currentYear}

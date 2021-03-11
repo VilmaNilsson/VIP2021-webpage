@@ -7,8 +7,25 @@ html
     //- All of the basic CSS variables
     link(rel='stylesheet' href='/static/css/index.css')
   body
-    h1 First pug template
-
+    nav Here goes the nav
+    main#homepageMain
+      #appImg
+        img(src='/static/assets/images/app.jpg' alt='Picture of app')
+      #introGame
+        h1 Intro to the game
+        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et lectus pellentesque massa bibendum nunc, adipiscing quis in sed. Ac interdum mattis quam pellentesque eu vel. Tristique habitant porttitor lorem. Et lectus pellentesque massa bibendum nunc, adipiscing quis in sed. Ac interdum mattis quam pellentesque eu vel.
+        p xxx - from us all
+      #infoGrid
+        #gridContainer 
+          .video Video 
+          .gridImg
+          .gridText
+            h1 Quiz 
+            p Which crew do you belong in? Take our quiz! ipsum dolor sit amet, consectetur  adipiscing elit. Et lectus pellentesque massa bibendum nunc, adipiscing
+          .gridImg 
+          .gridText 
+            h1 News 
+            p Read more about development, release date, events orem ipsum dolor sit amet, consectetur adipiscing elit. Et lectus pellentesque massa bibendum nunc, adipiscing
     //- Common footer
     include includes/footer.pug
     //- Common utility functions

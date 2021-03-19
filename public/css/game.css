@@ -22,9 +22,9 @@
 }
 
 #gamePage-heading, .gamePage-griditem, .gamePage-griditem-large {
-  background-color: rgb(75, 65, 85);
+  background-color: var(--gamePageDivBg);
   border-radius: 15px;
-  box-shadow: 0 0 15px 2px #ff95ed;
+  box-shadow: var(--glowingBoxShadow) var(--glowingPinkC);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -33,7 +33,7 @@
 
 .gamePage-p, .gamePage-p-large, .gamePage-h2, .gamePage-h2-large, .glowHeading {
   color: white;
-  text-shadow: 0 0 10px #ff95ed;
+  text-shadow: var(--glowingTextShadow) var(--glowingPinkC);
 }
 
 .glowHeading, .gamePage-h2-large, .gamePage-h2 {
@@ -49,7 +49,7 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: auto;
-  
+
 }
 
 .gamePage-griditem {

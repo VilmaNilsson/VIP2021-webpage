@@ -6,8 +6,26 @@ html
     meta(name='viewport' content='width=device-width,initial-scale=1')
     //- All of the basic CSS variables
     link(rel='stylesheet' href='/static/css/index.css')
-  body
-    h1 First pug template
+  body.indexBody
+    //- CANT INCLUDE NAVIGATION = ERROR IS 500
+    include includes/navigation.pug
+    #indexTopDiv.indexDevidingDiv
+      div
+      div
+         div
+            p Welcome to the snatch universe!
+         div
+            p Gather your friends for a round of planning, screaming, running and a lot of fun
+    #indexMidDiv.indexDevidingDiv
+      p Some shit has gone down in the Spiral Star Galaxy (And you have to solve it)
+      p The planets’ treasures has spread across the galaxy and they need to be returned to their rightful place before chaos ensues. Your crew is one of many who has been tasked with this mission and for every treasure your crew collects and returns you will be rewarded. But watch out for the other crews! They might want all of the rewards for themselves...
+    .indexDevidingDiv
+      a(href="/register")
+         button.indexButtonLink
+             p Register
+      a(href="/rulebook")
+         button.indexButtonLink
+            p Rulebook
 
     //- Common footer
     include includes/footer.pug

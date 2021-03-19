@@ -2,6 +2,88 @@
 @import "/static/css/variables.css";
 @import "/static/css/common.css";
 
-body {
-    background: var(--colorExample);;
+/* Body {
+    margin: 0px;
+} */
+
+.indexBody {
+   background-image: var(--mainBackgroundImage);
+   width: 100vw;
+   height: 100vh;
+   background-color: darkblue;
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-attachment: fixed;
+   margin: 0px;
+}
+
+.indexDevidingDiv {
+   width: 100vw;
+   height: 60vh;
+
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   color: white;
+   text-shadow: var(--glowingTextShadow) var(--glowingPinkC);
+}
+
+#indexTopDiv {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.indexDevidingDiv:first-child > div {
+   width: 50vw;
+   height: 90%;
+}
+
+.indexDevidingDiv > div:first-child {
+   background-image: url("/static/images/phone-img.png");
+   height: inherit;
+   width: 50vw;
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: contain;
+}
+
+.indexDevidingDiv > div:last-child {
+   width: 50vw;
+}
+
+.indexDevidingDiv > div:last-child > div{
+   width: 70%;
+   font-size: 1.6vw;
+   text-align: center;
+}
+
+.indexDevidingDiv > div:last-child {
+   font-family: var(--mainSlimFont);
+}
+
+#indexMidDiv {
+   background-color: var(--middleDivBg);
+   font-family: var(--mainThickFont);
+   font-size: 2.3vw;
+   flex-direction: column;
+   text-align: center;
+}
+
+.indexButtonLink {
+   width: 250px;
+   height: 90px;
+   background-color: var(--navActiveBg);
+   border: none;
+   border-radius: 30px;
+   font-family: var(--mainThickFont);
+   color: white;
+   text-shadow: var(--glowingTextShadow) var(--glowingPinkC);
+   cursor: pointer;
+}
+
+.indexButtonLink {
+   margin: 90px;
+   font-size: 20px;
 }

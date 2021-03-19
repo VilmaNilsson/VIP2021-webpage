@@ -1,0 +1,92 @@
+@import "/static/css/variables.css";
+
+#gamePage-body {
+  background-attachment: fixed;
+  background-image: var(--mainBackgroundImage);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#gamePage-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 5%;
+}
+
+#gamePage-heading {
+  align-items: center;
+  height: 60%;
+  margin: 5% 0;
+}
+
+#gamePage-heading, .gamePage-griditem, .gamePage-griditem-large {
+  background-color: rgb(75, 65, 85);
+  border-radius: 15px;
+  box-shadow: 0 0 15px 2px #ff95ed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2% 5%;
+}
+
+.gamePage-p, .gamePage-p-large, .gamePage-h2, .gamePage-h2-large, .glowHeading {
+  color: white;
+  text-shadow: 0 0 10px #ff95ed;
+}
+
+.glowHeading, .gamePage-h2-large, .gamePage-h2 {
+  font-family: var(--mainThickFont);
+}
+
+.glowHeading{
+  margin: 1% 0;
+  text-align: center;
+}
+
+#gamePage-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  
+}
+
+.gamePage-griditem {
+  box-sizing: border-box;
+  flex-basis: 0;
+  font-family: var(--mainSlimFont);
+  margin: 2%;
+}
+
+.gamePage-h2 {
+  flex-grow: 2;
+  font-size: 20px;
+  text-align: center;
+}
+
+.gamePage-p {
+  box-sizing: border-box;
+  flex-grow: 8;
+  padding: 0 7%;
+}
+
+.gamePage-griditem-large {
+  margin-top: 2.5%;
+  width: 50%;
+}
+
+.gamePage-griditem-large, #gamePage-main {
+  align-items: center;
+}
+
+.gamePage-h2-large {
+  font-size: 30px;
+}
+.gamePage-p-large {
+  box-sizing: border-box;
+  font-family: var(--mainSlimFont);
+  font-size: 25px;
+  padding: 0 10%;
+  text-align: center;
+}

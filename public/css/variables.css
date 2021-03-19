@@ -4,7 +4,7 @@
 :root {
     --colorExample: #0088cc;
 
-   /* From the design we got 17 march */
+   /* Common variables */
    --mainBackgroundImage: url("/static/images/space-background.jpg");
    --logoImage: url("/static/images/logo.png");
    --logoImage: url("/static/images/phone-img.png");
@@ -12,8 +12,13 @@
    --mainSlimFont: 'Montserrat', sans-serif;
    --navActiveBg: rgba(145, 145, 145, 0.8);
 
-   /* From the design we got 17 march - INDEX*/
-   --middleDivBg: rgba(255,255,255, 0.8);
-   --glowingTextShadow: 0 0 5px;
-   --glowingPinkC: pink;
+   --glowingTextShadow: 0 0 10px;
+   --glowingBoxShadow: 0 0 15px 2px;
+   --glowingPinkC: #ff95ed;
+
+   /* Index page */
+   --indexPagemiddleDivBg: rgba(255,255,255, 0.8);
+
+   /* Game page */
+   --gamePageDivBg: rgb(75, 65, 85);
 }

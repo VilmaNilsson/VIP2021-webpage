@@ -64,7 +64,7 @@
 }
 
 #indexMidDiv {
-   background-color: var(--middleDivBg);
+   background-color: var(--indexPagemiddleDivBg);
    font-family: var(--mainThickFont);
    font-size: 2.3vw;
    flex-direction: column;

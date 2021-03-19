@@ -60,27 +60,27 @@ app.get('/game', (req, res) => {
 // ==============
 
 // Pages not found will be routed into this function
-app.use(function(req, res, next){
+app.use((req, res) => {
   res.status(404);
 
   // Based on the requested format we can serve the user different types of
   // representations
   res.format({
-    html: function () {
+    html: () => {
       res.render('404', { url: req.url });
     },
-    json: function () {
+    json: () => {
       res.json({ error: 'Not found' });
     },
-    default: function () {
+    default: () => {
       res.type('txt').send('Not found');
-    }
+    },
   });
 });
 
 // If an error occurs in one of our routing functions we'll be routed here
 // instead, so the user doesn't get more information about what went wrong
-app.use(function(err, req, res, next){
+app.use((err, req, res) => {
   res.status(err.status || 500);
   res.render('500', { error: err });
 });

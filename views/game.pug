@@ -1,73 +1,24 @@
 doctype html
 html
   head
-    title Scratch, the best game ever!
+    title Snatch Time
     meta(charset='utf-8')
     meta(name='viewport' content='width=device-width,initial-scale=1')
     //- All of the basic CSS variables
     link(rel='stylesheet' href='/static/css/variables.css')
     link(rel='stylesheet' href='/static/css/game.css')
-  body#gamePage-body
+    link(rel='stylesheet' href='/static/css/navigation.css')
+  body#gameBody
     include includes/navigation.pug
+    .logoDiv
+    .deletedDiv
+      p More videos
+      .test
+         iframe(width="560" height="315" src="https://www.youtube.com/embed/Uj17R80s67c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+      .test
+         iframe(width="560" height="315" src="https://www.youtube.com/embed/hsJcLMWh6qc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+      .test
+         iframe(width="560" height="315" src="https://www.youtube.com/embed/WpQ0yXYDK8A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
 
-    main#gamePage-main
-      #gamePage-heading
-        h2.glowHeading Here are all the rules you need to get started with playing Snatch Time. 
-        h2.glowHeading The game is played in two phases; The Plan phase and the Play phase.
-
-      #gamePage-grid
-        div.gamePage-griditem 
-          h2.gamePage-h2 Plan Phase
-          p.gamePage-p During this phase you choose the spells you want to have available during the game. Each spell “costs” a certain space in your spell bag. You may fill your bag until it’s full but not more.  Choosing a spell is free and you may undo choices during the Plan Phase. See a list of spells below. Once the Plan phase is over the game moves on automatically and without delay to the Play Phase.
-
-        div.gamePage-griditem 
-          h2.gamePage-h2 Play Phase
-          p.gamePage-p This is the heart of the game. This is where you, in collaboration with your teammates (or on your own if you play solo) try to make more spondulix than your opponents. The shinplasters are made by ingeniously arranging Tokens in the Stations. You need to use your Pocket to do this.
-        
-        div.gamePage-griditem 
-          h2.gamePage-h2 Stations
-          p.gamePage-p There are five Stations in the game. Each team has their own Rack in each Station. A Rack has six Slots. A Slot may contain zero or one Token. Think of the Rack as a bookshelf with space for seven Tokens. Each space is a Slot. A Slot may be full or empty.
-        
-        div.gamePage-griditem 
-          h2.gamePage-h2 Tokens
-          p.gamePage-p Tokens are what you move around in this game. They do not do anything themselves.
-
-        div.gamePage-griditem 
-          h2.gamePage-h2 Pocket
-          p.gamePage-p Each player has two pockets: a Permanent one and a Temporary one. You may pick a Token from a Station and place it in one of your Pockets. Then you can move it to another Station. The Temporary Pocket only works if you activate it with a spell. For certain characters, however, the Temporary Pocket is always active, without the need of spells.
-
-        div.gamePage-griditem 
-          h2.gamePage-h2 Beginning of the Play Phase
-          p.gamePage-p At the beginning of the Play Phase, all teams have exactly the same Tokens in each Station. To clarify: Team A will have the same Tokens as Team B in Station 1. Team A will have another set of Tokens in Station 2, and Team B will have the same set of Tokens in Station 2 as Team A. And so on.
-        
-        div.gamePage-griditem 
-          h2.gamePage-h2 Watching a Station
-          p.gamePage-p You can see all the Tokens in a Station by clicking on its name. This allows you to see your opponents' tokens and makesmart decisions about your arrangements. You cannot pick any Token from a Station unless you have logged in to it.
-
-        div.gamePage-griditem 
-          h2.gamePage-h2 Logging in to a Station
-          p.gamePage-p The moment you start watching a Station, the Login process starts. It takes some seconds to login to a station. Note that you can only have one Login process going on at the same time. Once you have logged in to a station you can transfer Tokens from your Rack (Slot) to your Pocket and vice versa.
-
-        div.gamePage-griditem 
-          h2.gamePage-h2 Transferring tokens between pocket and slot
-          p.gamePage-p First you need to login to the Station, see above. Then drag and drop the Token from your Slot to your Token or vice versa. If both the Slot and the Pocket have a token then what happens is a Swap: The Token that was in your Pocket ends up in the Slot and vice versa. And that’s the third time we managed to get vice versa in just a few lines. We’re so proud! The good thing is that the Tokens in your Pockets move with you wherever you go, so you can now bring them with you to another Station and start making those smart arrangements that will result in you having more of the stuff than your opponents..
-        
-        div.gamePage-griditem 
-          h2.gamePage-h2 Making a living
-          p.gamePage-p So, how do you get those spondulix you need to win the game? Well, the team that has the most of any Token in a Station gets one greenback. But you need to be the only one that has the most.
-        
-        div.gamePage-griditem 
-          h2.gamePage-h2 Salaries
-          p.gamePage-p The spondulix is given 10 times during each game. The game will calculate what is owed to each team and hand it out automatically.
-
-        div.gamePage-griditem 
-          h2.gamePage-h2 Casting Spells
-          p.gamePage-p To make things more interesting there are a number of different spells that you can cast during the game. You choose your spells during the Plan phase and then cast them basically whenever you want during the Play phase. It doesn’t cost anything to cast a spell but you only have so many, so make them count. You cast a spell by clicking on it and following the instructions.
-      
-      div.gamePage-griditem-large 
-        h2.gamePage-h2-large End of the game
-        p.gamePage-p-large The Game ends when the Play Phase is over. The team with the most spondulix wins. The game always ends with a salary.
-        
     //- Common footer
     include includes/footer.pug
-

@@ -1,5 +1,50 @@
 @import "/static/css/variables.css";
 
+#gameBody {
+   margin: 0px;
+   background-color: var(--greyBgC);
+   width: 100vw;
+   height: 100vh;
+}
+
+.deletedDiv {
+   width: 100vw;
+   height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+}
+
+.logoDiv {
+   background: var(--logoImg);
+   height: 30vh;
+   width: 30vw;
+   background-repeat: no-repeat;
+   background-position: center;
+   position: absolute;
+   align-items: center;
+}
+
+.deletedDiv > p {
+   font-family: var(--rajdhaniFont);
+   font-size: 30px;
+   font-weight: 400;
+   color: var(--whiteFontC);
+   position:relative;
+}
+
+.deletedDiv > iframe {
+   margin: 20px;
+}
+
+iframe {
+   /* margin-top: 100px; */
+
+}
+
+/* old, will delete soon /vilma */
+/*
 #gamePage-body {
   background-attachment: fixed;
   background-image: var(--mainBackgroundImage);
@@ -89,4 +134,4 @@
   font-size: 25px;
   padding: 0 10%;
   text-align: center;
-}
+} */

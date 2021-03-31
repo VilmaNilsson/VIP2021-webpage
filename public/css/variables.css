@@ -1,24 +1,28 @@
 /* Todo: update with more stuff */
-@import url('https://fonts.googleapis.com/css2?family=Bungee+Inline&family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
+
 
 :root {
-    --colorExample: #0088cc;
-
    /* Common variables */
-   --mainBackgroundImage: url("/static/images/space-background.jpg");
-   --logoImage: url("/static/images/logo.png");
-   --logoImage: url("/static/images/phone-img.png");
-   --mainThickFont: 'Bungee Inline', cursive;
-   --mainSlimFont: 'Montserrat', sans-serif;
-   --navActiveBg: rgba(145, 145, 145, 0.8);
+   --rajdhaniFont: 'Rajdhani', sans-serif;
+   --latoFont: 'Lato', sans-serif;
+   --logoImg: url("/static/images/logo.svg");
 
-   --glowingTextShadow: 0 0 10px;
-   --glowingBoxShadow: 0 0 15px 2px;
-   --glowingPinkC: #ff95ed;
+   --greyBgC: #242328;
+   --whiteFontC: #F4F4F4;
+   --logoC: #FF00CC;
+
+   --teamPinkC: #FF3399;
+   --teamMagentaC: #CC00FF;
+   --teamBlueC: #0066FF;
+   --teamCyanC: #33FFFF;
 
    /* Index page */
-   --indexPagemiddleDivBg: rgba(255,255,255, 0.8);
+   --starryBackgroundImage: url("/static/images/Starry background.jpg");
 
-   /* Game page */
-   --gamePageDivBg: rgb(75, 65, 85);
+   /* not using, thought it probably was to complicated */
+   /* --fwFirstUpper: 700;
+   --fwSecondUpper: 500;
+   --fwLastUpper: 300; */
 }

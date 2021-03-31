@@ -2,91 +2,103 @@
 @import "/static/css/variables.css";
 @import "/static/css/common.css";
 
-/* Body {
-    margin: 0px;
-} */
-
 .indexBody {
-   background-image: var(--mainBackgroundImage);
-   width: 100vw;
+   margin: 0px;
+   background-color: var(--greyBgC);
+   color: var(--whiteFontC);
+   align-items: center;
+   text-align: center;
+}
+
+#indexStarryDiv {
+   position: sticky;
    height: 100vh;
-   background-color: darkblue;
-   background-position: center;
-   background-repeat: no-repeat;
+   width: 100vw;
+   background: var(--starryBackgroundImage);
    background-size: cover;
-   background-attachment: fixed;
+    /* -moz-box-shadow: inset 0px 850px 500px -500px #fff;
+    -webkit-box-shadow: inset 0px 850px 500px -500px #fff;
+    -o-box-shadow: inset 0px 850px 500px -500px #fff; */
+    /* box-shadow: inset 0px 850px 500px -500px var(--greyBgC); */
+   box-shadow: inset 0px -850px 500px -500px var(--greyBgC);
+
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+}
+
+.logoDiv {
+   background: var(--logoImg);
+   height: 25vh;
+   width: 100vw;
+   background-repeat: no-repeat;
+   background-position: center;
+   position: absolute;
+   /* top: -60px; */
+   z-index: 98;
+   align-items: center;
+}
+
+#indexWelcomeText {
+   width: 70vw;
+   text-align: center;
+   padding: 0px;
+}
+
+#indexWelcomeTextUpper {
+   display: flex;
+   /* font-size: 58px;
+   line-height: 53px; */
+   font-size: 30px;
+   line-height: 28px;
+   text-align: center;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+#indexWelcomeTextUpper > p:first-child {
+   font-family: var(--rajdhaniFont);
+   font-weight: 700;
+   /* font-size: 58px; */
+   /* line-height: 53px; */
+   margin: 0px;
+   padding: 0px;
+}
+
+#indexWelcomeTextUpper > p:last-child {
+   font-family: var(--rajdhaniFont);
+   font-weight: 500;
+   margin: 0px;
+   padding: 0px;
+}
+
+#indexWelcomeText:last-child {
+   font-family: var(--latoFont);
+   font-weight: 300;
+   /* font-size: 41px;
+   line-height:  53px; */
+   font-size: 25px;
+   line-height: 28px;
    margin: 0px;
 }
 
-.indexDevidingDiv {
-   width: 100vw;
-   height: 60vh;
-
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   color: white;
-   text-shadow: var(--glowingTextShadow) var(--glowingPinkC);
-}
-
-#indexTopDiv {
-   display: flex;
-   justify-content: center;
-   align-items: center;
-}
-
-.indexDevidingDiv:first-child > div {
-   width: 50vw;
-   height: 90%;
-}
-
-.indexDevidingDiv > div:first-child {
-   background-image: url("/static/images/phone-img.png");
-   height: inherit;
-   width: 50vw;
-   background-position: center;
-   background-repeat: no-repeat;
-   background-size: contain;
-}
-
-.indexDevidingDiv > div:last-child {
-   width: 50vw;
-}
-
-.indexDevidingDiv > div:last-child > div{
-   width: 70%;
-   font-size: 1.6vw;
+#indexContentWrapper {
+   font-family: var(--rajdhaniFont);
+   font-weight: 400;
+   /* font-size: 66px; */
+   font-size: 40px;
    text-align: center;
 }
 
-.indexDevidingDiv > div:last-child {
-   font-family: var(--mainSlimFont);
+.indexWrapperDiv {
+   margin-top: 10vh;
+
+   /* delete later */
+   min-height: 100px;
 }
 
-#indexMidDiv {
-   background-color: var(--indexPagemiddleDivBg);
-   font-family: var(--mainThickFont);
-   font-size: 2.3vw;
-   flex-direction: column;
-   text-align: center;
-}
+#videoDiv {
 
-.indexButtonLink {
-   width: 250px;
-   height: 90px;
-   background-color: var(--navActiveBg);
-   border: none;
-   border-radius: 30px;
-   font-family: var(--mainThickFont);
-   color: white;
-   text-shadow: var(--glowingTextShadow) var(--glowingPinkC);
-   cursor: pointer;
 }
-
-.indexButtonLink {
-   margin: 90px;
-   font-size: 20px;
-}
-
-/* extra kommentar, test */
-/* extra kommentar, test 2 */

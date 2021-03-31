@@ -1,17 +1,20 @@
 @import "/public/css/variables.css";
 
 header {
-  margin: 0 5vw;
+  position: absolute;
+  z-index: 99;
+  width: 100vw;
+  font-family: var(--latoFont);
 }
 
 #navGrid {
   align-items: center;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  height: 20vh;
+  height: 8vh;
 }
 
-.navLink {  
+.navLink {
   align-items: center;
   display: flex;
   font-size: larger;
@@ -19,30 +22,31 @@ header {
   justify-content: center;
   text-decoration: none;
   width: 70%;
+  color: white;
 }
 
 #navLogo {
   background-color: black;
-  border-radius: 50px;
+  border-radius: 30px;
   color: white;
-  height: 40%;
+  height: 30%;
   margin: 2vh;
 }
 
 #navLogo:hover {
-  background-color: palevioletred;
+  background-color: var(--logoC);
 }
 
 .nonLogo {
   background-color: transparent;
-  color: black;
+  color: white;
 }
 
 .navLink:hover {
   /* background-color: black; */
-  color: palevioletred;
+  color: var(--logoC);
 }
 
 .currentPage {
-  border-bottom: 2px solid palevioletred;
+  border-bottom: 2px solid var(--logoC);
 }

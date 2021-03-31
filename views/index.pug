@@ -1,31 +1,29 @@
 doctype html
 html
   head
-    title Scratch, the best game ever!
+    title Snatch Time
     meta(charset='utf-8')
     meta(name='viewport' content='width=device-width,initial-scale=1')
     //- All of the basic CSS variables
     link(rel='stylesheet' href='/static/css/index.css')
+    link(rel='stylesheet' href='/static/css/navigation.css')
+  //- CANT INCLUDE NAVIGATION = ERROR IS 500
+  include includes/navigation.pug
   body.indexBody
-    //- CANT INCLUDE NAVIGATION = ERROR IS 500
-    include includes/navigation.pug
-    #indexTopDiv.indexDevidingDiv
-      div
-      div
-         div
-            p Welcome to the snatch universe!
-         div
-            p Gather your friends for a round of planning, screaming, running and a lot of fun
-    #indexMidDiv.indexDevidingDiv
-      p Some shit has gone down in the Spiral Star Galaxy (And you have to solve it)
-      p The planets’ treasures has spread across the galaxy and they need to be returned to their rightful place before chaos ensues. Your crew is one of many who has been tasked with this mission and for every treasure your crew collects and returns you will be rewarded. But watch out for the other crews! They might want all of the rewards for themselves...
-    .indexDevidingDiv
-      a(href="/register")
-         button.indexButtonLink
-             p Register
-      a(href="/game")
-         button.indexButtonLink
-            p Rulebook
+    .logoDiv
+    #indexStarryDiv
+      #indexWelcomeText
+         #indexWelcomeTextUpper
+            p Some shit has gone down in the Spiral Star Galaxy,
+            p and you have to solve it
+         p The designated dump planet Trashzonia has exploded and now trash is floating around everywhere in the galaxy. It is an ecological disaster on an astronomical scale. Since capitalism is king, the Galaxy Federation has hired private contractors, including you and your crew, to collect this garbage and dispose of it. You will be rewarded greatly for your work, but watch out for the other crews! They might want all of the rewards for themselves…
+    #indexContentWrapper
+      .indexWrapperDiv
+         p DISCOVER THE PLANETS
+      .indexWrapperDiv#videoDiv
+         iframe(width="560" height="315" src="https://www.youtube.com/embed/DZg2zUqIdCI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+      .indexWrapperDiv
+         p UPDATES FROM THE TEAM
 
     //- Common footer
     include includes/footer.pug

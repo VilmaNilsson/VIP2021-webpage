@@ -7,7 +7,7 @@
    /* Common variables */
    --rajdhaniFont: 'Rajdhani', sans-serif;
    --latoFont: 'Lato', sans-serif;
-   --logoImg: url("/static/images/logo.svg");
+   --logoImg: url("/static/images/Logo.svg");
 
    --greyBgC: #242328;
    --whiteFontC: #F4F4F4;
@@ -19,7 +19,7 @@
    --teamCyanC: #33FFFF;
 
    /* Index page */
-   --starryBackgroundImage: url("/static/images/Starry background.jpg");
+   --starryBackgroundImage: url("/static/images/Starry-Background.jpg");
 
    /* not using, thought it probably was to complicated */
    /* --fwFirstUpper: 700;

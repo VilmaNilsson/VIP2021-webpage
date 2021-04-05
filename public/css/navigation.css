@@ -1,4 +1,4 @@
-@import "/public/css/variables.css";
+/* @import "/public/css/variables.css";
 
 header {
   position: absolute;
@@ -43,10 +43,79 @@ header {
 }
 
 .navLink:hover {
-  /* background-color: black; */
+  /* background-color: black; HÄR ÄR DET AVKOMMENTERAT.
   color: var(--logoC);
 }
 
 .currentPage {
   border-bottom: 2px solid var(--logoC);
+} */
+
+#navGrid {
+   width: 350px;
+   height: 100vh;
+   z-index: 99;
+   position: absolute;
+   background-color: var(--greyBgC);
+}
+
+#currentPage {
+   font-weight: bold;
+}
+
+#navGrid > a {
+   text-decoration: none;
+   color: white;
+   cursor: pointer;
+   display: flex;
+   justify-content: left;
+   align-items: flex-start;
+   flex-direction: column;
+   padding-left: 10%;
+   width: 100%;
+}
+
+
+.navLinkBig {
+   font-family: var(--rajdhaniFont);
+   /* the px here are from me generating pt to px */
+   font-size: 20px;
+   line-height: 36px;
+   letter-spacing: 3px;
+   margin-top: 5%;
+}
+
+.navLinkSmall {
+   font-family: var(--latoFont);
+   font-weight: 100;
+   /* the px here are from me generating pt to px */
+   /* font-size: 33px;
+   line-height: 49px; */
+   font-size: 20px;
+   line-height: 25px;
+}
+
+#navHamContainer {
+   width: 35px;
+   cursor: pointer;
+}
+
+.navBar1, .navBar2, .navBar3 {
+   width: 100%;
+   height: 5px;
+   background-color: white;
+   margin: 6px 0;
+   transition: 0.4s;
+}
+
+.change .navBar1 {
+   transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .navBar2 {
+   opacity: 0;
+}
+
+.change .navBar3 {
+   transform: rotate(45deg) translate(-8px, -8px);
 }

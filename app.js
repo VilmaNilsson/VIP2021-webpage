@@ -68,6 +68,26 @@ app.get('/about-project', (req, res) => {
   res.render('about-project');
 });
 
+app.get('/actions', (req, res) => {
+  res.render('actions');
+});
+
+app.get('/crews', (req, res) => {
+  res.render('crews');
+});
+
+app.get('/planets', (req, res) => {
+  res.render('planets');
+});
+
+app.get('/register', (req, res) => {
+  res.render('register');
+});
+
+app.get('/rules', (req, res) => {
+  res.render('rules');
+});
+
 // ERROR HANDLERS
 // ==============
 

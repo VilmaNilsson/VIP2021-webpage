@@ -56,12 +56,16 @@ app.get('/game', (req, res) => {
   res.render('game');
 });
 
-app.get('/betatesting', (req, res) => {
-  res.render('betatesting');
+app.get('/beta-testing', (req, res) => {
+  res.render('beta-testing');
 });
 
 app.get('/about-team', (req, res) => {
   res.render('about-team');
+});
+
+app.get('/about-project', (req, res) => {
+  res.render('about-project');
 });
 
 // ERROR HANDLERS

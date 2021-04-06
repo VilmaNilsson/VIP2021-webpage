@@ -26,3 +26,7 @@
    --fwSecondUpper: 500;
    --fwLastUpper: 300; */
 }
+
+body {
+   width: 100vw;
+}

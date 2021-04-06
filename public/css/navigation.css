@@ -51,12 +51,24 @@ header {
   border-bottom: 2px solid var(--logoC);
 } */
 
+header {
+   position: fixed;
+   z-index: 99;
+}
+
 #navGrid {
+   /* width: 350px; */
    width: 350px;
    height: 100vh;
-   z-index: 99;
    position: absolute;
    background-color: var(--greyBgC);
+   transition: 0.4s;
+   left: -350px;
+   z-index: 97;
+}
+
+.navGridOpenClose#navGrid {
+   left: 0px;
 }
 
 #currentPage {
@@ -98,6 +110,7 @@ header {
 #navHamContainer {
    width: 35px;
    cursor: pointer;
+   z-index: 98;
 }
 
 .navBar1, .navBar2, .navBar3 {

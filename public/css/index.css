@@ -28,18 +28,6 @@
    flex-direction: column;
 }
 
-.logoDiv {
-   background: var(--logoImg);
-   height: 25vh;
-   width: 100vw;
-   background-repeat: no-repeat;
-   background-position: center;
-   position: absolute;
-   /* top: -60px; */
-   z-index: 98;
-   align-items: center;
-}
-
 #indexWelcomeText {
    width: 70vw;
    text-align: center;

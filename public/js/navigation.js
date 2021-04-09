@@ -1,4 +1,4 @@
-//works without, is this needed?
+// works without, is this needed?
 // const filepath = window.location.pathname;
 // const navLinks = document.querySelectorAll('.navLink');
 //
@@ -9,7 +9,7 @@
 //   }
 // });
 
-document.getElementById('navHamContainer').onclick = function(){
+document.getElementById('navHamContainer').onclick = function () {
   this.classList.toggle('change');
   document.getElementById('navGrid').classList.toggle('navGridOpenClose');
 };

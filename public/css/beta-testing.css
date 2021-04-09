@@ -1,0 +1,58 @@
+.beta-testingBody {
+  margin: 0px;
+
+  background-color: var(--greyBgC);
+  color: var(--whiteFontC);
+}
+
+#beta-testingVideo {
+  width: 100vw;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+}
+
+#beta-testingContentWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+}
+
+#beta-testingHeader > p {
+  font-family: var(--rajdhaniFont);
+}
+
+.beta-testingSectionContainer {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  flex-direction: column;
+  width: 50%;
+}
+
+.beta-testingHeaderContainer {
+  font-family: var(--rajdhaniFont);
+  font-size: 20px;
+}
+
+.beta-testingTextContainer {
+  font-family: var(--latoFont);
+  font-size: 15px;
+  font-weight: 300;
+}
+
+.beta-testingHeaderContainer > p {
+  margin: 5px;
+  margin-top: 30px;
+}
+
+.beta-testingTextContainer > p {
+  margin: 2px;
+}
+
+.beta-testingSectionContainer:last-child > div {
+  margin-top: 20px;
+}

@@ -3,8 +3,6 @@
 #gameBody {
    margin: 0px;
    background-color: var(--greyBgC);
-   width: 100vw;
-   height: 100vh;
 }
 
 .deletedDiv {

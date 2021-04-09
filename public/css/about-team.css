@@ -1,0 +1,89 @@
+.about-teamBody {
+   margin: 0px;
+
+   background-color: var(--greyBgC);
+   color: var(--whiteFontC);
+}
+
+.about-teamBody > p {
+  width: 100vw;
+}
+
+#about-teamText {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+  height: 40vh;
+}
+
+#about-teamUpperText {
+  font-family: var(--rajdhaniFont);
+  font-size: 25px;
+  font-weight: 500;
+  margin: 0;
+}
+
+#about-teamMiddleText {
+  font-family: var(--latoFont);
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 10px;
+  letter-spacing: 2px;
+}
+
+#about-teamTeamContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+}
+
+.aboutTeamDiv {
+  background-color: #3d3c44;
+  height: 100%;
+  width: 20vw;
+  margin-left: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  font-family: var(--rajdhaniFont);
+  font-size: 30px;
+  line-height: 25px;
+  letter-spacing: 5px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.aboutTeamDivImg {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 40%;
+  width: 80%;
+  margin-bottom: 60px;
+}
+
+.aboutTeamDiv:first-child > .aboutTeamDivImg{
+  background-image: url("/static/images/marketing-icon-17.svg");
+}
+
+.aboutTeamDiv:nth-child(2) > .aboutTeamDivImg {
+  background-image: url("/static/images/ux-icon-17.svg");
+}
+
+.aboutTeamDiv:last-child > .aboutTeamDivImg {
+  background-image: url("/static/images/dev-icon-17.svg");
+
+}
+
+.aboutTeamDivImg {
+
+}
+
+.aboutTeamDivText {
+
+}

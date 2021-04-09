@@ -1,52 +1,81 @@
-@import "/public/css/variables.css";
-
 header {
-  position: absolute;
-  z-index: 99;
-  width: 100vw;
-  font-family: var(--latoFont);
+   position: fixed;
+   z-index: 99;
 }
 
 #navGrid {
-  align-items: center;
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  height: 8vh;
+   /* width: 350px; */
+   width: 350px;
+   height: 100vh;
+   position: absolute;
+   background-color: var(--greyBgC);
+   transition: 0.4s;
+   left: -350px;
+   z-index: 97;
 }
 
-.navLink {
-  align-items: center;
-  display: flex;
-  font-size: larger;
-  height: 20%;
-  justify-content: center;
-  text-decoration: none;
-  width: 70%;
-  color: white;
+.navGridOpenClose#navGrid {
+   left: 0px;
 }
 
-#navLogo {
-  background-color: black;
-  border-radius: 30px;
-  color: white;
-  height: 30%;
-  margin: 2vh;
+#currentPage {
+   font-weight: bold;
 }
 
-#navLogo:hover {
-  background-color: var(--logoC);
+#navGrid > a {
+   text-decoration: none;
+   color: white;
+   cursor: pointer;
+   display: flex;
+   justify-content: left;
+   align-items: flex-start;
+   flex-direction: column;
+   padding-left: 10%;
+   width: 100%;
 }
 
-.nonLogo {
-  background-color: transparent;
-  color: white;
+
+.navLinkBig {
+   font-family: var(--rajdhaniFont);
+   /* the px here are from me generating pt to px */
+   font-size: 20px;
+   line-height: 36px;
+   letter-spacing: 3px;
+   margin-top: 5%;
 }
 
-.navLink:hover {
-  /* background-color: black; */
-  color: var(--logoC);
+.navLinkSmall {
+   font-family: var(--latoFont);
+   font-weight: 100;
+   /* the px here are from me generating pt to px */
+   /* font-size: 33px;
+   line-height: 49px; */
+   font-size: 20px;
+   line-height: 25px;
 }
 
-.currentPage {
-  border-bottom: 2px solid var(--logoC);
+#navHamContainer {
+   width: 35px;
+   cursor: pointer;
+   z-index: 98;
+}
+
+.navBar1, .navBar2, .navBar3 {
+   width: 100%;
+   height: 5px;
+   background-color: white;
+   margin: 6px 0;
+   transition: 0.4s;
+}
+
+.change .navBar1 {
+   transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .navBar2 {
+   opacity: 0;
+}
+
+.change .navBar3 {
+   transform: rotate(45deg) translate(-8px, -8px);
 }

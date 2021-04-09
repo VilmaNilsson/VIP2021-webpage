@@ -28,18 +28,6 @@
    flex-direction: column;
 }
 
-.logoDiv {
-   background: var(--logoImg);
-   height: 25vh;
-   width: 100vw;
-   background-repeat: no-repeat;
-   background-position: center;
-   position: absolute;
-   /* top: -60px; */
-   z-index: 98;
-   align-items: center;
-}
-
 #indexWelcomeText {
    width: 70vw;
    text-align: center;
@@ -93,12 +81,39 @@
 }
 
 .indexWrapperDiv {
-   margin-top: 10vh;
+   margin-top: 20vh;
 
    /* delete later */
    min-height: 100px;
 }
 
-#videoDiv {
+.indexWrapperDivPlanets {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.indexPlanetDiv {
+   width: 15vw;
+   height: 330px;
+   margin: 0 20px;
+   background-image: url("/static/images/Starry-Background.jpg");
+   background-position: right;
+   background-repeat: no-repeat;
+   background-size: cover;
+}
+
+.indexPlanetImg {
+   background-image: url("/static/images/Moo-15.svg");
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: contain;
+   width: 100%;
+   height: 45%;
+   margin-top: 20%;
+
+}
+
+.indexPlanetDiv > p {
 
 }

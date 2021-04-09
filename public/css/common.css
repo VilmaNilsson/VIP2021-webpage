@@ -1,4 +1,17 @@
 /* This will be filled with common styling later on */
-h1 {
-    color: maroon;
+body {
+   /* width: 100vw; */
+}
+
+.logoDiv {
+   background: var(--logoImg);
+   height: 25vh;
+   width: 100vw;
+   background-repeat: no-repeat;
+   background-position: center;
+   position: absolute;
+   /* top: -60px; */
+   z-index: 98;
+   align-items: center;
+   margin-bottom: 25vh;
 }

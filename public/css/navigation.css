@@ -79,3 +79,10 @@ header {
 .change .navBar3 {
    transform: rotate(45deg) translate(-8px, -8px);
 }
+
+.menuDropDownDiv {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   flex-direction: column;
+}

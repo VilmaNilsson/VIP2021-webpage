@@ -24,7 +24,7 @@ header {
 
 #navGrid > a {
    text-decoration: none;
-   color: white;
+   color: var(--whiteFontC);
    cursor: pointer;
    display: flex;
    justify-content: left;
@@ -81,8 +81,19 @@ header {
 }
 
 .menuDropDownDiv {
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
+   display: none;
    flex-direction: column;
+   text-align: left!important;
 }
+
+.menuDropDownDiv a {
+   text-decoration: none;
+   color: var(--whiteFontC);
+   width: 50%;
+   margin-left: 10%;
+}
+
+.menuDropDownDiv a:visited {
+   color: var(--whiteFontC);
+}
+

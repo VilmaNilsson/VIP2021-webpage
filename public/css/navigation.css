@@ -18,7 +18,7 @@ header {
    left: 0px;
 }
 
-#currentPage {
+.currentPage {
    font-weight: bold;
 }
 
@@ -30,15 +30,15 @@ header {
    justify-content: left;
    align-items: flex-start;
    flex-direction: column;
-   padding-left: 10%;
-   width: 100%;
+   padding-left: var(--navPaddingLeft);
+   width: var(--navLinkWidth);
 }
 
 
 .navLinkBig {
    font-family: var(--rajdhaniFont);
    /* the px here are from me generating pt to px */
-   font-size: 20px;
+   font-size: var(--navHeadLinksFontSize);
    line-height: 36px;
    letter-spacing: 3px;
    margin-top: 5%;
@@ -50,8 +50,11 @@ header {
    /* the px here are from me generating pt to px */
    /* font-size: 33px;
    line-height: 49px; */
-   font-size: 20px;
-   line-height: 25px;
+   font-size: var(--navDropDownLinksFontSize);
+   text-decoration: none;
+   line-height: var(--navDropDownLinksLineHeight);
+   display: flex;
+   width: 0;
 }
 
 #navHamContainer {
@@ -81,19 +84,58 @@ header {
 }
 
 .menuDropDownDiv {
-   display: none;
    flex-direction: column;
    text-align: left!important;
+   height: 0;
+   transition: all var(--navTransitionDurations) ease;
+   margin-left: -100%;
+   animation: dropDownSlideOut var(--navAnimationDurationIn) ease forwards;
 }
 
-.menuDropDownDiv a {
+.menuDropDownShowing {
+   display: flex;
+   height: 15%;
+   transition: all var(--navTransitionDurations) ease;
+   animation: dropDownSlideIn var(--navAnimationDurationOut) ease forwards;
+}
+
+.menuDropDownShowingTheGame {
+   display: flex;
+   height: 30%;
+   transition: all var(--navTransitionDurations) ease;
+   animation: dropDownSlideIn var(--navAnimationDurationOut) ease forwards;
+}
+
+.menuDropDownDiv.menuDropVisable a {
+   display: flex;
+   font-size: var(--navDropDownLinksFontSize);
    text-decoration: none;
+   line-height: var(--navDropDownLinksLineHeight);
+
    color: var(--whiteFontC);
-   width: 50%;
-   margin-left: 10%;
+   width: var(--navLinkWidth);
+   padding-left: var(--navPaddingLeft);
 }
 
 .menuDropDownDiv a:visited {
    color: var(--whiteFontC);
 }
 
+#navGrid a:hover {
+   opacity: var(--navLinkHoverOpacity);
+}
+
+@keyframes dropDownSlideIn {
+   to {
+      margin-left: 0;
+   }
+}
+
+@keyframes dropDownSlideOut {
+   from {
+      margin-left: 0;
+   }
+   to {
+      margin-left: -100%;
+   }
+}

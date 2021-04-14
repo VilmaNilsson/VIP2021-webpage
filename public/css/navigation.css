@@ -5,19 +5,19 @@ header {
 
 #navGrid {
    /* width: 350px; */
-   width: 350px;
+   width: 30vw;
    height: 100vh;
    position: absolute;
    background-color: var(--greyBgC);
    -webkit-transition: 0.4s;
    -o-transition: 0.4s;
    transition: 0.4s;
-   left: -350px;
+   left: -100vw;
    z-index: 97;
 }
 
 .navGridOpenClose#navGrid {
-   left: 0px;
+   left: 0vw;
 }
 
 .currentPage {
@@ -186,5 +186,17 @@ header {
    }
    to {
       margin-left: -100%;
+   }
+}
+
+@media (max-width: 900px) {
+   #navGrid {
+      width: 50vw;
+   }
+}
+
+@media (max-width: 600px) {
+   #navGrid {
+      width: 100vw;
    }
 }

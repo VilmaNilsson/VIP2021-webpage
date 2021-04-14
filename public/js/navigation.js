@@ -20,13 +20,13 @@ const navTheGame = document.querySelector('.navGame');
 const navRegister = document.querySelector('.navRegister');
 
 switch (navPageName) {
-  case 'navAbout-project':
+  case 'about-project':
     navAbout.classList.toggle('currentPage');
-    document.querySelector('.navnavAboutProject').classList.toggle('currentPage');
+    document.querySelector('.navAboutProject').classList.toggle('currentPage');
     break;
-  case 'navAbout-team':
+  case 'about-team':
     navAbout.classList.toggle('currentPage');
-    document.querySelector('.navnavAboutTeam').classList.toggle('currentPage');
+    document.querySelector('.navAboutTeam').classList.toggle('currentPage');
     break;
   case 'beta-testing':
     navEvent.classList.toggle('currentPage');
@@ -60,11 +60,10 @@ switch (navPageName) {
     break;
 }
 
-// const currentPage = document.querySelector('.currentPage');
-
 const animationDurations = 500;
 
-document.getElementById('navHamContainer').onclick = function () {
+document.getElementById('navHamContainer').onclick = function (event) {
+  event.stopPropagation();
   this.classList.toggle('change');
   document.getElementById('navGrid').classList.toggle('navGridOpenClose');
 };
@@ -87,18 +86,25 @@ let navShowingAbout = false;
 let navShowingEvents = false;
 let navShowingGame = false;
 
-navAbout.addEventListener('click', () => {
+navAbout.addEventListener('click', (event) => {
+  event.stopPropagation();
   displayNavDiv('.aboutDiv', navShowingAbout);
   navShowingAbout = !navShowingAbout;
-  navAbout.classList.toggle('selected');
 });
 
-navEvent.addEventListener('click', () => {
+navEvent.addEventListener('click', (event) => {
+  event.stopPropagation();
   displayNavDiv('.eventDiv', navShowingEvents);
   navShowingEvents = !navShowingEvents;
 });
 
-navTheGame.addEventListener('click', () => {
+navTheGame.addEventListener('click', (event) => {
+  event.stopPropagation();
   displayNavDiv('.gameDiv', navShowingGame);
   navShowingGame = !navShowingGame;
+});
+
+document.body.addEventListener('click', (event) => {
+  document.getElementById('navHamContainer').classList.toggle('change');
+  document.getElementById('navGrid').classList.toggle('navGridOpenClose');
 });

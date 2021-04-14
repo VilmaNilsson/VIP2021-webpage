@@ -1,14 +1,16 @@
-body {
+@import "/static/css/variables.css";
+@import "/static/css/common.css";
+
+.releaseBody {
     margin: 0;
+    background-color: var(--greyBgC);
+    color: var(--whiteFontC);
     display: flex;
-    justify-content: center;
     align-items: center;
+    text-align: center;
     flex-direction: column;
-
     height: 100vh;
-
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
+ }
 
 #release-main {
     display: flex;

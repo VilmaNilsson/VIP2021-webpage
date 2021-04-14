@@ -8,8 +8,10 @@ html
     link(rel='stylesheet' href='/static/css/variables.css')
     link(rel='stylesheet' href='/static/css/navigation.css')
     link(rel='stylesheet' href='/static/css/releaseDay.css')
-  body
-  //- FOR DESIGN "E-DAY"
+  body.releaseBody
+    include includes/navigation.pug
+    .logoDiv
+    //-FOR DESIGN "E-DAY"
     main(id="release-main")
       h3(id="release-cdTitle") countdown clock
       div(id="release-outerCountdown")
@@ -27,7 +29,7 @@ html
             div(id="release-seconds")
               p(class="release-cdTitle") SECONDS
               div(class="release-cdTimer"  id="release-timerSeconds")
-
+    script(src="/static/js/navigation.js")
     script(src="/static/js/releaseDay.js")
     //- Common footer
     include includes/footer.pug

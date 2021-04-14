@@ -36,7 +36,7 @@
 
  .teamMember {
      display: flex;
-     margin-bottom: 10px;
+     margin-bottom: 20px;
      align-items: center;
  }
 
@@ -64,6 +64,34 @@
     margin-bottom: 20px;
  }
 
- .right .teamText {
-    text-align: right;
+ @media (min-width: 1001px) {
+    .right .teamText {
+        text-align: right;
+     }
+ }
+
+ @media(min-width: 780px) AND (max-width: 1000px) {
+
+    .wrapper > h1 {
+        margin-bottom: 20px;
+    }
+
+     h1 {
+         margin-bottom: 10px;
+     }
+
+     .left img, .right img {
+         margin: 0px;
+     }
+
+     .teamMember {
+        flex-direction: column;
+        text-align: left;
+        margin-bottom: 30px;
+    }
+
+     .teamMember h1 {
+         text-align: center;
+         margin-top: 20px;
+     }
  }

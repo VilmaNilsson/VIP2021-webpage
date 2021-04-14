@@ -1,0 +1,97 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.about-teamsBody {
+    margin: 0px;
+    background-color: var(--greyBgC);
+    color: var(--whiteFontC);
+ }
+
+ body > .logoDiv {
+     position: static;
+     width: 100%;
+     margin-bottom: 5vh;
+ }
+
+ h1 {
+    font-family: var(--rajdhaniFont);
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 40px;
+ }
+
+ .wrapper {
+     display: flex;
+     flex-direction: column;
+     width: 100%;
+     justify-content: center;
+     align-items: center;
+ }
+
+ .teamMembers {
+     width: 70%;
+ }
+
+ .teamMember {
+     display: flex;
+     margin-bottom: 20px;
+     align-items: center;
+ }
+
+ .right {
+     flex-direction: row-reverse;
+ }
+
+ .left img {
+     margin-right: 30px;
+ }
+
+ .right img {
+     margin-left: 30px;
+ }
+
+ img {
+     height: 320px;
+ }
+
+ .teamMember p {
+    font-family: var(--latoFont);
+    font-weight: lighter;
+    font-size: 20px;
+    line-height: 25px;
+    margin-bottom: 20px;
+ }
+
+ @media (min-width: 1001px) {
+    .right .teamText {
+        text-align: right;
+     }
+ }
+
+ @media(min-width: 780px) AND (max-width: 1000px) {
+
+    .wrapper > h1 {
+        margin-bottom: 20px;
+    }
+
+     h1 {
+         margin-bottom: 10px;
+     }
+
+     .left img, .right img {
+         margin: 0px;
+     }
+
+     .teamMember {
+        flex-direction: column;
+        text-align: left;
+        margin-bottom: 30px;
+    }
+
+     .teamMember h1 {
+         text-align: center;
+         margin-top: 20px;
+     }
+ }

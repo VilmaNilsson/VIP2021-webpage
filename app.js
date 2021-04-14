@@ -64,6 +64,18 @@ app.get('/about-team', (req, res) => {
   res.render('about-team');
 });
 
+app.get('/about-development', (req, res) => {
+  res.render('about-development');
+});
+
+app.get('/about-marketing', (req, res) => {
+  res.render('about-marketing');
+});
+
+app.get('/about-ux', (req, res) => {
+  res.render('about-ux');
+});
+
 app.get('/about-project', (req, res) => {
   res.render('about-project');
 });

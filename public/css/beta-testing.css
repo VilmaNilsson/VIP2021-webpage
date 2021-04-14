@@ -1,12 +1,22 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
 .beta-testingBody {
   margin: 0px;
-
   background-color: var(--greyBgC);
   color: var(--whiteFontC);
 }
 
+body > .logoDiv {
+  position: static;
+  width: 100%;
+  margin-bottom: 0px;
+}
+
 #beta-testingVideo {
-  width: 100vw;
+  width: 100%;
   height: 70vh;
   display: flex;
   justify-content: center;
@@ -15,44 +25,39 @@
 
 #beta-testingContentWrapper {
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 100vw;
+  width: 100%;
+  margin-top: 50px;
 }
 
-#beta-testingHeader > p {
-  font-family: var(--rajdhaniFont);
-}
-
-.beta-testingSectionContainer {
-  display: flex;
-  justify-content: center;
-  align-items: baseline;
-  flex-direction: column;
+#forTextAlignment {
   width: 50%;
 }
 
-.beta-testingHeaderContainer {
+h1 {
   font-family: var(--rajdhaniFont);
-  font-size: 20px;
+  font-weight: 450;
+  font-size: 30px;
 }
 
-.beta-testingTextContainer {
-  font-family: var(--latoFont);
-  font-size: 15px;
-  font-weight: 300;
-}
-
-.beta-testingHeaderContainer > p {
-  margin: 5px;
+h2 {
+  font-family: var(--rajdhaniFont);
+  font-size: 22px;
+  font-weight: 500;
   margin-top: 30px;
 }
 
-.beta-testingTextContainer > p {
-  margin: 2px;
+h2:first-of-type {
+  margin-top: 10px;
 }
 
-.beta-testingSectionContainer:last-child > div {
+p {
+  font-family: var(--latoFont);
+  font-size: 20px;
+  font-weight: 300;
+}
+
+p:nth-of-type(4), p:nth-of-type(5) {
   margin-top: 20px;
 }

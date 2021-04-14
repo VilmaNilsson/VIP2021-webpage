@@ -25,4 +25,15 @@
    /* --fwFirstUpper: 700;
    --fwSecondUpper: 500;
    --fwLastUpper: 300; */
+
+   /* Navigation */
+   --navPaddingLeft: 10%;
+   --navLinkWidth: calc(var(--navPaddingLeft) - 100%)%;
+   --navHeadLinksFontSize: 28pt;
+   --navDropDownLinksFontSize: 25pt;
+   --navLinkHoverOpacity: 0.7;
+   --navDropDownLinksLineHeight: 37pt;
+   --navAnimationDurationOut: 0.7s;
+   --navAnimationDurationIn: 0.3s;
+   --navTransitionDurations: 0.5s;
 }

@@ -4,17 +4,20 @@ header
       .navBar2
       .navBar3
    #navGrid
-      a.navLink.navLinkBig(href="/") HOME
-      a.navLink.navLinkBig(href="/info") ABOUT
-      a.navLink.navLinkSmall(href="/about-project") About the Project
-      a.navLink.navLinkSmall(href="/about-team") About the Team
-      a.navLink.navLinkBig(href="/release") EVENTS
-      a.navLink.navLinkSmall(href="/beta-testing") Beta Testing
-      a.navLink.navLinkSmall(href="/release") E-day
-      //-Don't delete line 15 ("the game"), so far we need a page where users can see all videos. This changes when there is a new design on where these videos goes. / Vilma
-      a.navLink.navLinkBig(href="/game") THE GAME
-      a.navLink.navLinkSmall(href="/rules") Rules
-      a.navLink.navLinkSmall(href="/crews") The Crews
-      a.navLink.navLinkSmall(href="/planets") The Planets
-      a.navLink.navLinkSmall(href="/actions") The Actions
-      a.navLink.navLinkBig(href="/register") REGISTER
+      a.navLink.navLinkBig.navHome(href="/") HOME
+      a.navLink.navLinkBig.navAbout ABOUT
+      div.aboutDiv.menuDropDownDiv
+         a.navLink.navLinkSmall.navAboutProject(href="/about-project") About the Project
+         a.navLink.navLinkSmall.navAboutTeam(href="/about-team") About the Team
+      a.navLink.navLinkBig.navEvents EVENTS
+      div.eventDiv.menuDropDownDiv
+         a.navLink.navLinkSmall.navBetaTesting(href="/beta-testing") Beta Testing
+         a.navLink.navLinkSmall.navReleaseDay(href="/release") E-day
+      //-Don't delete line 17 ("the game"), so far we need a page where users can see all videos. This changes when there is a new design on where these videos goes. / Vilma
+      a.navLink.navLinkBig.navGame THE GAME
+      div.gameDiv.menuDropDownDiv
+         a.navLink.navLinkSmall.navRules(href="/rules") Rules
+         a.navLink.navLinkSmall.navCrews(href="/crews") The Crews
+         a.navLink.navLinkSmall.navPlanets(href="/planets") The Planets
+         a.navLink.navLinkSmall.navActions(href="/actions") The Actions
+      a.navLink.navLinkBig.navRegister(href="/register") REGISTER

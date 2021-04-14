@@ -22,6 +22,7 @@ header {
 
 .currentPage {
    font-weight: bold;
+   text-shadow: 1px 1px var(--whiteFontC), 1px 1px var(--whiteFontC);
 }
 
 #navGrid > a {

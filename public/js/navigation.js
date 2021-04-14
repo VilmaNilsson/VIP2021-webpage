@@ -104,7 +104,7 @@ navTheGame.addEventListener('click', (event) => {
   navShowingGame = !navShowingGame;
 });
 
-document.body.addEventListener('click', (event) => {
+document.body.addEventListener('click', () => {
   document.getElementById('navHamContainer').classList.toggle('change');
   document.getElementById('navGrid').classList.toggle('navGridOpenClose');
 });

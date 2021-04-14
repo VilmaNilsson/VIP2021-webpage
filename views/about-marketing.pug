@@ -1,31 +1,30 @@
 doctype html
 html
   head
-    title Snatch
+    title Snatch - The marketing team
     meta(charset='utf-8')
     meta(name='viewport' content='width=device-width,initial-scale=1')
     //- All of the basic CSS variables
-    link(rel='stylesheet' href='/static/css/about-team.css')
+    link(rel='stylesheet' href='/static/css/about-teams.css')
     link(rel='stylesheet' href='/static/css/navigation.css')
     link(rel='stylesheet' href='/static/css/index.css')
     link(rel='stylesheet' href='/static/css/variables.css')
   //- CANT INCLUDE NAVIGATION = ERROR IS 500
   include includes/navigation.pug
-  body.about-teamBody
+  include includes/about-teams-data.pug
+
+  body.about-teamsBody
     .logoDiv
-    #about-teamText
-      p#about-teamUpperText About the Team
-      p#about-teamMiddleText The team members as described by their team mates.
-    #about-teamTeamContainer
-      a.aboutTeamDiv(href="/about-marketing")
-        .aboutTeamDivImg
-        .aboutTeamDivText MARKETING /DESIGN
-      a.aboutTeamDiv(href="/about-ux")
-        .aboutTeamDivImg
-        .aboutTeamDivText UX
-      a.aboutTeamDiv(href="/about-development")
-        .aboutTeamDivImg
-        .aboutTeamDivText DEVELOPMENT
+    .wrapper
+      h1 Marketing & Design Team
+      .teamMembers
+        each member, index in marketingArray
+          - let direction = ""
+            if index % 2 == 0
+              - direction = "left"
+            else
+              - direction = "right"
+            +teamMember(member, direction)
 
   //- Common footer
   include includes/footer.pug
@@ -34,4 +33,3 @@ html
   //- JavaScript for this page (might not be needed)
   script(src='/static/js/index.js')
   script(src='/static/js/navigation.js')
-  

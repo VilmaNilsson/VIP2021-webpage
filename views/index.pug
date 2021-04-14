@@ -15,27 +15,27 @@ html
     #indexStarryDiv
       #indexWelcomeText
          #indexWelcomeTextUpper
-            p Some shit has gone down in the Spiral Star Galaxy,
-            p and you have to solve it
-         p The designated dump planet Trashzonia has exploded and now trash is floating around everywhere in the galaxy. It is an ecological disaster on an astronomical scale. Since capitalism is king, the Galaxy Federation has hired private contractors, including you and your crew, to collect this garbage and dispose of it. You will be rewarded greatly for your work, but watch out for the other crews! They might want all of the rewards for themselves…
+            span Some shit has gone down in the Spiral Star Galaxy,
+            span and you have to solve it
+         p The designated dump planet Trashzonia has exploded and now trash is floating around everywhere in the galaxy. It is an ecological disaster on an astronomical scale. Since capitalism is king, the Galaxy Federation has hired private contractors, including you and your crew, to collect this garbage and dispose of it. You will be rewarded greatly for your work, but watch out for the other crews!<br>They might want all of the rewards for themselves…
     #indexContentWrapper
       .indexWrapperDiv
          p DISCOVER THE PLANETS
-         p här ska vara tre planeter. De ska vara random varje gång man laddar om GLÖM EJ!!!!!!!!
-         .indexWrapperDivPlanets
-            .indexPlanetDiv
-               .indexPlanetImg
-               p Pluto
-            .indexPlanetDiv
-               .indexPlanetImg
-               p Moo
-            .indexPlanetDiv
-               .indexPlanetImg
-               p Planet
+         #indexWrapperDivPlanets
+            //- .indexPlanetDiv
+            //-    .indexPlanetImg
+            //-    p Pluto
+            //- .indexPlanetDiv
+            //-    .indexPlanetImg
+            //-    p Moo
+            //- .indexPlanetDiv
+            //-    .indexPlanetImg
+            //-    p Planet
       .indexWrapperDiv#videoDiv
-         iframe(width="560" height="315" src="https://www.youtube.com/embed/DZg2zUqIdCI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+         iframe(src="https://www.youtube.com/embed/DZg2zUqIdCI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
       .indexWrapperDiv
          p UPDATES FROM THE TEAM
+         .teamUpdateDiv 
 
     //- Common footer
     include includes/footer.pug

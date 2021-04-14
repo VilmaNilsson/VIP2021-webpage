@@ -3,117 +3,157 @@
 @import "/static/css/common.css";
 
 .indexBody {
-   margin: 0px;
-   background-color: var(--greyBgC);
-   color: var(--whiteFontC);
-   align-items: center;
-   text-align: center;
+  margin: 0px;
+  background-color: var(--greyBgC);
+  color: var(--whiteFontC);
+  align-items: center;
+  text-align: center;
+}
+
+#navHamContainer {
+  margin: 2vw;
+}
+
+div.logoDiv {
+  height: 19vh;
+  width: 100%;
 }
 
 #indexStarryDiv {
-   position: sticky;
-   height: 100vh;
-   width: 100vw;
-   background: var(--starryBackgroundImage);
-   background-size: cover;
-    /* -moz-box-shadow: inset 0px 850px 500px -500px #fff;
-    -webkit-box-shadow: inset 0px 850px 500px -500px #fff;
-    -o-box-shadow: inset 0px 850px 500px -500px #fff; */
-    /* box-shadow: inset 0px 850px 500px -500px var(--greyBgC); */
-   box-shadow: inset 0px -850px 500px -500px var(--greyBgC);
-
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   flex-direction: column;
+  position: sticky;
+  height: 100vh;
+  width: 100%;
+  background: var(--starryBackgroundImage);
+  background-size: cover;
+  box-shadow: inset 0px -850px 500px -500px var(--greyBgC);
+  -moz-box-shadow: inset 0px -850px 500px -500px var(--greyBgC);
+  -webkit-box-shadow: inset 0px -850px 500px -500px var(--greyBgC);
+  -o-box-shadow: inset 0px -850px 500px -500px var(--greyBgC);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 #indexWelcomeText {
-   width: 70vw;
-   text-align: center;
-   padding: 0px;
+  width: 70vw;
+  padding: 0px;
 }
 
 #indexWelcomeTextUpper {
-   display: flex;
-   /* font-size: 58px;
-   line-height: 53px; */
-   font-size: 30px;
-   line-height: 28px;
-   text-align: center;
-   display: flex;
-   justify-content: center;
-   align-items: center;
+  font-size: 30px;
+  line-height: 28px;
 }
 
-#indexWelcomeTextUpper > p:first-child {
-   font-family: var(--rajdhaniFont);
-   font-weight: 700;
-   /* font-size: 58px; */
-   /* line-height: 53px; */
-   margin: 0px;
-   padding: 0px;
+#indexWelcomeTextUpper > span:first-child {
+  font-family: var(--rajdhaniFont);
+  font-weight: 700;
+  margin: 0px;
+  padding: 0px;
 }
 
-#indexWelcomeTextUpper > p:last-child {
-   font-family: var(--rajdhaniFont);
-   font-weight: 500;
-   margin: 0px;
-   padding: 0px;
+#indexWelcomeTextUpper > span:last-child {
+  font-family: var(--rajdhaniFont);
+  font-weight: 500;
+  margin: 0px;
+  margin-left: 1%;
+  padding: 0px;
 }
 
 #indexWelcomeText:last-child {
-   font-family: var(--latoFont);
-   font-weight: 300;
-   /* font-size: 41px;
-   line-height:  53px; */
-   font-size: 25px;
-   line-height: 28px;
-   margin: 0px;
+  font-family: var(--latoFont);
+  font-weight: 300;
+  font-size: 25px;
+  line-height: 28px;
+  margin: 0px;
 }
 
 #indexContentWrapper {
-   font-family: var(--rajdhaniFont);
-   font-weight: 400;
-   /* font-size: 66px; */
-   font-size: 40px;
-   text-align: center;
+  font-family: var(--rajdhaniFont);
+  font-weight: 400;
+  font-size: 40px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .indexWrapperDiv {
-   margin-top: 20vh;
-
-   /* delete later */
-   min-height: 100px;
+  margin-top: 20vh;
+  width: 70vw;
 }
 
-.indexWrapperDivPlanets {
-   display: flex;
-   justify-content: center;
-   align-items: center;
+.indexWrapperDiv:first-child {
+  margin-top: 0;
+}
+
+.indexWrapperDiv > p {
+  margin-top: 0;
+}
+
+#indexWrapperDivPlanets {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .indexPlanetDiv {
-   width: 15vw;
-   height: 330px;
-   margin: 0 20px;
-   background-image: url("/static/images/Starry-Background.jpg");
-   background-position: right;
-   background-repeat: no-repeat;
-   background-size: cover;
+  width: 32%;
+  height: 30vw;
+  margin: 0;
+  background-image: url("/static/images/Starry-Background.jpg");
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.indexPlanetImg {
-   background-image: url("/static/images/Moo-15.svg");
-   background-position: center;
-   background-repeat: no-repeat;
-   background-size: contain;
-   width: 100%;
-   height: 45%;
-   margin-top: 20%;
+.indexPlanetDiv:nth-child(2){
+  margin: 0 2vw;
+}
 
+
+.indexPlanetImg {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100%;
+  height: 45%;
+  margin-top: 20%;
 }
 
 .indexPlanetDiv > p {
+  margin: 0 0 10px 0;
+}
 
+#videoDiv > iframe {
+  width: 70vw;
+  height: 39vw;
+}
+
+.teamUpdateDiv {
+  height: 30vw;
+}
+
+/* breakpoint <600px */
+@media(min-width: 600px) and (max-width: 800px){
+  #indexWelcomeText:last-child {
+    margin-top: 17vw;
+  }
+  .indexWrapperDiv {
+    margin-top: 15vh;
+  }
+  .indexPlanetDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .indexPlanetDiv p {
+    font-size: 35px;
+    margin: 0 0 10px 0;
+  }
 }

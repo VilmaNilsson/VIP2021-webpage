@@ -8,55 +8,55 @@
 //     link.classList.add('currentPage');
 //   }
 // });
-let currentPage = window.location.href;
+let navCurrentPage = window.location.href;
 
-currentPage = currentPage.split('/');
-const pageName = currentPage[currentPage.length - 1];
+navCurrentPage = navCurrentPage.split('/');
+const navPageName = navCurrentPage[navCurrentPage.length - 1];
 
-const home = document.querySelector('.navHome');
-const about = document.querySelector('.navAbout');
-const events = document.querySelector('.navEvents');
-const theGame = document.querySelector('.navGame');
-const register = document.querySelector('.navRegister');
+const navHome = document.querySelector('.navHome');
+const navAbout = document.querySelector('.navAbout');
+const navEvent = document.querySelector('.navEvents');
+const navTheGame = document.querySelector('.navGame');
+const navRegister = document.querySelector('.navRegister');
 
-switch (pageName) {
-  case 'about-project':
-    about.classList.toggle('currentPage');
-    document.querySelector('.navAboutProject').classList.toggle('currentPage');
+switch (navPageName) {
+  case 'navAbout-project':
+    navAbout.classList.toggle('currentPage');
+    document.querySelector('.navnavAboutProject').classList.toggle('currentPage');
     break;
-  case 'about-team':
-    about.classList.toggle('currentPage');
-    document.querySelector('.navAboutTeam').classList.toggle('currentPage');
+  case 'navAbout-team':
+    navAbout.classList.toggle('currentPage');
+    document.querySelector('.navnavAboutTeam').classList.toggle('currentPage');
     break;
   case 'beta-testing':
-    events.classList.toggle('currentPage');
+    navEvent.classList.toggle('currentPage');
     document.querySelector('.navBetaTesting').classList.toggle('currentPage');
     break;
   case 'release':
-    events.classList.toggle('currentPage');
+    navEvent.classList.toggle('currentPage');
     document.querySelector('.navReleaseDay').classList.toggle('currentPage');
     break;
   case 'rules':
-    theGame.classList.toggle('currentPage');
+    navTheGame.classList.toggle('currentPage');
     document.querySelector('.navRules').classList.toggle('currentPage');
     break;
   case 'crews':
-    theGame.classList.toggle('currentPage');
+    navTheGame.classList.toggle('currentPage');
     document.querySelector('.navCrews').classList.toggle('currentPage');
     break;
   case 'planets':
-    theGame.classList.toggle('currentPage');
+    navTheGame.classList.toggle('currentPage');
     document.querySelector('.navPlanets').classList.toggle('currentPage');
     break;
   case 'actions':
-    theGame.classList.toggle('currentPage');
+    navTheGame.classList.toggle('currentPage');
     document.querySelector('.navActions').classList.toggle('currentPage');
     break;
   case 'register':
-    register.classList.toggle('currentPage');
+    navRegister.classList.toggle('currentPage');
     break;
   default:
-    home.classList.toggle('currentPage');
+    navHome.classList.toggle('currentPage');
     break;
 }
 
@@ -85,20 +85,20 @@ function displayNavDiv(divClass, showing) {
 }
 let navShowingAbout = false;
 let navShowingEvents = false;
-let navShowingTheGame = false;
+let navShowingGame = false;
 
-about.addEventListener('click', () => {
+navAbout.addEventListener('click', () => {
   displayNavDiv('.aboutDiv', navShowingAbout);
   navShowingAbout = !navShowingAbout;
-  about.classList.toggle('selected');
+  navAbout.classList.toggle('selected');
 });
 
-events.addEventListener('click', () => {
+navEvent.addEventListener('click', () => {
   displayNavDiv('.eventDiv', navShowingEvents);
   navShowingEvents = !navShowingEvents;
 });
 
-theGame.addEventListener('click', () => {
-  displayNavDiv('.gameDiv', navShowingTheGame);
-  navShowingTheGame = !navShowingTheGame;
+navTheGame.addEventListener('click', () => {
+  displayNavDiv('.gameDiv', navShowingGame);
+  navShowingGame = !navShowingGame;
 });

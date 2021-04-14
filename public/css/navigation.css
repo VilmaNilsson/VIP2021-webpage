@@ -9,6 +9,8 @@ header {
    height: 100vh;
    position: absolute;
    background-color: var(--greyBgC);
+   -webkit-transition: 0.4s;
+   -o-transition: 0.4s;
    transition: 0.4s;
    left: -350px;
    z-index: 97;
@@ -26,10 +28,19 @@ header {
    text-decoration: none;
    color: var(--whiteFontC);
    cursor: pointer;
+   display: -webkit-box;
+   display: -ms-flexbox;
    display: flex;
-   justify-content: left;
-   align-items: flex-start;
-   flex-direction: column;
+   -webkit-box-pack: left;
+       -ms-flex-pack: left;
+           justify-content: left;
+   -webkit-box-align: start;
+       -ms-flex-align: start;
+           align-items: flex-start;
+   -webkit-box-orient: vertical;
+   -webkit-box-direction: normal;
+       -ms-flex-direction: column;
+           flex-direction: column;
    padding-left: var(--navPaddingLeft);
    width: var(--navLinkWidth);
 }
@@ -37,7 +48,6 @@ header {
 
 .navLinkBig {
    font-family: var(--rajdhaniFont);
-   /* the px here are from me generating pt to px */
    font-size: var(--navHeadLinksFontSize);
    line-height: 36px;
    letter-spacing: 3px;
@@ -47,12 +57,11 @@ header {
 .navLinkSmall {
    font-family: var(--latoFont);
    font-weight: 100;
-   /* the px here are from me generating pt to px */
-   /* font-size: 33px;
-   line-height: 49px; */
    font-size: var(--navDropDownLinksFontSize);
    text-decoration: none;
    line-height: var(--navDropDownLinksLineHeight);
+   display: -webkit-box;
+   display: -ms-flexbox;
    display: flex;
    width: 0;
 }
@@ -68,11 +77,15 @@ header {
    height: 5px;
    background-color: white;
    margin: 6px 0;
+   -webkit-transition: 0.4s;
+   -o-transition: 0.4s;
    transition: 0.4s;
 }
 
 .change .navBar1 {
-   transform: rotate(-45deg) translate(-9px, 6px);
+   -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+       -ms-transform: rotate(-45deg) translate(-9px, 6px);
+           transform: rotate(-45deg) translate(-9px, 6px);
 }
 
 .change .navBar2 {
@@ -80,33 +93,53 @@ header {
 }
 
 .change .navBar3 {
-   transform: rotate(45deg) translate(-8px, -8px);
+   -webkit-transform: rotate(45deg) translate(-8px, -8px);
+       -ms-transform: rotate(45deg) translate(-8px, -8px);
+           transform: rotate(45deg) translate(-8px, -8px);
 }
 
 .menuDropDownDiv {
-   flex-direction: column;
+   -webkit-box-orient: vertical;
+   -webkit-box-direction: normal;
+       -ms-flex-direction: column;
+           flex-direction: column;
    text-align: left!important;
    height: 0;
+   -webkit-transition: all var(--navTransitionDurations) ease;
+   -o-transition: all var(--navTransitionDurations) ease;
    transition: all var(--navTransitionDurations) ease;
    margin-left: -100%;
-   animation: dropDownSlideOut var(--navAnimationDurationIn) ease forwards;
+   -webkit-animation: dropDownSlideOut var(--navAnimationDurationIn) ease forwards;
+           animation: dropDownSlideOut var(--navAnimationDurationIn) ease forwards;
 }
 
 .menuDropDownShowing {
+   display: -webkit-box;
+   display: -ms-flexbox;
    display: flex;
    height: 15%;
+   -webkit-transition: all var(--navTransitionDurations) ease;
+   -o-transition: all var(--navTransitionDurations) ease;
    transition: all var(--navTransitionDurations) ease;
-   animation: dropDownSlideIn var(--navAnimationDurationOut) ease forwards;
+   -webkit-animation: dropDownSlideIn var(--navAnimationDurationOut) ease forwards;
+           animation: dropDownSlideIn var(--navAnimationDurationOut) ease forwards;
 }
 
 .menuDropDownShowingTheGame {
+   display: -webkit-box;
+   display: -ms-flexbox;
    display: flex;
    height: 30%;
+   -webkit-transition: all var(--navTransitionDurations) ease;
+   -o-transition: all var(--navTransitionDurations) ease;
    transition: all var(--navTransitionDurations) ease;
-   animation: dropDownSlideIn var(--navAnimationDurationOut) ease forwards;
+   -webkit-animation: dropDownSlideIn var(--navAnimationDurationOut) ease forwards;
+           animation: dropDownSlideIn var(--navAnimationDurationOut) ease forwards;
 }
 
 .menuDropDownDiv.menuDropVisable a {
+   display: -webkit-box;
+   display: -ms-flexbox;
    display: flex;
    font-size: var(--navDropDownLinksFontSize);
    text-decoration: none;
@@ -125,9 +158,24 @@ header {
    opacity: var(--navLinkHoverOpacity);
 }
 
+@-webkit-keyframes dropDownSlideIn {
+   to {
+      margin-left: 0;
+   }
+}
+
 @keyframes dropDownSlideIn {
    to {
       margin-left: 0;
+   }
+}
+
+@-webkit-keyframes dropDownSlideOut {
+   from {
+      margin-left: 0;
+   }
+   to {
+      margin-left: -100%;
    }
 }
 

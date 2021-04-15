@@ -98,14 +98,25 @@ app.get('/privacy-policy', (req, res) => {
 // =============
 app.use(express.json());
 app.post('/registration-form', (req, res, next) => {
-  const data = JSON.stringify(req.body);
-  console.log(data);
+  const body = JSON.stringify(req.body);
+  // console.log(body);
 
-  fs.writeFile('users.json', data, (err, fd) => {
+  fs.readFile(__dirname + '/users.json', {flag: 'a+'}, (err, data) => {
     if(err) throw err;
-    console.log('new user saved in db');
-    res.json(data);
+    
+    const newJson = data + body;
+    console.log(newJson);
+
+    // fs.writeFile('users.json', JSON.stringify(json));
+    // console.log('data was added to users.json');
   });
+
+  // fs.appendFile('users.json', data, (err, fd) => {
+  //   if(err) throw err;
+    
+  //   console.log('new user saved in db');
+  //   res.json(data);
+  // });
 });
 
 // ERROR HANDLERS

@@ -1,0 +1,10 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.about-projectBody {
+    margin: 0px;
+    background-color: var(--greyBgC);
+    color: var(--whiteFontC);
+ }

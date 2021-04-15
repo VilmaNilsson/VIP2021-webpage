@@ -5,6 +5,7 @@ const morgan = require('morgan');
 const minify = require('express-minify');
 const fs = require('fs');
 
+
 // Makes us able to run with a custom port via the terminal, eg:
 //  $ PORT=8080 node app.js
 // Defaults to 3000
@@ -95,8 +96,16 @@ app.get('/privacy-policy', (req, res) => {
 
 // RECEIVERS FOR POST-REQS
 // =============
-app.post('/registration-form', (req, res) => {
-  
+app.use(express.json());
+app.post('/registration-form', (req, res, next) => {
+  const data = JSON.stringify(req.body);
+  console.log(data);
+
+  fs.writeFile('users.json', data, (err, fd) => {
+    if(err) throw err;
+    console.log('new user saved in db');
+    res.json(data);
+  });
 });
 
 // ERROR HANDLERS

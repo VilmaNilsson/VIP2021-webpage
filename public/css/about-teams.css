@@ -36,7 +36,7 @@
 
  .teamMember {
      display: flex;
-     margin-bottom: 20px;
+     margin-top: 80px;
      align-items: center;
  }
 
@@ -70,7 +70,7 @@
      }
  }
 
- @media(min-width: 780px) AND (max-width: 1000px) {
+ @media(min-width: 600px) AND (max-width: 1000px) {
 
     .wrapper > h1 {
         margin-bottom: 20px;
@@ -88,6 +88,42 @@
         flex-direction: column;
         text-align: left;
         margin-bottom: 30px;
+    }
+
+     .teamMember h1 {
+         text-align: center;
+         margin-top: 20px;
+     }
+ }
+
+
+
+ @media (max-width: 600px) {
+    .wrapper > h1 {
+        margin-bottom: 20px;
+    }
+
+     h1 {
+         margin-bottom: 10px;
+     }
+
+     .left img, .right img {
+         margin: 0px;
+     }
+
+     .teamMember {
+        flex-direction: column;
+        text-align: left;
+        margin-bottom: 30px;
+    }
+
+    .teamProfile {
+        width: 60vw;
+        height: 60vw;
+    }
+
+    .teamMember p {
+        font-size: 15px;
     }
 
      .teamMember h1 {

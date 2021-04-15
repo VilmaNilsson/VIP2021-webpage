@@ -5,7 +5,6 @@ const morgan = require('morgan');
 const minify = require('express-minify');
 const fs = require('fs');
 
-
 // Makes us able to run with a custom port via the terminal, eg:
 //  $ PORT=8080 node app.js
 // Defaults to 3000
@@ -97,26 +96,28 @@ app.get('/privacy-policy', (req, res) => {
 // RECEIVERS FOR POST-REQS
 // =============
 app.use(express.json());
-app.post('/registration-form', (req, res, next) => {
-  const body = JSON.stringify(req.body);
-  // console.log(body);
+app.post('/registration-form', (req, res) => {
+  const body = { ...req.body };
+  const usersPath = path.join(__dirname, '/users.json');
 
-  fs.readFile(__dirname + '/users.json', {flag: 'a+'}, (err, data) => {
-    if(err) throw err;
-    
-    const newJson = data + body;
-    console.log(newJson);
-
-    // fs.writeFile('users.json', JSON.stringify(json));
-    // console.log('data was added to users.json');
+  fs.readFile(usersPath, { flag: 'a+' }, (err, data) => {
+    if (err) throw err;
+    const dataCheck = data + '';
+    console.log(dataCheck);
+    if (dataCheck === '') {
+      const nArr = [];
+      nArr.push(body);
+      fs.writeFile('users.json', JSON.stringify(nArr), () => {
+        res.json({ addedEmail: body.email });
+      });
+    } else {
+      const unpackedArr = JSON.parse(data);
+      unpackedArr.push(body);
+      fs.writeFile('users.json', JSON.stringify(unpackedArr), () => {
+        res.json({ addedEmail: body.email });
+      });
+    }
   });
-
-  // fs.appendFile('users.json', data, (err, fd) => {
-  //   if(err) throw err;
-    
-  //   console.log('new user saved in db');
-  //   res.json(data);
-  // });
 });
 
 // ERROR HANDLERS

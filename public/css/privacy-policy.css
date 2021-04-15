@@ -1,0 +1,6 @@
+#bodyPrivacy {
+  background-color: var(--greyBgC);
+}
+h1, p {
+  color: var(--whiteFontC);
+}

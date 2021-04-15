@@ -8,7 +8,17 @@ html
     link(rel='stylesheet' href='/static/css/index.css')
     link(rel='stylesheet' href='/static/css/navigation.css')
     link(rel='stylesheet' href='/static/css/variables.css')
+    link(rel='stylesheet' href='/static/css/actions.css')
     //- CANT INCLUDE NAVIGATION = ERROR IS 500
   include includes/navigation.pug
   body
-    p Actions
+  .logoDiv
+  #wrapper
+    h1 Actions
+
+  //- Common footer
+  include includes/footer.pug
+  //- Common utility functions
+  script(src='/static/js/utils.js')
+  //- JavaScript for this page (might not be needed)
+  script(src='/static/js/navigation.js')

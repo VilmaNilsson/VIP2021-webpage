@@ -3,6 +3,7 @@ const path = require('path');
 const express = require('express');
 const morgan = require('morgan');
 const minify = require('express-minify');
+const fs = require('fs');
 
 // Makes us able to run with a custom port via the terminal, eg:
 //  $ PORT=8080 node app.js
@@ -86,6 +87,16 @@ app.get('/register', (req, res) => {
 
 app.get('/rules', (req, res) => {
   res.render('rules');
+});
+
+app.get('/privacy-policy', (req, res) => {
+  res.render('privacy-policy');
+});
+
+// RECEIVERS FOR POST-REQS
+// =============
+app.post('/registration-form', (req, res) => {
+  
 });
 
 // ERROR HANDLERS

@@ -102,7 +102,7 @@ app.post('/registration-form', (req, res) => {
 
   fs.readFile(usersPath, { flag: 'a+' }, (err, data) => {
     if (err) throw err;
-    const dataCheck = data + '';
+    const dataCheck = `${data}`;
     console.log(dataCheck);
     if (dataCheck === '') {
       const nArr = [];

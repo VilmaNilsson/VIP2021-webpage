@@ -1,17 +1,19 @@
-doctype html
+doctype
 html
   head
-    title Scratch, the best game ever!
+    title Snatch Time
     meta(charset='utf-8')
     meta(name='viewport' content='width=device-width,initial-scale=1')
-    //- All of the basic CSS variables
+    All of the basic CSS variables
     link(rel='stylesheet' href='/static/css/variables.css')
     link(rel='stylesheet' href='/static/css/navigation.css')
-    link(rel='stylesheet' href='/static/css/releaseDay.css')
-  body
-  //- FOR DESIGN "E-DAY"
+    link(rel='stylesheet' href='/static/css/release.css')
+  body.releaseBody
+    include includes/navigation.pug
+    .logoDiv
+    //-FOR DESIGN "E-DAY"
     main(id="release-main")
-      h3(id="release-cdTitle") countdown clock
+      h3(id="release-cdTitle") Time until take off:
       div(id="release-outerCountdown")
         div(id="release-innerCountdown")
           div(id="release-countDown")
@@ -27,7 +29,8 @@ html
             div(id="release-seconds")
               p(class="release-cdTitle") SECONDS
               div(class="release-cdTimer"  id="release-timerSeconds")
-
-    script(src="/static/js/releaseDay.js")
+    script(src="/static/js/navigation.js")
+    script(src="/static/js/release.js")
     //- Common footer
     include includes/footer.pug
+

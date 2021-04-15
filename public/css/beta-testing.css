@@ -12,7 +12,7 @@
 body > .logoDiv {
   position: static;
   width: 100%;
-  margin-bottom: 0px;
+  margin-bottom: 20vh;
 }
 
 #beta-testingVideo {
@@ -28,7 +28,6 @@ body > .logoDiv {
   align-items: center;
   flex-direction: column;
   width: 100%;
-  margin-top: 50px;
 }
 
 #forTextAlignment {
@@ -39,6 +38,7 @@ h1 {
   font-family: var(--rajdhaniFont);
   font-weight: 450;
   font-size: 30px;
+  margin-top: 50px;
 }
 
 h2 {

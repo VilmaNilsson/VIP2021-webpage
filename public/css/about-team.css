@@ -32,6 +32,7 @@
   margin-top: 0;
   margin-left: 5vw;
   margin-right: 5vw;
+  text-align: center;
 }
 
 #about-teamTeamContainer {
@@ -52,7 +53,6 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-
   font-family: var(--rajdhaniFont);
   font-size: 30px;
   line-height: 25px;
@@ -85,4 +85,54 @@
 
 .aboutTeamDivText {
   font-size: 2vw;
+}
+/* Breakpoint 1 1000px*/
+
+@media screen and (max-width: 1000px){
+  #about-teamTeamContainer {
+    margin: 0;
+    height: 45vh;
+  }
+
+  .aboutTeamDiv {
+    height: 75%;
+    width: 23vw;
+  }
+  .aboutTeamDivText {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 800px){
+  #about-teamTeamContainer {
+    margin: 0;
+    height: 45vh;
+  }
+
+  .aboutTeamDiv {
+    height: 75%;
+    width: 25vw;
+  }
+  .aboutTeamDivText {
+    font-size: 14.5px;
+  }
+}
+@media screen and (min-width:700px) {
+  .aboutTeamDivText {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 555px){
+  #about-teamTeamContainer {
+    flex-direction: column;
+    height: unset;
+  }
+  .aboutTeamDiv {
+      height: 30vh;
+      width: 40vh;
+      margin: 10px 0px;
+  }
+  .aboutTeamDivText {
+    font-size: unset;
+  }
 }

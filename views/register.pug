@@ -5,10 +5,23 @@ html
     meta(charset='utf-8')
     meta(name='viewport' content='width=device-width,initial-scale=1')
     //- All of the basic CSS variables
-    link(rel='stylesheet' href='/static/css/index.css')
     link(rel='stylesheet' href='/static/css/navigation.css')
     link(rel='stylesheet' href='/static/css/variables.css')
-    //- CANT INCLUDE NAVIGATION = ERROR IS 500
+    link(rel='stylesheet' href='/static/css/register.css')
   include includes/navigation.pug
-  body
-    p Register
+  body#registerBody
+    main#registerMain
+      h1#registerh1 Register
+      p#registerInformationText Enter you e-mail address to sign up as a beta-tester. Don't be an alpha.
+      #registerForm
+        //- input(type="text", placeholder="Username")#registerUsername.inputRegister
+        input(type="email", placeholder="E-mail address")#registerEmail.inputRegister
+        input(type="email", placeholder="Confirm e-mail address")#registerEmailCheck.inputRegister
+        div#privacyparent
+          input(type="checkbox")#checkbox
+          label(for="checkbox")#registerLabel I have read and accept the #[a(href="/privacy-policy" target="_blank")#privacyTag privacy policy]. Clicking the link will open a new tab.
+        p#warningText.hidden
+        button#registerButton Register
+
+    script(src='/static/js/navigation.js')
+    script(src='/static/js/register.js')

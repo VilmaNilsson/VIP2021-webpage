@@ -1,0 +1,38 @@
+#registerBody {
+  background-color: var(--greyBgC);
+}
+
+#registerMain {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#registerForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.inputRegister {
+  margin: .5vh;
+}
+
+#privacyParent {
+  display: flex;
+}
+
+#registerh1, #privacyTag, #registerLabel, #registerInformationText, #warningText {
+  color: var(--whiteFontC);
+}
+#privacyTag:hover {
+  color: var(--logoC);
+}
+
+#warningText {
+  height: 20px;
+}
+
+.hidden {
+  opacity: 0;
+}

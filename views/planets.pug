@@ -5,10 +5,53 @@ html
     meta(charset='utf-8')
     meta(name='viewport' content='width=device-width,initial-scale=1')
     //- All of the basic CSS variables
-    link(rel='stylesheet' href='/static/css/index.css')
     link(rel='stylesheet' href='/static/css/navigation.css')
     link(rel='stylesheet' href='/static/css/variables.css')
+    link(rel='stylesheet' href='/static/css/planets.css')
     //- CANT INCLUDE NAVIGATION = ERROR IS 500
   include includes/navigation.pug
-  body
-    p Planets
+  body.planetsBody
+    //- #starBgd
+    h2 All the planets
+    #planetWrap
+      #planet1.planetContainer
+        .planetImage
+        .planetText
+          h3 Planet 1
+          p Some information about the planet 
+      #planet2.planetContainer
+        .planetImage
+        .planetText
+          h3 Planet 2
+          p Some information about the planet
+      #planet3.planetContainer
+        .planetImage
+        .planetText
+          h3 Planet 3
+          p Some information about the planet 
+      #planet4.planetContainer
+        .planetImage
+        .planetText
+          h3 Planet 4
+          p Some information about the planet 
+      #planet5.planetContainer
+        .planetImage
+        .planetText
+          h3 Planet 5
+          p Some information about the planet 
+      #planet6.planetContainer
+        .planetImage
+        .planetText
+          h3 Planet 6
+          p Some information about the planet 
+      #planet7.planetContainer
+        .planetImage
+        .planetText
+          h3 Planet 7
+          p Some information about the planet 
+      #planet8.planetContainer
+        .planetImage
+        .planetText
+          h3 Planet 8
+          p Some information about the planet 
+  include includes/footer.pug

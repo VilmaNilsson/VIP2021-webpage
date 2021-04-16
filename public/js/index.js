@@ -4,57 +4,63 @@ const planets = [
   {
     name: 'Pluto',
     imgUrl: 'static/images/Pluto-15.svg',
-    link: '#Pluto'
+    link: '#Pluto',
   },
   {
     name: 'Moo',
     imgUrl: 'static/images/Moo-15.svg',
-    link: '#Moo'
+    link: '#Moo',
   },
   {
     name: 'Uranus',
     imgUrl: 'static/images/Pluto-15.svg',
-    link: '#Uranus'
+    link: '#Uranus',
   },
   {
     name: 'Urfanny',
     imgUrl: 'static/images/Moo-15.svg',
-    link: '#Urfanny'
+    link: '#Urfanny',
   },
   {
     name: 'Urbum',
     imgUrl: 'static/images/Pluto-15.svg',
-    link: '#Urbum'
+    link: '#Urbum',
   },
   {
     name: 'Urparts',
     imgUrl: 'static/images/Moo-15.svg',
-    link: '#Urparts'
-  }
+    link: '#Urparts',
+  },
 ];
+
+// random number (max not included) --> got ES-lint error when calling the function from utils.js
+// so I moved it here
+function randomNumber(min, max) {
+  return min + Math.floor((max - min) * Math.random());
+}
 
 // randomize then 3 planets for each reload
 // randomNumber-function is placed in utils.js
 const randomPlanets = [];
 
-for (let i = 0; i < 3; i++) {
+for (let i = 0; i < 3; i += 1) {
   const randomNr = randomNumber(0, planets.length);
   randomPlanets.push(planets[randomNr]);
   planets.splice(randomNr, 1);
 }
 
 // make elements for these in the planetsContainer on the index-page
-let planetWrapper = document.getElementById('indexWrapperDivPlanets');
+const planetWrapper = document.getElementById('indexWrapperDivPlanets');
 
 // function for the HTML-elements for the planets
 function createIndexPlanets(arrEl) {
-  let planetDiv = document.createElement('a');
+  const planetDiv = document.createElement('a');
   planetDiv.classList.add('indexPlanetDiv');
   planetDiv.setAttribute('href', arrEl.link);
-  let planetImg = document.createElement('div');
+  const planetImg = document.createElement('div');
   planetImg.classList.add('indexPlanetImg');
   planetImg.style.backgroundImage = `url(${arrEl.imgUrl})`;
-  let planetName = document.createElement('p');
+  const planetName = document.createElement('p');
   planetName.innerText = arrEl.name;
   planetDiv.append(planetImg, planetName);
   return planetDiv;

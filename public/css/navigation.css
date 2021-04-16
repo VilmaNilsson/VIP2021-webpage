@@ -194,6 +194,7 @@ header {
 @media (max-width: 900px) {
    #navGrid {
       width: 50vw;
+      left: -1vw;
    }
 }
 

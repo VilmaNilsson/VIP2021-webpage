@@ -91,3 +91,9 @@
     height: 9vh;
     width: 9vh;
 }
+
+@media (max-width: 900px) {
+    .releaseBody {
+        overflow-y: hidden;
+    }
+}

@@ -16,15 +16,46 @@ fetch(newReq)
       const timeLeft = EventDayTime - localTimeNow;
 
       // Calculating days, hours, minutes, seconds to the Event day
-      const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-      const hours = Math.floor(timeLeft % (1000 * 60 * 60 * 24) / (1000 * 60 * 60));
-      const minutes = Math.floor(timeLeft % (1000 * 60 * 60) / (1000 * 60));
-      const seconds = Math.floor(timeLeft % (1000 * 60) / 1000);
+      const times = [
+        { days: Math.floor(timeLeft / (1000 * 60 * 60 * 24)) },
+        { hours: Math.floor(timeLeft % (1000 * 60 * 60 * 24) / (1000 * 60 * 60)) },
+        { minutes: Math.floor(timeLeft % (1000 * 60 * 60) / (1000 * 60)) },
+        { seconds: Math.floor(timeLeft % (1000 * 60) / 1000) },
+      ];
+
+      // Checking if times.objects is below 10 or 0 to add an extra 0
+      for (let i = 0; i < times.length; i += 1) {
+        if (times[i].days < 10) {
+          times[i].days = `0${times[i].days}`;
+        }
+        if (times[i].hours < 10) {
+          times[i].hours = `0${times[i].hours}`;
+        }
+        if (times[i].minutes < 10) {
+          times[i].minutes = `0${times[i].minutes}`;
+        }
+        if (times[i].seconds < 10) {
+          times[i].seconds = `0${times[i].seconds}`;
+        }
+
+        if (times[i].days === 0) {
+          times[i].days = '00';
+        }
+        if (times[i].hours === 0) {
+          times[i].hours = '00';
+        }
+        if (times[i].minutes === 0) {
+          times[i].minutes = '00';
+        }
+        if (times[i].seconds === 0) {
+          times[i].seconds = '00';
+        }
+      }
 
       // Add result to the website
-      document.getElementById('release-timerDays').textContent = days;
-      document.getElementById('release-timerHours').textContent = hours;
-      document.getElementById('release-timerMinutes').textContent = minutes;
-      document.getElementById('release-timerSeconds').textContent = seconds;
+      document.getElementById('release-timerDays').textContent = times[0].days;
+      document.getElementById('release-timerHours').textContent = times[1].hours;
+      document.getElementById('release-timerMinutes').textContent = times[2].minutes;
+      document.getElementById('release-timerSeconds').textContent = times[3].seconds;
     }, 1000);
   });

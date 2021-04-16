@@ -36,4 +36,12 @@
    --navAnimationDurationOut: 0.7s;
    --navAnimationDurationIn: 0.3s;
    --navTransitionDurations: 0.5s;
+
+   /* Planets Fontsize */
+   --heading2: 4vw;
+   --heading3: 2vw;
+   --paragraphs: 1.5vw;
+   --heading2Mobile: 40pt;
+   --heading3Mobile: 30pt;
+   --paragraphsMobile: 16pt;
 }

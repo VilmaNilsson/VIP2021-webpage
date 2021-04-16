@@ -1,0 +1,97 @@
+@import "/static/css/variables.css";
+@import "/static/css/common.css";
+
+.planetsBody {
+  margin: 0px;
+  padding: 0;
+  background-color: var(--greyBgC);
+  color: var(--whiteFontC);
+  align-items: center;
+  text-align: center;
+}
+
+header {
+    position: absolute;
+    top: 3%;
+    left: 3%;
+    /* display: none; */
+}
+
+.planetsBody > h2 {
+    font-family: var(--rajdhaniFont);
+    margin-top: 10vw;
+    font-size: var(--heading2);
+}
+
+.planetsBody h3 {
+    font-family: var(--rajdhaniFont);
+    font-size: var(--heading3);
+}
+
+.planetsBody p {
+    font-family: var(--latoFont);
+    font-size: var(--paragraphs);
+}
+
+/* #starBgd {
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    height: 100vh;
+    width: 100%;
+    background: var(--starryBackgroundImage);
+    background-size: cover;
+    box-shadow: inset 0px -850px 500px -500px var(--greyBgC);
+    -moz-box-shadow: inset 0px -850px 500px -500px var(--greyBgC);
+    -webkit-box-shadow: inset 0px -850px 500px -500px var(--greyBgC);
+    -o-box-shadow: inset 0px -850px 500px -500px var(--greyBgC);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+} */
+
+#planetWrap {
+    display: flex;
+    width: 70vw;
+    flex-wrap: wrap;
+    margin-top: 6vh;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-evenly;
+}
+
+.planetContainer {
+    flex-basis: 45%;
+    height: 35vw;
+    border: 1px solid white;
+    margin: 1.5vw;
+}
+
+.planetImage {
+    height: 60%;
+}
+
+@media (max-width: 600px) {
+    #planetWrap {
+        width: 100%;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        align-items: center;
+    }
+    .planetContainer {
+        width: 90%;
+        flex-basis: 75vh;
+        margin: 3vh 0 0 0;
+    }
+    .planetsBody > h2 {
+        font-size: var(--heading2Mobile);
+    }
+    .planetsBody h3 {
+        font-size: var(--heading3Mobile);
+    }
+    .planetsBody p {
+        font-size: var(--paragraphsMobile);
+    }
+
+}

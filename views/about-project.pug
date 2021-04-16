@@ -6,9 +6,14 @@ html
     meta(name='viewport' content='width=device-width,initial-scale=1')
     //- All of the basic CSS variables
     link(rel='stylesheet' href='/static/css/navigation.css')
+    link(rel='stylesheet' href='/static/css/about-project.css')
     link(rel='stylesheet' href='/static/css/about-team.css')
+    link(rel='stylesheet' href='/static/css/index.css')
     link(rel='stylesheet' href='/static/css/variables.css')
   //- CANT INCLUDE NAVIGATION = ERROR IS 500
   include includes/navigation.pug
   body.about-teamBody
-    p hejsan alla
+    .logoDiv
+    #about-teamText
+      p#about-teamUpperText About the Project
+      p#about-teamMiddleText This is a text about the project

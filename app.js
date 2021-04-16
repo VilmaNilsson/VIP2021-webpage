@@ -3,6 +3,7 @@ const path = require('path');
 const express = require('express');
 const morgan = require('morgan');
 const minify = require('express-minify');
+const fs = require('fs');
 
 // Makes us able to run with a custom port via the terminal, eg:
 //  $ PORT=8080 node app.js
@@ -64,6 +65,18 @@ app.get('/about-team', (req, res) => {
   res.render('about-team');
 });
 
+app.get('/about-development', (req, res) => {
+  res.render('about-development');
+});
+
+app.get('/about-marketing', (req, res) => {
+  res.render('about-marketing');
+});
+
+app.get('/about-ux', (req, res) => {
+  res.render('about-ux');
+});
+
 app.get('/about-project', (req, res) => {
   res.render('about-project');
 });
@@ -86,6 +99,37 @@ app.get('/register', (req, res) => {
 
 app.get('/rules', (req, res) => {
   res.render('rules');
+});
+
+app.get('/privacy-policy', (req, res) => {
+  res.render('privacy-policy');
+});
+
+// RECEIVERS FOR POST-REQS
+// =============
+app.use(express.json());
+app.post('/registration-form', (req, res) => {
+  const body = { ...req.body };
+  const usersPath = path.join(__dirname, '/users.json');
+
+  fs.readFile(usersPath, { flag: 'a+' }, (err, data) => {
+    if (err) throw err;
+    const dataCheck = `${data}`;
+    console.log(dataCheck);
+    if (dataCheck === '') {
+      const nArr = [];
+      nArr.push(body);
+      fs.writeFile('users.json', JSON.stringify(nArr), () => {
+        res.json({ addedEmail: body.email });
+      });
+    } else {
+      const unpackedArr = JSON.parse(data);
+      unpackedArr.push(body);
+      fs.writeFile('users.json', JSON.stringify(unpackedArr), () => {
+        res.json({ addedEmail: body.email });
+      });
+    }
+  });
 });
 
 // ERROR HANDLERS

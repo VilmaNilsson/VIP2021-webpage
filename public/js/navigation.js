@@ -1,13 +1,3 @@
-// works without, is this needed?
-// const filepath = window.location.pathname;
-// const navLinks = document.querySelectorAll('.navLink');
-//
-// navLinks.forEach((link) => {
-//   if (filepath === link.getAttribute('href')) {
-//     console.log(`Welcome to page ${link.getAttribute('href')}`);
-//     link.classList.add('currentPage');
-//   }
-// });
 let navCurrentPage = window.location.href;
 
 navCurrentPage = navCurrentPage.split('/');
@@ -62,11 +52,13 @@ switch (navPageName) {
 
 const animationDurations = 500;
 
-document.getElementById('navHamContainer').onclick = function (event) {
+const navHam = document.getElementById('navHamContainer');
+
+navHam.addEventListener('click', (event) => {
   event.stopPropagation();
-  this.classList.toggle('change');
+  navHam.classList.toggle('change');
   document.getElementById('navGrid').classList.toggle('navGridOpenClose');
-};
+});
 
 function displayNavDiv(divClass, showing) {
   const navDiv = document.querySelector(divClass);
@@ -104,7 +96,9 @@ navTheGame.addEventListener('click', (event) => {
   navShowingGame = !navShowingGame;
 });
 
-document.body.addEventListener('click', () => {
-  document.getElementById('navHamContainer').classList.toggle('change');
-  document.getElementById('navGrid').classList.toggle('navGridOpenClose');
+document.addEventListener('click', (event) => {
+  if (event.target.id !== 'navGrid') {
+    document.getElementById('navHamContainer').classList.remove('change');
+    document.getElementById('navGrid').classList.remove('navGridOpenClose');
+  }
 });

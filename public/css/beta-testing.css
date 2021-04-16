@@ -89,6 +89,10 @@ p:nth-of-type(4), p:nth-of-type(5) {
     width: 90%;
   }
 
+  p {
+    font-size: 15px;
+  }
+
   #beta-testingVideo {
     height: 50.8vw;
   }

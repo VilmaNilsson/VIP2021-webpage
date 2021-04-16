@@ -157,3 +157,72 @@ div.logoDiv {
     margin: 0 0 10px 0;
   }
 }
+
+
+/* mobile version <360px */
+@media(min-width: 0px) and (max-width: 599px){
+  #indexStarryDiv {
+    height: auto;
+    /*min-height: 80vh;*/
+    justify-content: flex-start;
+    box-shadow: inset 0px -780px 500px -500px var(--greyBgC);
+    -moz-box-shadow: inset 0px -780px 500px -500px var(--greyBgC);
+    -webkit-box-shadow: inset 0px -780px 500px -500px var(--greyBgC);
+    -o-box-shadow: inset 0px -780px 500px -500px var(--greyBgC);
+  }
+  #indexWelcomeText {
+    width: 80vw;
+  }
+  #indexWelcomeTextUpper {
+    font-size: 27px;
+  }
+  #indexWelcomeText:last-child {
+    margin: 21vh 0 8vh;
+    font-size: 18px;
+    line-height: 25px;
+  }
+  #indexWelcomeText > p {
+    margin-top: 35px;
+  }
+  .indexWrapperDiv {
+    width: 80vw;
+    margin-top: 10vh;
+  }
+  .indexWrapperDiv > p {
+    font-size: 30px;
+  }
+  #indexWrapperDivPlanets {
+    flex-direction: column;
+  }
+  .indexPlanetImg {
+    height: 60%;
+    margin-top: 14%;
+  }
+  .indexPlanetDiv, .indexPlanetDiv:nth-child(2) {
+    max-height: 300px;
+    max-width: 300px;
+    width: 80%;
+    height: 60vw;
+    margin-bottom: 30px;
+  }
+  .indexPlanetDiv > p {
+     font-size: 30px;
+  }
+  #videoDiv > iframe {
+    border: 4px solid #1a191d;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+}
+}
+
+@media(min-width: 0px) and (max-width: 400px){
+  #indexWelcomeTextUpper {
+    font-size: 23px;
+  }
+  #indexWelcomeText:last-child {
+    font-size: 17px;
+  }
+}

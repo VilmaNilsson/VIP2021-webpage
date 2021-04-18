@@ -1,0 +1,27 @@
+@import "/static/css/variables.css";
+@import "/static/css/common.css";
+
+#rulesBody {
+    background-color: var(--greyBgC);
+    text-align: center;
+    color: var(--whiteFontC);
+}
+
+.logoDiv {
+    position: static;
+    margin-bottom: 5vh;
+}
+
+#rulesWrapper {
+    width: 80vw;
+    min-height: 67vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    /*justify-content: center;*/
+}
+
+#rulesWrapper > h1 {
+    font-family: var(--rajdhaniFont);
+    font-weight: 500;
+}

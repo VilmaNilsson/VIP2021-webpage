@@ -25,3 +25,9 @@
     font-family: var(--rajdhaniFont);
     font-weight: 500;
 }
+
+#videoDiv > iframe {
+  width: 70vw;
+  height: 70vw;
+}
+

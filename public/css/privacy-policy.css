@@ -1,6 +1,25 @@
 #bodyPrivacy {
   background-color: var(--greyBgC);
+  margin: 0 10vw;
 }
-h1, p {
+
+#logoDiv {
+  height: 19vh;
+  width: 100%;
+  display: inline-block;
+  background-image: var(--logoImg);
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-bottom: 10vh;
+}
+
+h1, h2, p, ul {
   color: var(--whiteFontC);
+}
+h1, h2 {
+  font-family: var(--rajdhaniFont);
+}
+p, ul {
+  font-family: var(--latoFont);
+  max-width: 500px;
 }

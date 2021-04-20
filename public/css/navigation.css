@@ -10,6 +10,7 @@ header {
 #navGrid {
    width: 30vw;
    height: 100vh;
+   padding-top: 10vh;
    position: absolute;
    background-color: var(--greyBgC);
    -webkit-transition: 0.4s;
@@ -78,6 +79,7 @@ header {
    cursor: pointer;
    z-index: 98;
    margin: 2vw;
+   position: absolute;
 }
 
 .navBar1, .navBar2, .navBar3 {

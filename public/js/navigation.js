@@ -70,7 +70,6 @@ function displayNavDiv(divClass, showing) {
 
   if (selectedMenu) {
     const anySelected = Array.from(selectedMenu.className.split(' '));
-    // if (anySelected.includes('gameDiv'))
     if (!anySelected.includes(divClass)) {
       if (anySelected.includes('gameDiv')) {
         selectedMenu.classList.toggle('menuDropDownShowingTheGame');

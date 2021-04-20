@@ -10,7 +10,7 @@ header {
 #navGrid {
    width: 30vw;
    height: 100vh;
-   padding-top: 10vh;
+   padding-top: 75px;
    position: absolute;
    background-color: var(--greyBgC);
    -webkit-transition: 0.4s;
@@ -195,6 +195,12 @@ header {
    }
    to {
       margin-left: -100%;
+   }
+}
+
+@media (min-width: 1799px) {
+   #navGrid {
+      width: 20vw;
    }
 }
 

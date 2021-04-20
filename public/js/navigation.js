@@ -79,7 +79,9 @@ function displayNavDiv(divClass, showing) {
         if (anySelected.includes('aboutDiv')) navShowingAbout = false;
         if (anySelected.includes('eventDiv')) navShowingEvents = false;
       }
-      selectedMenu.classList.toggle('menuDropVisable');
+      setTimeout(() => {
+        selectedMenu.classList.toggle('menuDropVisable');
+      }, animationDurations);
     }
   }
 

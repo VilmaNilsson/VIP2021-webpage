@@ -202,4 +202,11 @@ header {
    #navGrid {
       width: 100vw;
    }
+   .navLinkBig {
+      margin-top: 10%;
+   }
+   .navLinkSmall {
+      font-size: 18pt !important;
+      margin-top: 7.5px !important;
+   }
 }

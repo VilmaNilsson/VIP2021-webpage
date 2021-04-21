@@ -14,11 +14,11 @@ let navShowingEvents = false;
 let navShowingGame = false;
 
 switch (navPageName) {
-  case 'about-project':
+  case 'project':
     navAbout.classList.toggle('currentPage');
     document.querySelector('.navAboutProject').classList.toggle('currentSubPage');
     break;
-  case 'about-team':
+  case 'team':
     navAbout.classList.toggle('currentPage');
     document.querySelector('.navAboutTeam').classList.toggle('currentSubPage');
     break;

@@ -8,12 +8,36 @@ html
     link(rel='stylesheet' href='/static/css/index.css')
     link(rel='stylesheet' href='/static/css/navigation.css')
     link(rel='stylesheet' href='/static/css/variables.css')
-    link(rel='stylesheet' href='/static/css/about-team.css')
+    link(rel='stylesheet' href='/static/css/crews.css')
     //- CANT INCLUDE NAVIGATION = ERROR IS 500
   include includes/navigation.pug
-  body.about-teamBody
+  body#crewsBody
     .logoDiv
-    #about-teamText
-      p#about-teamUpperText Crews
-      p#about-teamMiddleText This is a text about the crews
+    #crewsWrapper
+      h1 Crews
+      .crewsGrid
+        #crew1.crewCard.starBackground
+          img(src="/static/images/crews/hoarders-18.svg", alt="star geeks").crewImage
+          h3 HOARDERS
+        #crew2.crewCard.starBackground
+          img(src="/static/images/crews/karens-18.svg", alt="karens").crewImage
+          h3 THE KARENS
+        #crew3.crewCard.starBackground
+          img(src="/static/images/crews/raccoons-17.svg", alt="raccoons").crewImage
+          h3 RACCOONS
+        #crew4.crewCard.starBackground
+          img(src="/static/images/crews/humans-18.svg", alt="humans").crewImage
+          h3 HUMANS
+        #crew5.crewCard.starBackground
+          img(src="/static/images/crews/starGeeks-18.svg", alt="star geeks").crewImage
+          h3 STAR GEEKS 
+        #crew6.crewCard.starBackground
+          img(src="/static/images/crews/babies-18.svg", alt="the babies").crewImage
+          h3 THE BABIES
+        #crew7.crewCard.starBackground
+          img(src="/static/images/crews/shitStormers-18.svg", alt="shit stormers").crewImage
+          h3 SHIT STORMERS
+        #crew8.crewCard.starBackground
+          img(src="/static/images/crews/flatEarthers-18.svg", alt="flat earthers").crewImage
+          h3 FLAT EARTHERS
   script(src="/static/js/navigation.js")

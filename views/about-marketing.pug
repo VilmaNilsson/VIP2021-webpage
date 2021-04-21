@@ -17,6 +17,8 @@ html
     .logoDiv
     .wrapper
       h1 Marketing & Design Team
+      .buttonWrapper
+        a(href="/about-team").backButton &#8592; #[span Back to teams]
       .teamMembers
         each member, index in marketingArray
           - let direction = ""

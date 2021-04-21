@@ -61,23 +61,23 @@ app.get('/beta-testing', (req, res) => {
   res.render('beta-testing');
 });
 
-app.get('/about-team', (req, res) => {
+app.get('/about/team', (req, res) => {
   res.render('about-team');
 });
 
-app.get('/about-development', (req, res) => {
+app.get('/about/teams/development', (req, res) => {
   res.render('about-development');
 });
 
-app.get('/about-marketing', (req, res) => {
+app.get('/about/teams/marketing', (req, res) => {
   res.render('about-marketing');
 });
 
-app.get('/about-ux', (req, res) => {
+app.get('/about/teams/ux', (req, res) => {
   res.render('about-ux');
 });
 
-app.get('/about-project', (req, res) => {
+app.get('/about/project', (req, res) => {
   res.render('about-project');
 });
 

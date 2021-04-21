@@ -1,14 +1,22 @@
 doctype html
 html
   head
-    title Snatch
+    title Snatch - Game Rules
     meta(charset='utf-8')
     meta(name='viewport' content='width=device-width,initial-scale=1')
     //- All of the basic CSS variables
     link(rel='stylesheet' href='/static/css/index.css')
     link(rel='stylesheet' href='/static/css/navigation.css')
     link(rel='stylesheet' href='/static/css/variables.css')
+    link(rel='stylesheet' href='/static/css/rules.css')
     //- CANT INCLUDE NAVIGATION = ERROR IS 500
   include includes/navigation.pug
-  body
-    p Rules
+  body#rulesBody
+    .logoDiv
+    #rulesWrapper
+      h1 Game Rules
+
+  //- Common footer
+  include includes/footer.pug
+  //- Common utility functions
+  script(src='/static/js/utils.js')

@@ -1,0 +1,99 @@
+@import "/static/css/variables.css";
+@import "/static/css/common.css";
+
+.releaseBody {
+    margin: 0;
+    background-color: var(--greyBgC);
+    color: var(--whiteFontC);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 100vh;
+ }
+
+#release-main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 15%;
+    height: 70%;
+    width: 85%;
+
+    font-family: var(--rajdhaniFont);
+}
+
+#release-outerCountdown {
+    width: 100%;
+    height: 50%;
+
+    display: -webkit-box;
+
+    display: -ms-flexbox;
+
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+
+#release-innerCountdown {
+    width: 90%;
+    height: 80%;
+}
+
+#release-countDown {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+
+    display: flex;
+    justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+
+    color: var(--whiteFontC);
+    height: 100%;
+}
+
+#release-cdTitle {
+    font-size: 28pt;
+}
+
+.release-cdTimer {
+    text-align: center;
+
+    font-size: 8vh;
+    height: 9vh;
+    width: 9vh;
+}
+
+@media (max-width: 900px) {
+    .releaseBody {
+        overflow-y: hidden;
+    }
+}

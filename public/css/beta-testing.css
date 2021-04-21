@@ -1,58 +1,103 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
 .beta-testingBody {
   margin: 0px;
-
   background-color: var(--greyBgC);
   color: var(--whiteFontC);
 }
 
+.logoDiv {
+  position: static;
+  width: 100%;
+  margin-bottom: 5vh;
+}
+
 #beta-testingVideo {
-  width: 100vw;
-  height: 70vh;
+  width: 100%;
+  height: 40vw;
   display: flex;
   justify-content: center;
   align-items: end;
 }
 
+iframe {
+  width: 70.8vw;
+  height: 100%;
+}
+
 #beta-testingContentWrapper {
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 100vw;
+  width: 100%;
 }
 
-#beta-testingHeader > p {
-  font-family: var(--rajdhaniFont);
-}
-
-.beta-testingSectionContainer {
-  display: flex;
-  justify-content: center;
-  align-items: baseline;
-  flex-direction: column;
+#forTextAlignment {
   width: 50%;
 }
 
-.beta-testingHeaderContainer {
+h1 {
   font-family: var(--rajdhaniFont);
-  font-size: 20px;
+  font-weight: 450;
+  font-size: 30px;
+  margin-top: 50px;
 }
 
-.beta-testingTextContainer {
-  font-family: var(--latoFont);
-  font-size: 15px;
-  font-weight: 300;
-}
-
-.beta-testingHeaderContainer > p {
-  margin: 5px;
+h2 {
+  font-family: var(--rajdhaniFont);
+  font-size: 22px;
+  font-weight: 500;
   margin-top: 30px;
 }
 
-.beta-testingTextContainer > p {
-  margin: 2px;
+h2:first-of-type {
+  margin-top: 10px;
 }
 
-.beta-testingSectionContainer:last-child > div {
+p {
+  font-family: var(--latoFont);
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 25px;
+}
+
+p:nth-of-type(4), p:nth-of-type(5) {
   margin-top: 20px;
+}
+
+@media (max-width: 1120px) {
+
+  .logoDiv {
+    margin-bottom: 5vh;
+  }
+
+  #beta-testingVideo {
+    height: 40vw;
+  }
+
+  iframe {
+    width: 70.8vw;
+    height: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  #forTextAlignment {
+    width: 90%;
+  }
+
+  p {
+    font-size: 15px;
+  }
+
+  #beta-testingVideo {
+    height: 50.8vw;
+  }
+
+  iframe {
+    width: 90%;
+  }
 }

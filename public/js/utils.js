@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 // We'll store common utility functions within this file
 
 // function byId(id) {

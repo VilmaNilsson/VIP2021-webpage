@@ -6,7 +6,7 @@ body {
 .logoDiv {
    background: var(--logoImg);
    height: 25vh;
-   width: 100vw;
+   width: 100%;
    background-repeat: no-repeat;
    background-position: center;
    position: absolute;

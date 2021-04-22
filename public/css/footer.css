@@ -1,0 +1,63 @@
+@import "/static/css/variables.css";
+
+footer {
+    box-sizing: border-box;
+    display: flex;
+    background-color: var(--greyBkFooter);
+    height: 22vh;
+    padding: 2vw 15vw;
+    color: var(--fontCFooter);
+    width:100%;
+    margin-top: 10vh;
+}
+
+footer > div {
+    flex-basis: 50%;
+}
+
+footer a {
+    text-decoration: none;
+    color: var(--fontCFooter);
+    font-family: var(--latoFont);
+    display: block;
+    margin-bottom: 4px;
+}
+
+footer a:visited {
+    color: var(--fontCFooter);
+}
+
+/* footer a:hover {
+    color: lightslategray;
+} */
+
+footer h3 {
+    font-family: var(--rajdhaniFont);
+    text-transform: uppercase;
+    margin: 0;
+    margin-bottom: 4px;
+}
+
+#footerScroll {
+    display: flex;
+    justify-content: flex-end;
+}
+
+#scrollToTop {
+    height: 30px;
+}
+
+#scrollToTop:hover {
+    cursor: pointer;
+}
+
+#footerLinks {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: left;
+}
+
+.footerLinksDiv {
+    flex-basis: 0;
+    flex-grow: 1;
+}

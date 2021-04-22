@@ -8,6 +8,7 @@ html
     link(rel='stylesheet' href='/static/css/navigation.css')
     link(rel='stylesheet' href='/static/css/variables.css')
     link(rel='stylesheet' href='/static/css/register.css')
+    link(rel='stylesheet' href='/static/css/footer.css')
   include includes/navigation.pug
   body#registerBody
     #logoDiv
@@ -24,6 +25,8 @@ html
         p#warningText.hidden
         #buttonContainer
           button#registerButton Register
-
+    //- Common footer
+    include includes/footer.pug
+    script(src='/static/js/utils.js')
     script(src='/static/js/navigation.js')
     script(src='/static/js/register.js')

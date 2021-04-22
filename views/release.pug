@@ -7,6 +7,7 @@ html
     link(rel='stylesheet' href='/static/css/variables.css')
     link(rel='stylesheet' href='/static/css/navigation.css')
     link(rel='stylesheet' href='/static/css/release.css')
+    link(rel='stylesheet' href='/static/css/footer.css')
   body.releaseBody
     include includes/navigation.pug
     .logoDiv
@@ -28,6 +29,7 @@ html
             div(id="release-seconds")
               p(class="release-cdTitle") SECONDS
               div(class="release-cdTimer"  id="release-timerSeconds") 00
+    script(src="/static/js/utils.js")
     script(src="/static/js/navigation.js")
     script(src="/static/js/release.js")
     //- Common footer

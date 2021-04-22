@@ -17,6 +17,11 @@ header {
     /* display: none; */
 }
 
+.logoDiv {
+    position: static;
+    margin-bottom: 10vw;
+}
+
 .planetsBody > h2 {
     font-family: var(--rajdhaniFont);
     margin-top: 10vw;

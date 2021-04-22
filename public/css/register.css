@@ -2,12 +2,10 @@
   background-color: var(--greyBgC);
 }
 
-#logoDiv {
+.logoDiv {
   height: 19vh;
-  background-image: var(--logoImg);
-  background-repeat: no-repeat;
-  background-position: center;
   margin-bottom: 10vh;
+  position: static;
 }
 #registerMain {
   display: flex;

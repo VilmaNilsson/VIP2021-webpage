@@ -18,6 +18,8 @@ html
       a(href="/")
     .wrapper
       h1 Development team
+      .buttonWrapper
+        a(href="/about-team").backButton &#8592; #[span Back to teams]
       .teamMembers
         each member, index in devArray
           - let direction = ""

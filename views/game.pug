@@ -11,16 +11,17 @@ html
     link(rel='stylesheet' href='/static/css/footer.css')
   body#gameBody
   //- UNSURE WHAT THIS WILL BE USED FOR, BUT PROBALBY FOR "THE GAME"
-  include includes/navigation.pug
-    //- .logoDiv
-    //- .deletedDiv
-    //-   p More videos
-    //-   .test
-    //-      iframe(width="560" height="315" src="https://www.youtube.com/embed/Uj17R80s67c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
-    //-   .test
-    //-      iframe(width="560" height="315" src="https://www.youtube.com/embed/hsJcLMWh6qc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
-    //-   .test
-    //-      iframe(width="560" height="315" src="https://www.youtube.com/embed/WpQ0yXYDK8A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+    include includes/navigation.pug
+    .logoDiv
+      a(href="/")
+    .deletedDiv
+      p More videos
+      .test
+         iframe(width="560" height="315" src="https://www.youtube.com/embed/Uj17R80s67c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+      .test
+         iframe(width="560" height="315" src="https://www.youtube.com/embed/hsJcLMWh6qc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+      .test
+         iframe(width="560" height="315" src="https://www.youtube.com/embed/WpQ0yXYDK8A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
 
     //- Common footer
   include includes/footer.pug

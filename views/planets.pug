@@ -12,49 +12,60 @@ html
     //- CANT INCLUDE NAVIGATION = ERROR IS 500
   include includes/navigation.pug
   body.planetsBody
+    .logoDiv
+      a(href="/")
     //- #starBgd
     h2 All the planets
     #planetWrap
-      #planet1.planetContainer
-        .planetImage
-        .planetText
-          h3 Planet 1
-          p Some information about the planet 
-      #planet2.planetContainer
-        .planetImage
-        .planetText
-          h3 Planet 2
-          p Some information about the planet
-      #planet3.planetContainer
-        .planetImage
-        .planetText
-          h3 Planet 3
-          p Some information about the planet 
-      #planet4.planetContainer
-        .planetImage
-        .planetText
-          h3 Planet 4
-          p Some information about the planet 
-      #planet5.planetContainer
-        .planetImage
-        .planetText
-          h3 Planet 5
-          p Some information about the planet 
-      #planet6.planetContainer
-        .planetImage
-        .planetText
-          h3 Planet 6
-          p Some information about the planet 
-      #planet7.planetContainer
-        .planetImage
-        .planetText
-          h3 Planet 7
-          p Some information about the planet 
-      #planet8.planetContainer
-        .planetImage
-        .planetText
-          h3 Planet 8
-          p Some information about the planet 
+      .flipCardWrap
+        #planet1.planetContainer
+          .planetImage.starBackground
+          .planetText
+            h3 Planet 1
+            p Some information about the planet 
+      .flipCardWrap
+        #planet2.planetContainer
+          .planetImage.starBackground
+          .planetText
+            h3 Planet 2
+            p Some information about the planet 
+      .flipCardWrap
+        #planet3.planetContainer
+          .planetImage.starBackground
+          .planetText
+            h3 Planet 3
+            p Some information about the planet 
+      .flipCardWrap
+        #planet4.planetContainer
+          .planetImage.starBackground
+          .planetText
+            h3 Planet 4
+            p Some information about the planet 
+      .flipCardWrap
+        #planet5.planetContainer
+          .planetImage.starBackground
+          .planetText
+            h3 Planet 5
+            p Some information about the planet 
+      .flipCardWrap
+        #planet6.planetContainer
+          .planetImage.starBackground
+          .planetText
+            h3 Planet 6
+            p Some information about the planet 
+      .flipCardWrap
+        #planet7.planetContainer
+          .planetImage.starBackground
+          .planetText
+            h3 Planet 7
+            p Some information about the planet 
+      .flipCardWrap
+        #planet8.planetContainer
+          .planetImage.starBackground
+          .planetText
+            h3 Planet 8
+            p Some information about the planet 
   include includes/footer.pug
   script(src="/static/js/utils.js")
   script(src="/static/js/navigation.js")
+  script(src="/static/js/backgroundAssigner.js")

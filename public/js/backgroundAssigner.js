@@ -1,5 +1,5 @@
 // Create a new HTMLCollection that will hold all elements that has the class
-const planetItemArray = document.getElementsByClassName('starBackgound');
+const planetItemArray = document.getElementsByClassName('starBackground');
 
 // Function for generating a random number
 function randomNumber() {

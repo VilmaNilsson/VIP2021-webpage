@@ -9,6 +9,7 @@ html
     link(rel='stylesheet' href='/static/css/navigation.css')
     link(rel='stylesheet' href='/static/css/variables.css')
     link(rel='stylesheet' href='/static/css/crews.css')
+    link(rel='stylesheet' href='/static/css/footer.css')
     //- CANT INCLUDE NAVIGATION = ERROR IS 500
   include includes/navigation.pug
   body#crewsBody
@@ -76,5 +77,8 @@ html
               h3 FLAT EARTHERS 
             .crewInfo
               h3 info 
+    //- Common footer
+  include includes/footer.pug
+  script(src="/static/js/utils.js")
   script(src="/static/js/navigation.js")
   script(src="/static/js/backgroundAssigner.js")

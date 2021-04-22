@@ -10,6 +10,7 @@ html
     link(rel='stylesheet' href='/static/css/about-team.css')
     link(rel='stylesheet' href='/static/css/index.css')
     link(rel='stylesheet' href='/static/css/variables.css')
+    link(rel='stylesheet' href='/static/css/footer.css')
   //- CANT INCLUDE NAVIGATION = ERROR IS 500
   include includes/navigation.pug
   body.about-teamBody
@@ -18,4 +19,7 @@ html
     #about-teamText
       p#about-teamUpperText About the Project
       p#about-teamMiddleText This is a text about the project
+  //- Common footer
+  include includes/footer.pug
+  script(src="/static/js/utils.js")
   script(src="/static/js/navigation.js")

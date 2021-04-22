@@ -7,5 +7,9 @@
     margin: 0px;
     background-color: var(--greyBgC);
     color: var(--whiteFontC);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
  }
  

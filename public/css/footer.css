@@ -61,3 +61,20 @@ footer h3 {
     flex-basis: 0;
     flex-grow: 1;
 }
+
+/* mobilversion */
+@media(max-width: 600px) {
+    footer {
+        padding: 5vw 10vw;
+        width: 100%;
+        margin-top: 10vh;
+        flex-direction: column;
+        height: auto;
+    }
+    #footerLinks {
+        flex-direction: column;
+    }
+    .footerLinksDiv {
+        margin-bottom: 2vh;
+    }
+}

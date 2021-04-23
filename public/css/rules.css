@@ -5,6 +5,8 @@
     background-color: var(--greyBgC);
     text-align: center;
     color: var(--whiteFontC);
+    padding: 0;
+    margin: 0;
 }
 
 .logoDiv {

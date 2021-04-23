@@ -1,5 +1,7 @@
 #registerBody {
   background-color: var(--greyBgC);
+  padding: 0;
+  margin: 0;
 }
 
 .logoDiv {

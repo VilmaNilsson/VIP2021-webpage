@@ -5,6 +5,8 @@
     background-color: var(--greyBgC);
     text-align: center;
     color: var(--whiteFontC);
+    padding: 0;
+    margin: 0;
 }
 
 .logoDiv {
@@ -66,101 +68,54 @@
 
 .cardSpace {
     background-color: transparent;
-    height: 27vw;
     perspective: 800px;
-  }
+}
   
-  .cardBase {
+.cardBase {
     position: relative;
     width: 100%;
-    height: 100%;
+    height: 27vw;
     transition: transform 0.8s;
     transform-style: preserve-3d;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     -webkit-transition: transform 0.8s;
     -moz-transition: transform 0.8s;
     -ms-transition: transform 0.8s;
     -o-transition: transform 0.8s;
 }
-  
  
-  .cardSpace:hover .cardBase {
+.cardSpace:hover .cardBase {
     transform: rotateY(180deg);
     -webkit-transform: rotateY(180deg);
     -moz-transform: rotateY(180deg);
     -ms-transform: rotateY(180deg);
     -o-transform: rotateY(180deg);
 }
- 
-  
-  .crewCard, .crewInfo {
-    position: absolute;
+
+.crewCard, .crewInfo {
     width: 100%;
     height: 100%;
-    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
     background-color: black;
-  }
-  
-  .crewCard {
+}
+.crewCard {
+    position: absolute;
     color: white;
     background-position: center;
-    background-color: black;
-  }
+}
   
-  .crewInfo {
-    color: white;
+.crewInfo {
     transform: rotateY(180deg);
-  }
+}
+/* FLIP END */
 
-  /* FLIP END */
-
-@media(max-width: 1190px){
-    .crewCard > h3 {
-        font-size: 25px;
-        margin-top: -30px;
-    }
-  }
-
-@media(max-width: 995px){
-    .crewCard > h3 {
-        font-size: 20px;
-    }
-  }
-
-  @media(max-width: 840px){
-    .crewCard > h3 {
-        font-size: 16px;
-        margin-top: -25px;
-    }
-  }
-
-  @media(max-width: 700px){
+@media(max-width: 400px){
     .crewsGrid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        width: 70vw;
-        grid-gap: 25px;
+        grid-template-columns: repeat(1, 1fr);
+        grid-auto-rows: auto;
+        grid-gap: 70vw;
     }
-    .crewCard {
-        height: 50vw;
-    }
-    .crewCard > h3 {
-        font-size: 21px;
-    }
-  }
-
-  @media(max-width: 520px){
-    .crewCard > h3 {
-        font-size: 16px;
-    }
-  }
-
-  @media(max-width: 430px){
-    .crewsGrid {
-        display: block;
-    }
-    .crewCard {
+    .crewCard, .crewInfo {
         height: 93vw;
         margin-bottom: 35px;
     }
@@ -168,4 +123,47 @@
         font-size: 27px;
         margin-top: -35px;
     }
+}
+
+@media(min-width: 401px) AND (max-width: 900px) {
+    .crewsGrid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: auto;
+        width: 70vw;
+        grid-gap: 25px;
+    }
+    .cardBase {
+        margin-bottom: 20vw;
+    }
+    .crewCard, .crewInfo {
+        height: 50vw;
+    }
+    .crewCard > h3 {
+        font-size: 20px;
+        margin-top: -25px;
+    }
+}
+
+@media(min-width: 901px) AND (max-width: 1190){
+    .crewCard > h3 {
+        font-size: 25px;
+        margin-top: -30px;
+    }
   }
+
+  @media(min-width: 401px) AND (max-width: 500){
+    .crewCard > h3 {
+        font-size: 13px;
+    }
+  }
+
+  @media(min-width: 501) AND (max-width: 900){
+    .crewCard > h3 {
+        font-size: 13px;
+    }
+  }
+
+
+
+
+

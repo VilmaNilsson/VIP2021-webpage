@@ -121,8 +121,9 @@ app.post('/registration-form', (req, res) => {
         if (createError) {
           res.json({ error: 'Something went wrong' });
           console.log(createError);
+        } else {
+          res.json({ addedEmail: body.email });
         }
-        res.json({ addedEmail: body.email });
       });
     } else {
       const unpackedArr = JSON.parse(data);
@@ -131,8 +132,9 @@ app.post('/registration-form', (req, res) => {
         if (appendError) {
           res.json({ error: 'Something went wrong' });
           console.log(appendError);
+        } else {
+          res.json({ addedEmail: body.email });
         }
-        res.json({ addedEmail: body.email });
       });
     }
   });

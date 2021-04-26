@@ -112,22 +112,26 @@ app.post('/registration-form', (req, res) => {
   const body = { ...req.body };
   const usersPath = path.join(__dirname, '/users.json');
 
-  fs.readFile(usersPath, { flag: 'a+' }, (err, data) => {
+  fs.readFile(usersPath, { flag: 'a+', encoding: 'utf8' }, (err, data) => {
     if (err) { res.json({ error: 'Something went wrong' }); }
-    const dataCheck = `${data}`;
-    console.log(dataCheck);
-    if (dataCheck === '') {
+    if (data === '') {
       const nArr = [];
       nArr.push(body);
       fs.writeFile('users.json', JSON.stringify(nArr), (createError) => {
-        if (createError) { res.json({ error: 'Something went wrong' }); }
+        if (createError) {
+          res.json({ error: 'Something went wrong' });
+          console.log(createError);
+        }
         res.json({ addedEmail: body.email });
       });
     } else {
       const unpackedArr = JSON.parse(data);
       unpackedArr.push(body);
       fs.writeFile('users.json', JSON.stringify(unpackedArr), (appendError) => {
-        if (appendError) { res.json({ error: 'Something went wrong' }); }
+        if (appendError) {
+          res.json({ error: 'Something went wrong' });
+          console.log(appendError);
+        }
         res.json({ addedEmail: body.email });
       });
     }

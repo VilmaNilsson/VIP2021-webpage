@@ -58,7 +58,7 @@ header {
 
 #planetWrap {
     display: flex;
-    width: 70vw;
+    width: 54vw;
     flex-wrap: wrap;
     margin-top: 6vh;
     margin-left: auto;
@@ -69,6 +69,7 @@ header {
 .planetContainer {
     flex-basis: 45%;
     height: 35vw;
+	
 	
     /*border: 1px solid pink;*/
     margin: 1.5vw;
@@ -81,6 +82,8 @@ header {
     /* border: 1px solid #FF00CC; */
     background-image:none;
     border-image: url("/static/images/Neon-frame-18.svg") 30 fill / 30px / 30px space; ;
+	border-repeat: no-repeat;
+	
 }
 
 

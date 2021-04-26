@@ -38,7 +38,7 @@ header {
 	
 }
 
-/* #starBgd {
+ /*#starBgd {
     position: absolute;
     top: 0;
     z-index: -1;
@@ -64,6 +64,7 @@ header {
     margin-left: auto;
     margin-right: auto;
     justify-content: space-evenly;
+	
 }
 
 .planetContainer {
@@ -72,7 +73,7 @@ header {
 	
 	
     /*border: 1px solid pink;*/
-    margin: 1.5vw;
+    margin-top: 1.5vw;
 	
 	background-image:url("/static/images/Background1-18.png");
 	
@@ -82,7 +83,7 @@ header {
     /* border: 1px solid #FF00CC; */
     background-image:none;
     border-image: url("/static/images/Neon-frame-18.svg") 30 fill / 30px / 30px space; ;
-	border-repeat: no-repeat;
+	border-image-repeat: no-repeat;
 	
 }
 

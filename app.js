@@ -119,15 +119,15 @@ app.post('/registration-form', (req, res) => {
     if (dataCheck === '') {
       const nArr = [];
       nArr.push(body);
-      fs.writeFile('users.json', JSON.stringify(nArr), () => {
-        if (err) { res.json({ error: 'Something went wrong' }); }
+      fs.writeFile('users.json', JSON.stringify(nArr), (createError) => {
+        if (createError) { res.json({ error: 'Something went wrong' }); }
         res.json({ addedEmail: body.email });
       });
     } else {
       const unpackedArr = JSON.parse(data);
       unpackedArr.push(body);
-      fs.writeFile('users.json', JSON.stringify(unpackedArr), () => {
-        if (err) { res.json({ error: 'Something went wrong' }); }
+      fs.writeFile('users.json', JSON.stringify(unpackedArr), (appendError) => {
+        if (appendError) { res.json({ error: 'Something went wrong' }); }
         res.json({ addedEmail: body.email });
       });
     }

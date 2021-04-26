@@ -69,12 +69,17 @@ header {
 .planetContainer {
     flex-basis: 45%;
     height: 35vw;
-    border: 1px solid white;
+    /* border: 1px solid white; */
     margin: 1.5vw;
 	
 	background-image:url("/static/images/Background1-18.png");
 	
 }
+
+.planetContainer:hover{
+    border: 1px solid #FF00CC;
+}
+
 
 
 .planetImageKim{
@@ -90,6 +95,7 @@ header {
 .planetContainer:hover > .planetImageKim{
 	
 	visibility: hidden;	
+    /* border: 1px solid #FF00CC; */
 	height: 0%;
 }
 

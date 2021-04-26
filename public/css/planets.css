@@ -69,7 +69,8 @@ header {
 .planetContainer {
     flex-basis: 45%;
     height: 35vw;
-    border: 1px solid white;
+	border-image: url("/static/images/Neon-frame-18.svg") 30 fill / 30px / 30px space; ;
+    /*border: 1px solid pink;*/
     margin: 1.5vw;
 	
 	background-image:url("/static/images/Background1-18.png");

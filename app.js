@@ -113,19 +113,21 @@ app.post('/registration-form', (req, res) => {
   const usersPath = path.join(__dirname, '/users.json');
 
   fs.readFile(usersPath, { flag: 'a+' }, (err, data) => {
-    if (err) throw err;
+    if (err) { res.json({ error: 'Something went wrong' }); }
     const dataCheck = `${data}`;
     console.log(dataCheck);
     if (dataCheck === '') {
       const nArr = [];
       nArr.push(body);
       fs.writeFile('users.json', JSON.stringify(nArr), () => {
+        if (err) { res.json({ error: 'Something went wrong' }); }
         res.json({ addedEmail: body.email });
       });
     } else {
       const unpackedArr = JSON.parse(data);
       unpackedArr.push(body);
       fs.writeFile('users.json', JSON.stringify(unpackedArr), () => {
+        if (err) { res.json({ error: 'Something went wrong' }); }
         res.json({ addedEmail: body.email });
       });
     }

@@ -90,6 +90,10 @@
     -moz-transform: rotateY(180deg);
     -ms-transform: rotateY(180deg);
     -o-transform: rotateY(180deg);
+	
+	
+    border-image: url("/static/images/Neon-frame-18.svg") 50 fill / 40px / 40px ; ;
+	/*border-image-repeat: no-repeat;*/
 }
 
 .planetCard, .planetInfo {

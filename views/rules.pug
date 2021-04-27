@@ -9,10 +9,12 @@ html
     link(rel='stylesheet' href='/static/css/navigation.css')
     link(rel='stylesheet' href='/static/css/variables.css')
     link(rel='stylesheet' href='/static/css/rules.css')
+    link(rel='stylesheet' href='/static/css/footer.css')
     //- CANT INCLUDE NAVIGATION = ERROR IS 500
   include includes/navigation.pug
   body#rulesBody
     .logoDiv
+      a(href="/")
     #rulesWrapper
       h1 Game Rules
       iframe(src="https://youtu.be/vbEZyQ4dLq0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
@@ -21,3 +23,4 @@ html
   include includes/footer.pug
   //- Common utility functions
   script(src='/static/js/utils.js')
+  script(src="/static/js/navigation.js")

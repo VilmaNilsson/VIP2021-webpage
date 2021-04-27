@@ -9,11 +9,28 @@
     color: var(--whiteFontC);
  }
 
+
  body > .logoDiv {
      position: static;
      width: 100%;
      margin-bottom: 5vh;
  }
+
+ .buttonWrapper {
+    width: 100%;
+ }
+
+ .backButton {
+    font-family: var(--rajdhaniFont);
+    color: var(--whiteFontC);
+    text-decoration: none;
+    margin-left: 15%;
+ }
+
+ .backButton span:hover {
+    text-decoration: underline;
+ }
+
 
  h1 {
     font-family: var(--rajdhaniFont);

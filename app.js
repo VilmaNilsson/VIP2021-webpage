@@ -61,23 +61,23 @@ app.get('/beta-testing', (req, res) => {
   res.render('beta-testing');
 });
 
-app.get('/about-team', (req, res) => {
+app.get('/about/team', (req, res) => {
   res.render('about-team');
 });
 
-app.get('/about-development', (req, res) => {
+app.get('/about/teams/development', (req, res) => {
   res.render('about-development');
 });
 
-app.get('/about-marketing', (req, res) => {
+app.get('/about/teams/marketing', (req, res) => {
   res.render('about-marketing');
 });
 
-app.get('/about-ux', (req, res) => {
+app.get('/about/teams/ux', (req, res) => {
   res.render('about-ux');
 });
 
-app.get('/about-project', (req, res) => {
+app.get('/about/project', (req, res) => {
   res.render('about-project');
 });
 
@@ -112,21 +112,29 @@ app.post('/registration-form', (req, res) => {
   const body = { ...req.body };
   const usersPath = path.join(__dirname, '/users.json');
 
-  fs.readFile(usersPath, { flag: 'a+' }, (err, data) => {
-    if (err) throw err;
-    const dataCheck = `${data}`;
-    console.log(dataCheck);
-    if (dataCheck === '') {
+  fs.readFile(usersPath, { flag: 'a+', encoding: 'utf8' }, (err, data) => {
+    if (err) { res.json({ error: 'Something went wrong' }); }
+    if (data === '') {
       const nArr = [];
       nArr.push(body);
-      fs.writeFile('users.json', JSON.stringify(nArr), () => {
-        res.json({ addedEmail: body.email });
+      fs.writeFile('users.json', JSON.stringify(nArr), (createError) => {
+        if (createError) {
+          res.json({ error: 'Something went wrong' });
+          console.log(createError);
+        } else {
+          res.json({ addedEmail: body.email });
+        }
       });
     } else {
       const unpackedArr = JSON.parse(data);
       unpackedArr.push(body);
-      fs.writeFile('users.json', JSON.stringify(unpackedArr), () => {
-        res.json({ addedEmail: body.email });
+      fs.writeFile('users.json', JSON.stringify(unpackedArr), (appendError) => {
+        if (appendError) {
+          res.json({ error: 'Something went wrong' });
+          console.log(appendError);
+        } else {
+          res.json({ addedEmail: body.email });
+        }
       });
     }
   });

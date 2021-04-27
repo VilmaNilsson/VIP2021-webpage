@@ -10,10 +10,6 @@
   text-align: center;
 }
 
-#navHamContainer {
-  margin: 2vw;
-}
-
 div.logoDiv {
   height: 19vh;
   width: 100%;
@@ -122,8 +118,8 @@ div.logoDiv {
   background-repeat: no-repeat;
   background-size: contain;
   width: 100%;
-  height: 45%;
-  margin-top: 20%;
+  height: 70%;
+  margin-top: 10%;
 }
 
 .indexPlanetDiv > p {
@@ -136,7 +132,37 @@ div.logoDiv {
 }
 
 .teamUpdateDiv {
-  height: 30vw;
+  text-align: justify;
+  font-family: var(--latoFont);
+  font-weight: 300;
+  font-size: 25px;
+  line-height: 28px;
+  position: relative;
+  padding: 2vw;
+}
+
+.teamUpdateDiv > p:first-child {
+  margin-top: 0;
+}
+
+.cornerLeftDiv, .cornerRightDiv {
+  position: absolute;
+  height: 3vw;
+  width: 3vw;
+}
+
+.cornerLeftDiv {
+  border-top: 5px solid white;
+  border-left: 5px solid white;
+  top: 0;
+  left: 0;
+}
+
+.cornerRightDiv {
+  border-bottom: 5px solid white;
+  border-right: 5px solid white;
+  bottom: 0;
+  right: 0;
 }
 
 /* breakpoint <600px */
@@ -215,7 +241,21 @@ div.logoDiv {
     -moz-border-radius: 3px;
     -ms-border-radius: 3px;
     -o-border-radius: 3px;
-}
+  }
+  .teamUpdateDiv {
+    padding: 4vw;
+    text-align: left;
+  }
+  .cornerLeftDiv, .cornerRightDiv {
+    height: 6vw;
+    width: 6vw;
+  }
+  .teamUpdateDiv p {
+    font-size: 17px;
+  }
+  .indexWrapperDiv > h3, .indexWrapperDiv > h3 {
+    font-size: 7vw;
+  }
 }
 
 @media(min-width: 0px) and (max-width: 400px){

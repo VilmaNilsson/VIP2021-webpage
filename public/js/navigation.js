@@ -9,38 +9,42 @@ const navEvent = document.querySelector('.navEvents');
 const navTheGame = document.querySelector('.navGame');
 const navRegister = document.querySelector('.navRegister');
 
+let navShowingAbout = false;
+let navShowingEvents = false;
+let navShowingGame = false;
+
 switch (navPageName) {
-  case 'about-project':
+  case 'project':
     navAbout.classList.toggle('currentPage');
-    document.querySelector('.navAboutProject').classList.toggle('currentPage');
+    document.querySelector('.navAboutProject').classList.toggle('currentSubPage');
     break;
-  case 'about-team':
+  case 'team':
     navAbout.classList.toggle('currentPage');
-    document.querySelector('.navAboutTeam').classList.toggle('currentPage');
+    document.querySelector('.navAboutTeam').classList.toggle('currentSubPage');
     break;
   case 'beta-testing':
     navEvent.classList.toggle('currentPage');
-    document.querySelector('.navBetaTesting').classList.toggle('currentPage');
+    document.querySelector('.navBetaTesting').classList.toggle('currentSubPage');
     break;
   case 'release':
     navEvent.classList.toggle('currentPage');
-    document.querySelector('.navReleaseDay').classList.toggle('currentPage');
+    document.querySelector('.navReleaseDay').classList.toggle('currentSubPage');
     break;
   case 'rules':
     navTheGame.classList.toggle('currentPage');
-    document.querySelector('.navRules').classList.toggle('currentPage');
+    document.querySelector('.navRules').classList.toggle('currentSubPage');
     break;
   case 'crews':
     navTheGame.classList.toggle('currentPage');
-    document.querySelector('.navCrews').classList.toggle('currentPage');
+    document.querySelector('.navCrews').classList.toggle('currentSubPage');
     break;
   case 'planets':
     navTheGame.classList.toggle('currentPage');
-    document.querySelector('.navPlanets').classList.toggle('currentPage');
+    document.querySelector('.navPlanets').classList.toggle('currentSubPage');
     break;
   case 'actions':
     navTheGame.classList.toggle('currentPage');
-    document.querySelector('.navActions').classList.toggle('currentPage');
+    document.querySelector('.navActions').classList.toggle('currentSubPage');
     break;
   case 'register':
     navRegister.classList.toggle('currentPage');
@@ -61,7 +65,25 @@ navHam.addEventListener('click', (event) => {
 });
 
 function displayNavDiv(divClass, showing) {
-  const navDiv = document.querySelector(divClass);
+  const navDiv = document.querySelector(`.${divClass}`);
+  const selectedMenu = document.querySelector('.menuDropVisable');
+
+  if (selectedMenu) {
+    const anySelected = Array.from(selectedMenu.className.split(' '));
+    if (!anySelected.includes(divClass)) {
+      if (anySelected.includes('gameDiv')) {
+        selectedMenu.classList.toggle('menuDropDownShowingTheGame');
+        navShowingGame = false;
+      } else {
+        selectedMenu.classList.toggle('menuDropDownShowing');
+        if (anySelected.includes('aboutDiv')) navShowingAbout = false;
+        if (anySelected.includes('eventDiv')) navShowingEvents = false;
+      }
+      setTimeout(() => {
+        selectedMenu.classList.toggle('menuDropVisable');
+      }, animationDurations);
+    }
+  }
 
   if (showing) {
     setTimeout(() => {
@@ -71,28 +93,25 @@ function displayNavDiv(divClass, showing) {
     navDiv.classList.toggle('menuDropVisable');
   }
 
-  if (divClass === '.gameDiv') navDiv.classList.toggle('menuDropDownShowingTheGame');
+  if (divClass === 'gameDiv') navDiv.classList.toggle('menuDropDownShowingTheGame');
   else navDiv.classList.toggle('menuDropDownShowing');
 }
-let navShowingAbout = false;
-let navShowingEvents = false;
-let navShowingGame = false;
 
 navAbout.addEventListener('click', (event) => {
   event.stopPropagation();
-  displayNavDiv('.aboutDiv', navShowingAbout);
+  displayNavDiv('aboutDiv', navShowingAbout);
   navShowingAbout = !navShowingAbout;
 });
 
 navEvent.addEventListener('click', (event) => {
   event.stopPropagation();
-  displayNavDiv('.eventDiv', navShowingEvents);
+  displayNavDiv('eventDiv', navShowingEvents);
   navShowingEvents = !navShowingEvents;
 });
 
 navTheGame.addEventListener('click', (event) => {
   event.stopPropagation();
-  displayNavDiv('.gameDiv', navShowingGame);
+  displayNavDiv('gameDiv', navShowingGame);
   navShowingGame = !navShowingGame;
 });
 

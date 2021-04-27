@@ -44,4 +44,9 @@
    --heading2Mobile: 40pt;
    --heading3Mobile: 30pt;
    --paragraphsMobile: 16pt;
+
+   /* footer */
+   --greyBkFooter: #F4F4F4;
+   --fontCFooter: #242328;
+   
 }

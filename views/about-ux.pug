@@ -9,14 +9,18 @@ html
     link(rel='stylesheet' href='/static/css/navigation.css')
     link(rel='stylesheet' href='/static/css/index.css')
     link(rel='stylesheet' href='/static/css/variables.css')
+    link(rel='stylesheet' href='/static/css/footer.css')
   //- CANT INCLUDE NAVIGATION = ERROR IS 500
   include includes/navigation.pug
   include includes/about-teams-data.pug
 
   body.about-teamsBody
     .logoDiv
+      a(href="/")
     .wrapper
       h1 UX Team
+      .buttonWrapper
+        a(href="/about-team").backButton &#8592; #[span Back to teams]
       .teamMembers
         each member, index in uxArray
           - let direction = ""

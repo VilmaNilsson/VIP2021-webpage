@@ -1,9 +1,15 @@
 #registerBody {
   background-color: var(--greyBgC);
+  padding: 0;
+  margin: 0;
 }
 
+.logoDiv {
+  height: 19vh;
+  margin-bottom: 10vh;
+  position: static;
+}
 #registerMain {
-  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12,10 +18,44 @@
 #registerForm {
   display: flex;
   flex-direction: column;
+  
+}
+
+#registerh1, #registerButton {
+  font-family: var(--rajdhaniFont);
+}
+
+.inputRegister, #registerButton {
+  background-color: var(--whiteFontC);
+  border: none;
+  padding: 10px;
+}
+
+#registerButton {
+  font-size: 20px;
+  transition: .2s;
+  -webkit-transition: .2s;
+  -moz-transition: .2s;
+  -ms-transition: .2s;
+  -o-transition: .2s;
+  box-sizing: border-box;
+  width: 50%;
+}
+#registerButton:hover {
+  box-shadow: 0px 0px 10px 2px var(--whiteFontC);
+  cursor: pointer;
+  color: var(--logoC);
 }
 
 .inputRegister {
+  font-size: 14px;
   margin: .5vh;
+  
+}
+
+#buttonContainer {
+  display: flex;
+  justify-content: center;
 }
 
 #privacyParent {
@@ -24,7 +64,13 @@
 
 #registerh1, #privacyTag, #registerLabel, #registerInformationText, #warningText {
   color: var(--whiteFontC);
+  text-align: center;
 }
+
+#privacyTag, #registerLabel, #registerInformationText, #warningText {
+  font-family: var(--latoFont);
+}
+
 #privacyTag:hover {
   color: var(--logoC);
 }

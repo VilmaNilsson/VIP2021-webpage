@@ -2,34 +2,44 @@
 // array with all the planets and pictures --> needs update when planets ready
 const planets = [
   {
-    name: 'Pluto',
-    imgUrl: 'static/images/Pluto-15.svg',
-    link: '#Pluto',
+    name: 'PLUTO',
+    imgUrl: '/static/images/planets/Pluto-18.svg',
+    link: '/planets#pluto',
   },
   {
-    name: 'Moo',
-    imgUrl: 'static/images/Moo-15.svg',
-    link: '#Moo',
+    name: 'MOO',
+    imgUrl: '/static/images/planets/Moo-18.svg',
+    link: '/planets#moo',
   },
   {
-    name: 'Uranus',
-    imgUrl: 'static/images/Pluto-15.svg',
-    link: '#Uranus',
+    name: 'URANUS',
+    imgUrl: '/static/images/planets/Uranus-18.svg',
+    link: '/planets#uranus',
   },
   {
-    name: 'Urfanny',
-    imgUrl: 'static/images/Moo-15.svg',
-    link: '#Urfanny',
+    name: 'BLANDITO',
+    imgUrl: '/static/images/planets/Blandito-18.svg',
+    link: '/planets#blandito',
   },
   {
-    name: 'Urbum',
-    imgUrl: 'static/images/Pluto-15.svg',
-    link: '#Urbum',
+    name: 'DEAD EARTH',
+    imgUrl: '/static/images/planets/Dead-Earth-17.svg',
+    link: '/planets#deadEarth',
   },
   {
-    name: 'Urparts',
-    imgUrl: 'static/images/Moo-15.svg',
-    link: '#Urparts',
+    name: 'KIM',
+    imgUrl: '/static/images/planets/Kim-17.svg',
+    link: '/planets#kim',
+  },
+  {
+    name: 'MARGARETH',
+    imgUrl: '/static/images/planets/Margareth-17.svg',
+    link: '/planets#margareth',
+  },
+  {
+    name: 'UR-MAMA',
+    imgUrl: '/static/images/planets/Urmom-18.svg',
+    link: '/planets#urMom',
   },
 ];
 

@@ -8,10 +8,13 @@ html
     link(rel='stylesheet' href='/static/css/navigation.css')
     link(rel='stylesheet' href='/static/css/variables.css')
     link(rel='stylesheet' href='/static/css/register.css')
+    link(rel='stylesheet' href='/static/css/footer.css')
   include includes/navigation.pug
   body#registerBody
+    .logoDiv
+      a(href="/")
     main#registerMain
-      h1#registerh1 Register
+      h1#registerh1 Register for beta testing
       p#registerInformationText Enter you e-mail address to sign up as a beta-tester. Don't be an alpha.
       #registerForm
         //- input(type="text", placeholder="Username")#registerUsername.inputRegister
@@ -21,7 +24,10 @@ html
           input(type="checkbox")#checkbox
           label(for="checkbox")#registerLabel I have read and accept the #[a(href="/privacy-policy" target="_blank")#privacyTag privacy policy]. Clicking the link will open a new tab.
         p#warningText.hidden
-        button#registerButton Register
-
+        #buttonContainer
+          button#registerButton Register
+    //- Common footer
+    include includes/footer.pug
+    script(src='/static/js/utils.js')
     script(src='/static/js/navigation.js')
     script(src='/static/js/register.js')

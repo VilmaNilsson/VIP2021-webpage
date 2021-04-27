@@ -4,14 +4,53 @@ body {
 }
 
 .logoDiv {
-   background: var(--logoImg);
    height: 25vh;
    width: 100%;
    background-repeat: no-repeat;
    background-position: center;
    position: absolute;
+   display: flex;
    /* top: -60px; */
    z-index: 98;
+   justify-content: center;
    align-items: center;
    margin-bottom: 25vh;
+}
+
+.logoDiv > a {
+   height: 100%;
+   width: 25%;
+   display: inline-block;
+   background: var(--logoImg);
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: contain;
+}
+
+@media (max-width: 1499px) {
+   .logoDiv > a {
+      width: 30%;
+      height: 90%;
+   }
+}
+
+@media (max-width: 1199px) {
+   .logoDiv > a {
+      width: 40%;
+      height: 80%;
+   }
+}
+
+@media (max-width: 899px) {
+   .logoDiv > a {
+      width: 50%;
+      height: 70%;
+   }
+}
+
+@media (max-width: 599px) {
+   .logoDiv > a {
+      width: 60%;
+      height: 50%;
+   }
 }

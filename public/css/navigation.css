@@ -10,6 +10,7 @@ header {
 #navGrid {
    width: 30vw;
    height: 100vh;
+   padding-top: 75px;
    position: absolute;
    background-color: var(--greyBgC);
    -webkit-transition: 0.4s;
@@ -25,6 +26,10 @@ header {
 
 .currentPage {
    font-weight: 700;
+}
+
+.currentSubPage {
+   text-decoration: underline !important;
 }
 
 #navGrid > a {
@@ -73,6 +78,8 @@ header {
    width: 35px;
    cursor: pointer;
    z-index: 98;
+   margin: 2vw;
+   position: absolute;
 }
 
 .navBar1, .navBar2, .navBar3 {
@@ -191,15 +198,27 @@ header {
    }
 }
 
+@media (min-width: 1799px) {
+   #navGrid {
+      width: 20vw;
+   }
+}
+
 @media (max-width: 900px) {
    #navGrid {
       width: 50vw;
-      left: -200vw;
    }
 }
 
 @media (max-width: 600px) {
    #navGrid {
       width: 100vw;
+   }
+   .navLinkBig {
+      margin-top: 10%;
+   }
+   .navLinkSmall {
+      font-size: 18pt !important;
+      margin-top: 7.5px !important;
    }
 }

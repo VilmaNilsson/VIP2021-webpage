@@ -4,6 +4,7 @@ const express = require('express');
 const morgan = require('morgan');
 const minify = require('express-minify');
 const fs = require('fs');
+const nodemailer = require('nodemailer');
 
 // Makes us able to run with a custom port via the terminal, eg:
 //  $ PORT=8080 node app.js
@@ -136,6 +137,75 @@ app.post('/registration-form', (req, res) => {
           res.json({ addedEmail: body.email });
         }
       });
+    }
+  });
+
+  const transporter = nodemailer.createTransport({
+    service: 'outlook',
+    auth: {
+      user: process.env.EMAIL,
+      pass: process.env.PASS,
+    },
+  });
+
+  const mailOptions = {
+    from: process.env.EMAIL,
+    to: body.email,
+    subject: 'Snatch Time Confirmation Letter',
+    html: `
+      <head>
+        <link rel="preconnect" href="https://fonts.gstatic.com"> 
+        <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+        <style>
+        * {
+          font-family: 'Lato', sans-serif;
+          }
+        .logo {
+          height: 15vh;
+          background-image: url(https://i.ibb.co/Ptzs6fb/Logo.png);
+          background-position: center;
+          background-repeat: no-repeat;
+        }
+        body {
+          background-color: #242328;
+        }
+        h1, p {
+          color: #F4F4F4;
+        }
+        a {
+          color: #FF00CC;
+        }
+        .content {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+        }
+        </style>
+      </head>
+      <body>
+        <main>
+          <div class="logo"></div>
+          <div class="content">
+            <h1>Transmission of Confirmation</h1>
+            <p>Greetings, holder of the e-mail address ${body.email}.</p>
+            <p>This transmission e-mail was sent to inform you that you are now signed up as a beta tester for Snatch Time.</p>
+            <p>Keep an eye on your inbox for further information about the game, such as invitations for testing and updates on the official release.</p>
+            <p>We kindly thank you for participating in our mission to clean up space. You are always welcome to visit our site <a href="http://cosmosnatch.se">cosmosnatch.se.</a></p>
+            <p>Over and out.</p>
+          </div>
+        </main>
+      </body>
+    `,
+  };
+
+  transporter.sendMail(mailOptions, (err, info) => {
+    if (err) {
+      console.log(err);
+      throw err;
+    } else {
+      console.log(`email sent: ${info.response}`);
     }
   });
 });

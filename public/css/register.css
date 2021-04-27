@@ -18,7 +18,6 @@
 #registerForm {
   display: flex;
   flex-direction: column;
-  
 }
 
 #registerh1, #registerButton {
@@ -50,7 +49,6 @@
 .inputRegister {
   font-size: 14px;
   margin: .5vh;
-  
 }
 
 #buttonContainer {

@@ -129,7 +129,7 @@
         margin-bottom: 60vw;
     }
 }
-
+@media(min-width: 450px) AND (max-width: 900px) {
     .crewsGrid {
         grid-template-columns: repeat(2, 1fr);
         grid-auto-rows: auto;

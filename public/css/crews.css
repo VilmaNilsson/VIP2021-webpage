@@ -27,6 +27,7 @@
     display: flex;
     align-items: center;
     flex-direction: column;
+    
 }
 
 #crewsWrapper > h1 {
@@ -109,7 +110,7 @@
 }
 /* FLIP END */
 
-@media(max-width: 400px){
+@media(max-width: 450px){
     .crewsGrid {
         grid-template-columns: repeat(1, 1fr);
         grid-auto-rows: auto;
@@ -123,9 +124,12 @@
         font-size: 27px;
         margin-top: -35px;
     }
+
+        #crewsWrapper {
+        margin-bottom: 60vw;
+    }
 }
 
-@media(min-width: 401px) AND (max-width: 900px) {
     .crewsGrid {
         grid-template-columns: repeat(2, 1fr);
         grid-auto-rows: auto;
@@ -142,7 +146,9 @@
         font-size: 20px;
         margin-top: -25px;
     }
+
 }
+
 
 @media(min-width: 901px) AND (max-width: 1190){
     .crewCard > h3 {

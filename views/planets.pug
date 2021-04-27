@@ -11,60 +11,54 @@ html
     link(rel='stylesheet' href='/static/css/footer.css')
     //- CANT INCLUDE NAVIGATION = ERROR IS 500
   include includes/navigation.pug
-  body.planetsBody
+  body#planetsBody
     .logoDiv
       a(href="/")
-    //- #starBgd
-    h2 All the planets
-    #planetWrap
-      .flipCardWrap
-        #kim.planetContainer
-          .planetImage.starBackground
-          .planetText
-            h3 Planet 1
-            p Some information about the planet 
-      .flipCardWrap
-        #uranus.planetContainer
-          .planetImage.starBackground
-          .planetText
-            h3 Planet 2
-            p Some information about the planet 
-      .flipCardWrap
-        #moo.planetContainer
-          .planetImage.starBackground
-          .planetText
-            h3 Planet 3
-            p Some information about the planet 
-      .flipCardWrap
-        #pluto.planetContainer
-          .planetImage.starBackground
-          .planetText
-            h3 Planet 4
-            p Some information about the planet 
-      .flipCardWrap
-        #urMom.planetContainer
-          .planetImage.starBackground
-          .planetText
-            h3 Planet 5
-            p Some information about the planet 
-      .flipCardWrap
-        #margareth.planetContainer
-          .planetImage.starBackground
-          .planetText
-            h3 Planet 6
-            p Some information about the planet 
-      .flipCardWrap
-        #deadEarth.planetContainer
-          .planetImage.starBackground
-          .planetText
-            h3 Planet 7
-            p Some information about the planet 
-      .flipCardWrap
-        #blandito.planetContainer
-          .planetImage.starBackground
-          .planetText
-            h3 Planet 8
-            p Some information about the planet 
+    #planetWrapper
+      h1 Planets
+      .planetGrid
+        .cardSpace
+          .cardBase
+            #planet1.planetCard.starBackground
+              img(src="/static/images/planets/Blandito-18.svg", alt="Blandito").planetImage
+              h3 Blandito
+            .planetInfo
+              h3 Some information about the planet  
+        .cardSpace
+          .cardBase
+            #planet3.planetCard.starBackground
+              img(src="/static/images/planets/Margareth-17.svg", alt="Margareth").planetImage
+              h3 Margareth
+            .planetInfo
+              h3 Some information about the planet 
+        .cardSpace
+          .cardBase
+            #planet4.planetCard.starBackground
+              img(src="/static/images/planets/Pluto-18.svg", alt="Pluto").planetImage
+              h3 Pluto
+            .planetInfo
+              h3 Some information about the planet 
+        .cardSpace
+          .cardBase
+            #planet5.planetCard.starBackground
+              img(src="/static/images/planets/Uranus-18.svg", alt="Uranus").planetImage
+              h3 Uranus
+            .planetInfo
+              h3 Some information about the planet 
+        .cardSpace
+          .cardBase
+            #planet6.planetCard.starBackground
+              img(src="/static/images/planets/Urmom-18.svg", alt="Urmom").planetImage
+              h3 Urmom
+            .planetInfo
+              h3 Some information about the planet
+        .cardSpace
+          .cardBase
+            #planet2.planetCard.starBackground
+              img(src="/static/images/planets/Kim-17.svg", alt="Kim").planetImage
+              h3 Kim
+            .planetInfo
+              h3 Some information about the planet
   include includes/footer.pug
   script(src="/static/js/utils.js")
   script(src="/static/js/navigation.js")

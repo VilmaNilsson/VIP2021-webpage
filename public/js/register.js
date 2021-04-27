@@ -1,5 +1,7 @@
 const button = document.querySelector('#registerButton');
 const inputFields = document.querySelectorAll('.inputRegister');
+const registerText = document.querySelector('#registerInformationText');
+const label = document.querySelector('label');
 const errorMessages = {
   1: 'The entered e-mail addresses do not match.',
   2: 'You must accept the privacy policy to continue.',
@@ -51,13 +53,14 @@ button.addEventListener('mouseup', (e) => {
     .then((rsrc) => {
       const errBox = document.querySelector('#warningText');
       errBox.classList.remove('hidden');
-      errBox.innerHTML = `${rsrc.addedEmail} was added for beta-testing. Thank you!`;
+      inputFields.forEach((element) => {
+        element.classList.add('hidden');
+      });
+      button.classList.add('hidden');
+      button.disabled = true;
+      checkbox.classList.add('hidden');
+      registerText.classList.add('hidden');
+      label.classList.add('hidden');
+      errBox.innerHTML = `${rsrc.addedEmail} was added for beta-testing. A confirmation e-mail has been sent to the aformentioned address.<br>Thank you!`;
     });
-});
-
-inputFields.forEach((element) => {
-  element.addEventListener('click', () => {
-    const errBox = document.querySelector('#warningText');
-    errBox.classList.add('hidden');
-  });
 });

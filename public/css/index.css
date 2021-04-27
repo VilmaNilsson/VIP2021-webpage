@@ -93,6 +93,28 @@ div.logoDiv {
   align-items: center;
 }
 
+#registerButton {
+  text-decoration: none;
+  color: black;
+  background-color: var(--whiteFontC);
+  border: none;
+  font-family: var(--rajdhaniFont);
+  padding: 10px;
+  font-size: 20px;
+  transition: .2s;
+  -webkit-transition: .2s;
+  -moz-transition: .2s;
+  -ms-transition: .2s;
+  -o-transition: .2s;
+  box-sizing: border-box;
+  margin-top: 5vh;
+}
+#registerButton:hover {
+  box-shadow: 0px 0px 10px 2px var(--whiteFontC);
+  cursor: pointer;
+  color: var(--logoC);
+}
+
 .indexPlanetDiv {
   width: 32%;
   height: 30vw;
@@ -241,6 +263,9 @@ div.logoDiv {
     -moz-border-radius: 3px;
     -ms-border-radius: 3px;
     -o-border-radius: 3px;
+  }
+  #registerButton {
+    font-size: 15px;
   }
   .teamUpdateDiv {
     padding: 4vw;

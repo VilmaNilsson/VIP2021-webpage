@@ -30,7 +30,7 @@
     
 }
 
-#planetWrapper > h1 {
+#planetWrapper > h1, h3 {
     font-family: var(--rajdhaniFont);
     font-weight: 700;
 }

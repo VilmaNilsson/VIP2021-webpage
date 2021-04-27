@@ -36,9 +36,15 @@ header {
 .planetsBody p {
     font-family: var(--latoFont);
     font-size: var(--paragraphs);
+    font-size:1vw;
 }
 
-/* #starBgd {
+.logoDiv{
+	position:relative;
+	
+}
+
+ /*#starBgd {
     position: absolute;
     top: 0;
     z-index: -1;
@@ -58,23 +64,174 @@ header {
 
 #planetWrap {
     display: flex;
-    width: 70vw;
+    width: 54vw;
     flex-wrap: wrap;
     margin-top: 6vh;
     margin-left: auto;
     margin-right: auto;
     justify-content: space-evenly;
+	
 }
 
 .planetContainer {
     flex-basis: 45%;
     height: 35vw;
-    border: 1px solid white;
-    margin: 1.5vw;
+	
+	
+    /*border: 1px solid pink;*/
+    margin-top: 1.5vw;
+	
+	background-image:url("/static/images/Background1-18.png");
+	
 }
 
-.planetImage {
+.planetContainer:hover{
+    /* border: 1px solid #FF00CC; */
+    background-image:none;
+    border-image: url("/static/images/Neon-frame-18.svg") 30 fill / 30px / 30px space; ;
+	border-image-repeat: no-repeat;
+	
+}
+
+
+
+.planetImageKim{
+	height: 55%;
+	width: 43%;
+	margin-left: 30%;
+	margin-top: 25%;
+	background-image: url("/static/images/Kim-17.svg");
+	background-repeat: no-repeat;
+	transform: scale(1.8);
+}
+
+.planetContainer:hover > .planetImageKim{
+	
+	visibility: hidden;	
+    /* border: 1px solid #FF00CC; */
+	height: 0%;
+}
+
+
+
+.planetImageUranus {
+    height: 55%;
+	width: 43%;
+	background-image: url("/static/images/Uranus-18.svg");
+	background-repeat: no-repeat;
+	transform: scale(1.8);
+	margin-left: 30%;
+	margin-top: 25%;
+}
+
+.planetContainer:hover > .planetImageUranus{
+	
+	visibility: hidden;	
+	height: 0%;
+}
+
+.planetImageMoo {
+    height: 55%;
+	width: 43%;
+	background-image: url("/static/images/Moo-15.svg");
+	background-repeat: no-repeat;
+	transform: scale(1.4);
+	margin-left: 30%;
+	margin-top: 30%;
+}
+
+.planetContainer:hover > .planetImageMoo{
+	
+	visibility: hidden;	
+	height: 0%;
+}
+.planetImagePluto {
+    height: 55%;
+	width: 43%;
+	background-image: url("/static/images/Pluto-15.svg");
+	background-repeat: no-repeat;
+	transform: scale(1.4);
+	margin-left: 30%;
+	margin-top: 30%;
+}
+.planetContainer:hover > .planetImagePluto{
+	
+	visibility: hidden;	
+	height: 0%;
+}
+.planetImageUr-mama {
+    height: 55%;
+	width: 43%;
+	background-image: url("/static/images/Urmom-18.svg");
+	background-repeat: no-repeat;
+	transform: scale(1.8);
+	margin-left: 30%;
+	margin-top: 25%;
+}
+.planetContainer:hover > .planetImageUr-mama{
+	
+	visibility: hidden;	
+	height: 0%;
+}
+.planetImageMargareth {
+    height: 55%;
+	width: 43%;
+	background-image: url("/static/images/Margareth-17.svg");
+	background-repeat: no-repeat;
+	transform: scale(1.8);
+	margin-left: 30%;
+	margin-top: 25%;
+}
+.planetContainer:hover > .planetImageMargareth{
+	
+	visibility: hidden;	
+	height: 0%;
+}
+.planetImageDead-Earth {
+    height: 55%;
+	width: 43%;
+	background-image: url("/static/images/Dead Earth-17.svg");
+	background-repeat: no-repeat;
+	transform: scale(1.8);
+	margin-left: 30%;
+	margin-top: 25%;
+}
+.planetContainer:hover > .planetImageDead-Earth{
+	
+	visibility: hidden;	
+	height: 0%;
+}
+.planetImageBlandito {
+    height: 55%;
+	width: 43%;
+	background-image: url("/static/images/Blandito-18.svg");
+	background-repeat: no-repeat;
+	transform: scale(1.8);
+	margin-left: 30%;
+	margin-top: 25%;
+}
+.planetContainer:hover > .planetImageBlandito{
+	
+	visibility: hidden;	
+	height: 0%;
+}
+/*.planetImageKim:hover {
     height: 60%;
+	
+	background-image:none;
+	
+}*/
+/*.planetImageKim:hover ~ .planetText{
+
+	background-color:red;
+}*/
+
+.planetText{
+	visibility: hidden;
+}
+
+.planetContainer:hover > .planetText{
+	visibility: visible;	
 }
 
 /* FLIP CARD ON HOVER */

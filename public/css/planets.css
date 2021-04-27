@@ -30,7 +30,7 @@
     
 }
 
-#planetWrapper > h1 {
+#planetWrapper > h1, h3 {
     font-family: var(--rajdhaniFont);
     font-weight: 700;
 }
@@ -58,7 +58,7 @@
 
 .planetCard > h3 {
     margin: -40px 0 0;
-    font-family: 'Rajdhani';
+    font-family: var(--rajdhaniFont);
     font-weight: 400;
     letter-spacing: 2px;
     font-size: 30px;
@@ -90,6 +90,10 @@
     -moz-transform: rotateY(180deg);
     -ms-transform: rotateY(180deg);
     -o-transform: rotateY(180deg);
+	
+	
+    border-image: url("/static/images/Neon-frame-18.svg") 50 fill / 40px / 40px ; ;
+	/*border-image-repeat: no-repeat;*/
 }
 
 .planetCard, .planetInfo {
@@ -97,7 +101,7 @@
     height: 100%;
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
-    background-color: black;
+    background-color: var(--greyBgC);
 }
 .planetCard {
     position: absolute;

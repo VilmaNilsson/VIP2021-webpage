@@ -141,13 +141,13 @@
 .planetInfo {
     transform: rotateY(180deg);
 	/*font-size: 80%;*/
-	
+	 
 	
 	
 }
 .planetInfoLongText{
     transform: rotateY(180deg);
-	font-size: 60%;
+	font-size: 70%;
 	
 	
 	
@@ -169,6 +169,7 @@
 	.planetInfoLongText{
 		 height: 93vw;
         margin-bottom: 35px;
+		font-size: 60%;
 	}
 	
     .planetCard > h3 {
@@ -195,6 +196,7 @@
     }
 	.planetInfoLongText{
 		 height: 50vw;
+		 font-size: 60%;
 	}
     .planetCard > h3 {
         font-size: 20px;

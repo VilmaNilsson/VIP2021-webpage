@@ -30,7 +30,7 @@
     
 }
 
-#crewsWrapper > h1 {
+#crewsWrapper > h1, h3 {
     font-family: var(--rajdhaniFont);
     font-weight: 700;
 }
@@ -58,7 +58,7 @@
 
 .crewCard > h3 {
     margin: -40px 0 0;
-    font-family: 'Rajdhani';
+    font-family: var(--rajdhaniFont);
     font-weight: 400;
     letter-spacing: 2px;
     font-size: 30px;
@@ -90,6 +90,8 @@
     -moz-transform: rotateY(180deg);
     -ms-transform: rotateY(180deg);
     -o-transform: rotateY(180deg);
+
+    border-image: url("/static/images/Neon-frame-18.svg") 50 fill / 40px / 40px;
 }
 
 .crewCard, .crewInfo {
@@ -97,7 +99,7 @@
     height: 100%;
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
-    background-color: black;
+    background-color: var(--greyBgC);
 }
 .crewCard {
     position: absolute;
@@ -107,6 +109,10 @@
   
 .crewInfo {
     transform: rotateY(180deg);
+}
+
+.crewInfo > h3 {
+    font-weight: 500;
 }
 /* FLIP END */
 
@@ -129,6 +135,31 @@
         margin-bottom: 60vw;
     }
 }
+
+@media (min-width: 451px) {
+    .crewCard > h3 {
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 600px) {
+    .crewCard > h3 {
+        font-size: 24px;
+    }
+}
+
+@media(min-width: 901px) {
+    .crewCard > h3 {
+        font-size: 20px;
+    }
+}
+
+@media(min-width: 1200px) {
+    .crewCard > h3 {
+        font-size: 26px;
+    }
+}
+
 @media(min-width: 450px) AND (max-width: 900px) {
     .crewsGrid {
         grid-template-columns: repeat(2, 1fr);
@@ -143,31 +174,10 @@
         height: 50vw;
     }
     .crewCard > h3 {
-        font-size: 20px;
-        margin-top: -25px;
+        margin-top: -35px;
     }
 
 }
-
-
-@media(min-width: 901px) AND (max-width: 1190){
-    .crewCard > h3 {
-        font-size: 25px;
-        margin-top: -30px;
-    }
-  }
-
-  @media(min-width: 401px) AND (max-width: 500){
-    .crewCard > h3 {
-        font-size: 13px;
-    }
-  }
-
-  @media(min-width: 501) AND (max-width: 900){
-    .crewCard > h3 {
-        font-size: 13px;
-    }
-  }
 
 
 

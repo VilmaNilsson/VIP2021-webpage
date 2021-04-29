@@ -4,16 +4,16 @@ footer {
     box-sizing: border-box;
     display: flex;
     background-color: var(--greyBkFooter);
-    height: 22vh;
-    padding: 2vw 15vw;
+    /*height: 22vh;*/
+    padding: 2vw 5vw;
     color: var(--fontCFooter);
     width:100%;
     margin-top: 10vh;
 }
 
-footer > div {
+/*footer > div {
     flex-basis: 50%;
-}
+}*/
 
 footer a {
     text-decoration: none;
@@ -41,6 +41,7 @@ footer h3 {
 #footerScroll {
     display: flex;
     justify-content: flex-end;
+    flex-grow: 1;
 }
 
 #scrollToTop {
@@ -55,6 +56,7 @@ footer h3 {
     display: flex;
     justify-content: space-evenly;
     text-align: left;
+    flex-basis: 90%;
 }
 
 .footerLinksDiv {
@@ -76,5 +78,17 @@ footer h3 {
     }
     .footerLinksDiv {
         margin-bottom: 2vh;
+    }
+}
+
+@media(min-width: 900px) {
+    footer {
+        padding: 3vw 10vw;
+    }
+}
+
+@media(min-width: 1200px) {
+    footer {
+        padding: 3vw 15vw;
     }
 }

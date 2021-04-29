@@ -70,6 +70,7 @@
 .cardSpace {
     background-color: transparent;
     perspective: 800px;
+	
 }
   
 .cardBase {
@@ -82,6 +83,8 @@
     -moz-transition: transform 0.8s;
     -ms-transition: transform 0.8s;
     -o-transition: transform 0.8s;
+	
+	
 }
  
 .cardSpace:hover .cardBase {
@@ -92,9 +95,11 @@
     -o-transform: rotateY(180deg);
 	
 	
-    border-image: url("/static/images/Neon-frame-18.svg") 50 fill / 40px / 40px ; ;
+    /*border-image: url("/static/images/Neon-frame-18.svg") 50 fill / 40px / 40px ; */
 	/*border-image-repeat: no-repeat;*/
 }
+
+
 
 .planetCard, .planetInfo {
     width: 100%;
@@ -102,7 +107,31 @@
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
     background-color: var(--greyBgC);
+	
+	
 }
+
+.planetCard, .planetInfoLongText {
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    background-color: var(--greyBgC);
+	
+	
+}
+
+
+
+.cardSpace:hover .planetInfo {
+	border-image: url("/static/images/Neon-frame-18.svg") 50 fill / 40px / 25px ;
+}
+
+.cardSpace:hover .planetInfoLongText{
+	border-image: url("/static/images/Neon-frame-18.svg") 50 fill / 40px / 25px ;
+}
+
+
 .planetCard {
     position: absolute;
     color: white;
@@ -111,6 +140,18 @@
   
 .planetInfo {
     transform: rotateY(180deg);
+	/*font-size: 80%;*/
+	 
+	
+	
+}
+.planetInfoLongText{
+    transform: rotateY(180deg);
+	font-size: 70%;
+	
+	
+	
+	
 }
 
 .planetInfo > h3 {
@@ -128,6 +169,12 @@
         height: 93vw;
         margin-bottom: 35px;
     }
+	.planetInfoLongText{
+		 height: 93vw;
+        margin-bottom: 35px;
+		font-size: 60%;
+	}
+	
     .planetCard > h3 {
         font-size: 27px;
         margin-top: -35px;
@@ -174,9 +221,15 @@
     .planetCard, .planetInfo {
         height: 50vw;
     }
+	.planetInfoLongText{
+		 height: 50vw;
+		 font-size: 60%;
+	}
     .planetCard > h3 {
         margin-top: -35px;
     }
+	
+	
 
 }
 

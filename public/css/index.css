@@ -157,10 +157,15 @@ div.logoDiv {
   text-align: justify;
   font-family: var(--latoFont);
   font-weight: 300;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 28px;
   position: relative;
   padding: 2vw;
+}
+
+.oldUpdates {
+  margin-top: 40px;
+  color: #949494;
 }
 
 .teamUpdateDiv > p:first-child {
@@ -185,6 +190,10 @@ div.logoDiv {
   border-right: 5px solid white;
   bottom: 0;
   right: 0;
+}
+
+.oldUpdates .cornerLeftDiv, .oldUpdates .cornerRightDiv {
+  border-color:#646466;
 }
 
 /* breakpoint <600px */

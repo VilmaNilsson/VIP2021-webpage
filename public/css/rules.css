@@ -15,15 +15,77 @@
 }
 
 #rulesWrapper {
-    width: 80vw;
-    min-height: 67vh;
+    width: 60vw;
+    max-width: 800px;
+    min-height: 100vh;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     /*justify-content: center;*/
+    text-align: start;
+    font-family: var(--latoFont);
 }
 
 #rulesWrapper > h1 {
     font-family: var(--rajdhaniFont);
     font-weight: 500;
+    text-align: center;
 }
+
+.ruleBox h2, h3, h4, p {
+    margin: 0;
+}
+
+.rulesList {
+    margin-left: 25px;
+}
+
+.rulesTitle {
+    margin-top: 20px;
+}
+
+.newParagraph {
+    margin-top: 15px;
+}
+
+.indent {
+    margin-left: 20px;
+}
+
+#rulesWrapper p {
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 23px;
+}
+
+.ruleBox h2 {
+    margin-top: 60px;
+    font-weight: 700;
+    font-size: 26px;
+}
+
+.ruleBox h3 {
+    margin-top: 50px;
+}
+
+.ruleBox h4 {
+    margin-top: 30px;
+}
+
+.ruleBox h2, h3, h4 {
+    margin-bottom: 5px;
+}
+
+
+@media(min-width: 501px) AND (max-width: 950px){
+    #rulesWrapper {
+        width: 80vw;
+    }
+  }
+ 
+  @media(min-width: 0px) AND (max-width: 500px){
+    #rulesWrapper {
+        font-size: 16px;
+        width: 70vw;
+    }
+  }

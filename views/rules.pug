@@ -17,6 +17,58 @@ html
       a(href="/")
     #rulesWrapper
       h1 Game Rules
+      p This is a fast-paced game in which you compete with others to see who sorts the most amount of garbage. On one hand, you pick garbage from one planet and place it in another to make points. On the other hand, you play different actions to enhance your team’s garbage sorting powers or to make it harder for the other teams to sort garbage. It requires a lot of teamwork and communication to get it right. Before you can start playing, you need to create a game. This is done during the Pre-Game.
+      .ruleBox
+        h2.rulesTitle Pre-Game 
+        p The pre-game looks a bit different for the game master and for the rest of the mortals.
+        h3.rulesTitle Game Master (GM)
+        p Before a game can start one of the players must create the game. This player is the game master (GM). The GM creates the game by:
+        .rulesList
+          h4.rulesTitle 1. Giving the game a name 
+          p The App will automatically give a name to the game. The GM can change that name.
+          h4.rulesTitle 2. Changing the game parameters
+          p The Game Master decides on the number of teams. In the advanced settings the GM can also set the following up, but this is not recommended until you’ve played a few times:
+          p.newParagraph.indent 1. Duration of Crew, Action and Play phases <br/> 2. Duration of Landing process
+          h4.rulesTitle 3. Setting Teams Up
+          p The GM can choose to let the players pick teams or to make random teams with the players that have joined the game.
+          h4.rulesTitle 4. Starting the game up
+          p Once the teams are ready, the GM starts the game with the click of a button.
+        h3.rulesTitle Common mortals
+        p After the GM has given the game a name, the players can join it. So, while the GM sets up the game (steps 2 and 3 above), the other players will be able to join it. If the GM allows them to choose teams, that’s what they need to do. Otherwise, they just wait until the GM is done setting up the teams and starts the game.
+
+      .ruleBox
+        h2.rulesTitle Game
+        p All games have three phases: Crew, Plan and Play, which are played in sequence. Each phase has a limited duration and then ends automatically.
+        h3.rulesTitle 1: Crew Phase (default: 30 seconds)
+        p There is a timer that shows how much time of the phase there is left. During this phase players choose the crew for their team. Each team can only have one crew.
+        p.newParagraph Any player in the team can choose a crew for the team. The crew that is chosen when the timer is done and the phase is over is the crew that will be used. Preferably, team members will discuss this properly in the team and not just choose wildly on their own. Once the Crew Phase is over the game moves on automatically and without delay to the Crew Phase.
+        h3.rulesTitle 2: Action Phase (default: 1 minute)
+        p There is a timer that shows how much time of the phase there is left. During this phase each player chooses the actions s/he wants to have available during the game. You can choose up to two actions. They can be the same action.
+        p.newParagraph The actions that are chosen when the timer is done and the phase is over are the ones you’ll be able to use. See the list of all available actions below. Once the Action Phase is over the game moves on automatically and without delay to the Play Phase.
+        h3.rulesTitle 3: Play Phase (default: 5 minutes)
+        p This is the heart of the game. This is where you, in collaboration with your teammates try to make more points than your opponents. You make points in different ways but let’s first see a few important concepts.
+        .rulesList
+          h4.rulesTitle Planets, Racks and Bins
+          p There are six planets in the game. Your team (and all the others) have a “rack” on each planet. A rack contains six bins, which is where the garbage goes. A bin can be filled (there is garbage in it) or empty (there is no garbage in it).
+          h4.rulesTitle Garbage
+          p At the beginning of the game all bins on all planets are filled with garbage. The game consists in re-arranging the garbage by moving it from planet to planet. You move the garbage by:
+          p.newParagraph.indent 1. Placing it in your cargo (click on the garbage you want to pick and then click on your cargo) <br/> 2. Moving to the planet where you want to place it <br/> 3. Placing the garbage in one of that planet’s bins
+          p.newParagraph At the start of the game all teams have the same garbage on each of the planets. So all start with the same conditions.
+          h4.rulesTitle Cargo
+          p You have two cargos where you can carry garbage. One is the “normal” cargo and the other the secret cargo. You cannot use your secret cargo unless you activate it with an action. Some crews always have the secret cargo active so they do not need to activate it with an action.
+          h4.rulesTitle Actions
+          p While moving garbage from a planet to another you may also play actions. You choose which actions will be available to you in the Action Phase (see above).
+          p.newParagraph Once in the Play Phase you can play an action by clicking on it. Some actions play immediately and others need a target. For instance, the action “Lock Planet” requires you to choose a target, namely which planet you want to lock. When you play actions with targets, you first click on the action to “prepare” it and then you click on your preferred target to play the action.
+          p.newParagraph Once an action has been played it needs to cool down before you can play it again. Different actions have different cool down times.
+          h4.rulesTitle Moving to a planet
+          p To move to a planet you need to click on its icon. It takes a few seconds to come close enough to the planet to be able to see the bins and their content. And it takes a few more seconds to land on the planet. Once you have landed on the planet, you can take from or place garbage in it.
+          h4.rulesTitle Making Points
+          p You can make points in three ways:
+          p.newParagraph.indent 1. By filling all the bins in one planet with the same garbage. Your team gets 3 points and all the garbage in the bins dematerializes. The bins will immediately be filled with new random garbage. <br/> 2. By filling all the bins in one planet with different kinds of garbage. Your team gets 2 points and all the garbage in the bins dematerializes. The bins will immediately be filled with new random garbage. <br/> 3. Some actions may give you points, check the list below.
+          h4.rulesTitle End of the Game
+          p The game ends when the Play Phase is over. The team with the most points wins. If there’s a tie, well, there’s a tie.
+        h3.rulesTitle List of Actions
+        p (Coming soon)
 
   //- Common footer
   include includes/footer.pug

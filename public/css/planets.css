@@ -56,7 +56,7 @@
     height: 90%;
 }
 
-.planetCard > h3 {
+.planetCard > h3, .planetInfo > h2 {
     margin: -40px 0 0;
     font-family: var(--rajdhaniFont);
     font-weight: 400;
@@ -107,8 +107,6 @@
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
     background-color: var(--greyBgC);
-	
-	
 }
 
 .planetCard, .planetInfoLongText {
@@ -117,8 +115,6 @@
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
     background-color: var(--greyBgC);
-	
-	
 }
 
 
@@ -141,29 +137,39 @@
 .planetInfo {
     transform: rotateY(180deg);
 	/*font-size: 80%;*/
-	 
-	
-	
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
 .planetInfoLongText{
     transform: rotateY(180deg);
-	font-size: 70%;
-	
-	
-	
-	
 }
 
 .planetInfo > h3 {
     font-weight: 500;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 300;
+    padding: 0 30px;
+    font-size: 1.1vw;
+    margin-bottom: 20px;
 }
+
+.planetInfo > h2 {
+    margin-top: -20px;
+}
+
 /* FLIP END */
+
 
 @media(max-width: 450px){
     .planetGrid {
         grid-template-columns: repeat(1, 1fr);
         grid-auto-rows: auto;
-        grid-gap: 70vw;
+        grid-gap: 80vw;
     }
     .planetCard, .planetInfo {
         height: 93vw;
@@ -174,7 +180,10 @@
         margin-bottom: 35px;
 		font-size: 60%;
 	}
-	
+    .planetInfo > h3 {
+        padding: 0 20px;
+        font-size: 3.5vw;
+    }
     .planetCard > h3 {
         font-size: 27px;
         margin-top: -35px;
@@ -185,26 +194,41 @@
 }
 
 @media (min-width: 451px) {
-    .planetCard > h3 {
+    .planetCard > h3, .planetInfo > h2 {
         font-size: 18px;
+    }
+    .planetInfo > h3 {
+        padding: 0 5px;
+        font-size: 11px;
     }
 }
 
 @media (min-width: 600px) {
-    .planetCard > h3 {
+    .planetCard > h3, .planetInfo > h2 {
         font-size: 24px;
+    }
+    .planetInfo > h3 {
+        padding: 0 20px;
+        font-size: 1.8vw;
     }
 }
 
 @media(min-width: 901px) {
-    .planetCard > h3 {
+    .planetCard > h3, .planetInfo > h2 {
         font-size: 20px;
+    }
+    .planetInfo > h3 {
+        padding: 0 10px;
+        font-size: 1.1vw;
     }
 }
 
 @media(min-width: 1200px) {
-    .planetCard > h3 {
+    .planetCard > h3, .planetInfo > h2 {
         font-size: 26px;
+    }
+    .planetInfo > h3 {
+        padding: 0 25px;
     }
 }
 
@@ -212,20 +236,21 @@
     .planetGrid {
         grid-template-columns: repeat(2, 1fr);
         grid-auto-rows: auto;
-        width: 70vw;
+        width: 80vw;
         grid-gap: 25px;
     }
     .cardBase {
-        margin-bottom: 20vw;
+        /*margin-bottom: 20vw;*/
+        height: auto;
     }
     .planetCard, .planetInfo {
-        height: 50vw;
+        height: 58vw;
     }
 	.planetInfoLongText{
-		 height: 50vw;
+		 height: 58vw;
 		 font-size: 60%;
 	}
-    .planetCard > h3 {
+    .planetCard > h3, .planetInfo > h2 {
         margin-top: -35px;
     }
 	

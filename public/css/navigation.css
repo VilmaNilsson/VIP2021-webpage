@@ -3,7 +3,7 @@
 
 header {
    position: fixed;
-   left: 1vh;
+   /*left: 1vh;*/
    z-index: 99;
 }
 

@@ -112,11 +112,11 @@ p:nth-of-type(4), p:nth-of-type(5) {
   }
 
   p {
-    font-size: 15px;
+    font-size: 16px;
   }
 
   #registerButton {
-    font-size: 15px;
+    font-size: 16px;
   }
 
   #beta-testingVideo {

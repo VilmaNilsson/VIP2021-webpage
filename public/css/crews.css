@@ -56,7 +56,7 @@
     height: 90%;
 }
 
-.crewCard > h3 {
+.crewCard > h3, .crewInfo > h2 {
     margin: -40px 0 0;
     font-family: var(--rajdhaniFont);
     font-weight: 400;
@@ -91,7 +91,7 @@
     -ms-transform: rotateY(180deg);
     -o-transform: rotateY(180deg);
 
-    border-image: url("/static/images/Neon-frame-18.svg") 50 fill / 40px / 40px;
+    /*border-image: url("/static/images/Neon-frame-18.svg") 50 fill / 40px / 40px;*/
 }
 
 .crewCard, .crewInfo {
@@ -101,6 +101,23 @@
     -webkit-backface-visibility: hidden;
     background-color: var(--greyBgC);
 }
+
+.crewCard, .crewInfoLongText {
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    background-color: var(--greyBgC);
+}
+
+.cardSpace:hover .crewInfo {
+	border-image: url("/static/images/Neon-frame-18.svg") 50 fill / 40px / 25px ;
+}
+
+.cardSpace:hover .crewInfoLongText{
+	border-image: url("/static/images/Neon-frame-18.svg") 50 fill / 40px / 25px ;
+}
+
 .crewCard {
     position: absolute;
     color: white;
@@ -109,54 +126,97 @@
   
 .crewInfo {
     transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.crewInfoLongText{
+    transform: rotateY(180deg);
 }
 
 .crewInfo > h3 {
     font-weight: 500;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 300;
+    padding: 0 30px;
+    font-size: 1.1vw;
+    margin-bottom: 20px;
 }
+
+.crewInfo > h2 {
+    margin-top: -20px;
+}
+
 /* FLIP END */
 
 @media(max-width: 450px){
     .crewsGrid {
         grid-template-columns: repeat(1, 1fr);
         grid-auto-rows: auto;
-        grid-gap: 70vw;
+        grid-gap: 80vw;
     }
     .crewCard, .crewInfo {
         height: 93vw;
         margin-bottom: 35px;
     }
+    .crewInfoLongText{
+        height: 93vw;
+        margin-bottom: 35px;
+        font-size: 60%;
+    }
+    .crewInfo > h3 {
+        padding: 0 20px;
+        font-size: 3.5vw;
+    }
     .crewCard > h3 {
         font-size: 27px;
         margin-top: -35px;
     }
-
-        #crewsWrapper {
+    #crewsWrapper {
         margin-bottom: 60vw;
     }
 }
 
 @media (min-width: 451px) {
-    .crewCard > h3 {
+    .crewCard > h3, .crewInfo > h2 {
         font-size: 18px;
+    }
+    .crewInfo > h3 {
+        padding: 0 5px;
+        font-size: 11px;
     }
 }
 
 @media (min-width: 600px) {
-    .crewCard > h3 {
+    .crewCard > h3, .crewInfo > h2 {
         font-size: 24px;
+    }
+    .crewInfo > h3 {
+        padding: 0 20px;
+        font-size: 1.8vw;
     }
 }
 
 @media(min-width: 901px) {
-    .crewCard > h3 {
+    .crewCard > h3, .crewInfo > h2 {
         font-size: 20px;
+    }
+    .crewInfo > h3 {
+        padding: 0 10px;
+        font-size: 1.1vw;
     }
 }
 
 @media(min-width: 1200px) {
-    .crewCard > h3 {
+    .crewCard > h3, .crewInfo > h2 {
         font-size: 26px;
+    }
+    .crewInfo > h3 {
+        padding: 0 25px;
     }
 }
 
@@ -164,16 +224,21 @@
     .crewsGrid {
         grid-template-columns: repeat(2, 1fr);
         grid-auto-rows: auto;
-        width: 70vw;
+        width: 80vw;
         grid-gap: 25px;
     }
     .cardBase {
-        margin-bottom: 20vw;
+        /*margin-bottom: 20vw;*/
+        height: auto;
     }
     .crewCard, .crewInfo {
-        height: 50vw;
+        height: 58vw;
     }
-    .crewCard > h3 {
+    .crewInfoLongText{
+        height: 58vw;
+        font-size: 60%;
+   }
+    .crewCard > h3, .crewInfo > h2  {
         margin-top: -35px;
     }
 

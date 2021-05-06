@@ -75,6 +75,7 @@ div.logoDiv {
 }
 
 .indexWrapperDiv {
+  position: relative;
   margin-top: 20vh;
   width: 70vw;
 }
@@ -161,6 +162,44 @@ div.logoDiv {
   line-height: 28px;
   position: relative;
   padding: 2vw;
+}
+
+.teamUpdateDivOld {
+  overflow: hidden;
+  transition: max-height 2s ease-out;
+  height: 0;
+  max-height: 0;
+  -webkit-transition: max-height 2s ease-out;
+  -moz-transition: max-height 2s ease-out;
+  -ms-transition: max-height 2s ease-out;
+  -o-transition: max-height 2s ease-out;
+}
+
+.teamUpdateDivOld.collapsed {
+  height: auto;
+  max-height: 200vh;
+}
+
+#toggle-button {
+  color: black;
+  background-color: var(--whiteFontC);
+  border: none;
+  font-family: var(--rajdhaniFont);
+  padding: 10px;
+  font-size: 20px;
+  transition: .2s;
+  -webkit-transition: .2s;
+  -moz-transition: .2s;
+  -ms-transition: .2s;
+  -o-transition: .2s;
+  box-sizing: border-box;
+  margin-top: 5vh;
+}
+
+#toggle-button:hover {
+  box-shadow: 0px 0px 10px 2px var(--whiteFontC);
+  cursor: pointer;
+  color: var(--logoC);
 }
 
 .oldUpdates {

@@ -81,19 +81,15 @@ randomPlanets.forEach((rdmPlanet) => {
   planetWrapper.append(createIndexPlanets(rdmPlanet));
 });
 
-
-
 // Click event for "see more updates from team"-button
-let showBtn = document.getElementById('toggle-button')
-let showBtnText = document.getElementById('toggle-button').innerText;
+const showBtn = document.getElementById('toggle-button');
+const showBtnText = document.getElementById('toggle-button').innerText;
 
-document.querySelector('#toggle-button').addEventListener('click', function() {
+document.querySelector('#toggle-button').addEventListener('click', () => {
   document.querySelector('.teamUpdateDivOld.collapsible').classList.toggle('collapsed');
-
-  if (showBtn.innerText == showBtnText){
-    showBtn.innerText = "Show less updates";
+  if (showBtn.innerText === showBtnText) {
+    showBtn.innerText = 'Show less updates';
   } else {
     showBtn.innerText = showBtnText;
   }
-
 });

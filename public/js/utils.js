@@ -19,4 +19,4 @@ card.forEach( el => {
   el.addEventListener('mouseover', () => {
     console.log('flippa mig');
   })
-})
+});

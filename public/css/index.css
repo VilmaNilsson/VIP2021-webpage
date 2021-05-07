@@ -67,7 +67,7 @@ div.logoDiv {
 #indexContentWrapper {
   font-family: var(--rajdhaniFont);
   font-weight: 400;
-  font-size: 40px;
+  font-size: 3vw;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -154,12 +154,16 @@ div.logoDiv {
   height: 39vw;
 }
 
+.updateWrapperDiv {
+  max-width: 900px;
+}
+
 .teamUpdateDiv {
   text-align: justify;
   font-family: var(--latoFont);
   font-weight: 300;
-  font-size: 18px;
-  line-height: 28px;
+  font-size: 16px;
+  line-height: 24px;
   position: relative;
   padding: 2vw;
 }
@@ -235,6 +239,12 @@ div.logoDiv {
   border-color:#646466;
 }
 
+.updateFrame img {
+  width: 30vw;
+  min-width: 315px;
+  max-width: 440px;
+}
+
 /* breakpoint <600px */
 @media(min-width: 600px) and (max-width: 800px){
   #indexWelcomeText:last-child {
@@ -249,7 +259,7 @@ div.logoDiv {
     justify-content: space-between;
   }
   .indexPlanetDiv p {
-    font-size: 35px;
+    font-size: 25px;
     margin: 0 0 10px 0;
   }
 }
@@ -337,5 +347,8 @@ div.logoDiv {
   }
   #indexWelcomeText:last-child {
     font-size: 17px;
+  }
+  .updateFrame img {
+    min-width: 260px;
   }
 }

@@ -15,8 +15,8 @@ toTopBtn.addEventListener('click', () => {
 
 const card = document.querySelectorAll('.cardSpace');
 
-card.forEach( el => {
+card.forEach((el) => {
   el.addEventListener('mouseover', () => {
     console.log('flippa mig');
-  })
+  });
 });

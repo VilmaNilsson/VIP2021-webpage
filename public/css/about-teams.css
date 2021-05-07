@@ -49,6 +49,7 @@
 
  .teamMembers {
      width: 55%;
+     max-width: 900px;
  }
 
  .teamMember {
@@ -87,6 +88,13 @@
      }
  }
 
+ @media(min-width: 1000px) AND (max-width: 1300px) {
+    .teamMembers {
+        width: 75%;
+        max-width: 830px;
+    }
+ }
+
  @media(min-width: 600px) AND (max-width: 1000px) {
 
     .wrapper > h1 {
@@ -110,7 +118,11 @@
      .teamMember h1 {
          text-align: center;
          margin-top: 20px;
-     }
+    }
+    .teamMembers {
+        width: 75%;
+        max-width: 510px;
+    }
  }
 
 
@@ -137,6 +149,8 @@
     .teamProfile {
         width: 60vw;
         height: 60vw;
+        max-width: 230px;
+        max-height: 230px;
     }
 
     .teamMember p {
@@ -146,5 +160,8 @@
      .teamMember h1 {
          text-align: center;
          margin-top: 20px;
-     }
+    }
+    .teamMembers {
+        width: 85%;
+    }
  }

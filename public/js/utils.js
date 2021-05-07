@@ -12,3 +12,11 @@ toTopBtn.addEventListener('click', () => {
   document.body.scrollTop = 0; // for Safari
   document.documentElement.scrollTop = 0; // for the other browsers
 });
+
+const card = document.querySelectorAll('.cardSpace');
+
+card.forEach((el) => {
+  el.addEventListener('mouseover', () => {
+    console.log('flippa mig');
+  });
+});

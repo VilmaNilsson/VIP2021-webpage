@@ -3,13 +3,14 @@
 
 header {
    position: fixed;
-   /*left: 1vh;*/
+   left: 1vh;
    z-index: 99;
 }
 
 #navGrid {
    width: 30vw;
-   height: 100vh;
+   /*height: 100vh;*/
+   min-height: 100vh;
    padding-top: 75px;
    position: absolute;
    background-color: var(--greyBgC);
@@ -59,7 +60,7 @@ header {
    font-size: var(--navHeadLinksFontSize);
    line-height: 36px;
    letter-spacing: 3px;
-   margin-top: 5%;
+   margin-top: 30px;
 }
 
 .navLinkSmall {

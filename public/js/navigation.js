@@ -54,7 +54,7 @@ switch (navPageName) {
     break;
 }
 
-const animationDurations = 500;
+const animationDurations = 200;
 
 const navHam = document.getElementById('navHamContainer');
 

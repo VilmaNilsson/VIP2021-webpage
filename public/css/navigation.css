@@ -118,7 +118,7 @@ header {
    -webkit-transition: all var(--navTransitionDurations) ease;
    -o-transition: all var(--navTransitionDurations) ease;
    transition: all var(--navTransitionDurations) ease;
-   margin-left: -100%;
+   margin-left: -110%;
    -webkit-animation: dropDownSlideOut var(--navAnimationDurationIn) ease forwards;
            animation: dropDownSlideOut var(--navAnimationDurationIn) ease forwards;
 }

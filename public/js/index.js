@@ -3,42 +3,42 @@
 const planets = [
   {
     name: 'PLUTO',
-    imgUrl: '/static/images/planets/Pluto-18.svg',
+    imgUrl: '/static/images/planets/pluto.svg',
     link: '/planets#pluto',
   },
   {
     name: 'MOO',
-    imgUrl: '/static/images/planets/Moo-18.svg',
+    imgUrl: '/static/images/planets/moo.svg',
     link: '/planets#moo',
   },
   {
     name: 'URANUS',
-    imgUrl: '/static/images/planets/Uranus-18.svg',
+    imgUrl: '/static/images/planets/uranus.svg',
     link: '/planets#uranus',
   },
   {
     name: 'BLANDITO',
-    imgUrl: '/static/images/planets/Blandito-18.svg',
+    imgUrl: '/static/images/planets/blandito.svg',
     link: '/planets#blandito',
   },
   {
     name: 'DEAD EARTH',
-    imgUrl: '/static/images/planets/Dead-Earth-17.svg',
+    imgUrl: '/static/images/planets/earth.svg',
     link: '/planets#deadEarth',
   },
   {
     name: 'KIM',
-    imgUrl: '/static/images/planets/Kim-17.svg',
+    imgUrl: '/static/images/planets/kim.svg',
     link: '/planets#kim',
   },
   {
     name: 'MARGARETH',
-    imgUrl: '/static/images/planets/Margareth-17.svg',
+    imgUrl: '/static/images/planets/margareth.svg',
     link: '/planets#margareth',
   },
   {
     name: 'UR-MAMA',
-    imgUrl: '/static/images/planets/Urmom-18.svg',
+    imgUrl: '/static/images/planets/ur-mama.svg',
     link: '/planets#urMom',
   },
 ];

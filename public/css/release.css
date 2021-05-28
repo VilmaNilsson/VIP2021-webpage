@@ -92,6 +92,18 @@
     width: 9vh;
 }
 
+
+#linkOuter p {
+    margin-top: 60px;
+    font-weight: 400;
+    font-size: 18px;
+    letter-spacing: .5px;
+}
+
+#fbLink {
+    color: var(--whiteFontC);
+}
+
 @media (max-width: 900px) {
     .releaseBody {
         overflow-y: hidden;

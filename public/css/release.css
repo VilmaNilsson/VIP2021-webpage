@@ -84,6 +84,15 @@
 
 }
 
+#release-cdTitle > a {
+    color: var(--whiteFontC);
+    text-decoration: none;
+}
+#release-cdTitle > a:hover {
+    color: rgb(206, 206, 206);
+}
+
+
 .release-cdTimer {
     text-align: center;
 
@@ -94,7 +103,7 @@
 
 
 #linkOuter p {
-    margin-top: 60px;
+    margin: 30px 10px 0;
     font-weight: 400;
     font-size: 18px;
     letter-spacing: .5px;

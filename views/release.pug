@@ -14,8 +14,10 @@ html
       a(href="/")
     //-FOR DESIGN "E-DAY"
     main(id="release-main")
-      h3(id="release-cdTitle") Time until take off:
-      div(id="release-outerCountdown")
+      //h3(id="release-cdTitle") The game:
+      h1#release-cdTitle
+        a(href="http://game.cosmosnatch.se/" target="_blank" rel="noopener noreferrer") game.cosmosnatch.se
+      //div(id="release-outerCountdown")
         div(id="release-innerCountdown")
           div(id="release-countDown")
             div(id="release-days")
@@ -35,7 +37,7 @@ html
           a#fbLink(href="https://www.facebook.com/events/761954911181512/?active_tab=about" target="_blank" rel="noopener noreferrer") here
     script(src="/static/js/utils.js")
     script(src="/static/js/navigation.js")
-    script(src="/static/js/release.js")
+    //script(src="/static/js/release.js")
     //- Common footer
     include includes/footer.pug
 
